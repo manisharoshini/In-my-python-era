@@ -194,3 +194,88 @@
 # x = 5
 # h(x)
 # print(x)
+
+# THIS TELLS THAT YOU CAN ACCESS VARIABLE OUTSEIDE THE FUNC BUT YOU CANT CHANGE THE VARIBALE
+
+# ---------------------------------------------
+# Functions as Arguments
+# ---------------------------------------------
+
+# def is_even(i):
+#     return i % 2 == 0
+
+# my_func = is_even # here giving another name to same function.. its not a function call
+# # in memory both my_func and is_even refer to the same code (by diff names)
+# a = my_func(4)
+# b = is_even(6)
+# print(a,b)
+
+# --------------------------------
+#Function as parameter
+# ---------------------------------
+
+# def calc(op, x, y):
+#     return op(x,y)
+
+# def add(a,b):
+#     return a + b
+
+# def div(a,b):
+#     if b!=0:
+#         return a/b 
+#     print("Denominator is 0")
+
+
+# print(calc(add,2,2))
+
+# Try it Yourself 
+
+# def calc(op,x,y):
+#     return op(x,y)
+
+# def div(a,b):
+#     if b!=0:
+#         return a/b
+#     print("Denominator cant be Zero")
+    
+# res = calc(div,4,0) # here it will return None !! 
+# print(res) 
+
+#---------------------------------------------------------------------------
+# Another Example of Function to understand the workings of function
+#---------------------------------------------------------------------------
+
+# def func_a():
+#     print("Inside Function A")
+    
+# def func_b(y):
+#     print("Inside function B")
+#     return y
+
+# def func_c(f,z):
+#     print("Inside Function c")
+#     return f(z)
+
+# print(func_a())
+# print(5 + func_b(2))
+# print(func_c(func_b, 3)) # here func_c(f,c) --> func_c(func_b,3)
+# # return f(z) --> f-> func_b and z-> 3 so it becomes func_b(3)
+
+# Try it Yourself 
+# def apply(crieteria,n):
+#     count = 0
+#     for i in range(n+1):
+#         if crieteria(i): count +=1
+#     return count
+        
+# def is_even(x):
+#     return x%2 == 0
+
+# def is_five(x):
+#     return x%5 == 0
+
+# how_many = apply(is_even,10) # here we just replaced crieteria with is_even function 
+# print(how_many)
+# # here crieteria is just a rule i apply to a function... the thing is we can add any crieteris to it.
+
+# print(apply(is_five,10)) # another one just for Trail sake 
