@@ -135,8 +135,8 @@ def bisection_root(x):
         ans = (high + low)/2
     return ans 
 
-print(bisection_root(4))
-print(bisection_root(123))
+# print(bisection_root(4))
+# print(bisection_root(123))
 
 # epsilon is the level of error whuch is acceotable or else it goes to infinite loop    
 # ---------------------------------------------------------------------------------------------
@@ -148,3 +148,14 @@ print(bisection_root(123))
 # 3. sqrt of 101 is 10.0497589111
 # 4. sqrt of 102 is 10.0994567871
 # ---------------------------------------------------------------------------------------------
+
+def count_nums_with_sqr_root_close_to(n, epsilon):
+    count = 0
+    for i in range(n ** 3): # This means ur checking from n to 1000 
+        sqrt = bisection_root(i) # take the square root 
+        if abs(n - sqrt) < epsilon:
+            count += 1
+            print(i, sqrt)
+    return count
+
+print(count_nums_with_sqr_root_close_to(10, 0.1))
