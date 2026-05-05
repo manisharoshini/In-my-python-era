@@ -121,19 +121,19 @@
 # print(is_triangular(4))
 
 
-# Bisection search using Functions:
-def bisection_root(x):
-    epsilon = 0.01
-    low = 0
-    high = x
-    ans = (high + low)/2
-    while abs(ans**2 - x) > epsilon:
-        if ans**2 < x:
-            low = ans
-        else:
-            high = ans
-        ans = (high + low)/2
-    return ans 
+# # Bisection search using Functions:
+# def bisection_root(x):
+#     epsilon = 0.01
+#     low = 0
+#     high = x
+#     ans = (high + low)/2
+#     while abs(ans**2 - x) > epsilon:
+#         if ans**2 < x:
+#             low = ans
+#         else:
+#             high = ans
+#         ans = (high + low)/2
+#     return ans 
 
 # print(bisection_root(4))
 # print(bisection_root(123))
@@ -149,13 +149,48 @@ def bisection_root(x):
 # 4. sqrt of 102 is 10.0994567871
 # ---------------------------------------------------------------------------------------------
 
-def count_nums_with_sqr_root_close_to(n, epsilon):
-    count = 0
-    for i in range(n ** 3): # This means ur checking from n to 1000 
-        sqrt = bisection_root(i) # take the square root 
-        if abs(n - sqrt) < epsilon:
-            count += 1
-            print(i, sqrt)
-    return count
+# def count_nums_with_sqr_root_close_to(n, epsilon):
+#     count = 0
+#     for i in range(n ** 3): # This means ur checking from n to 1000 
+#         sqrt = bisection_root(i) # take the square root 
+#         if abs(n - sqrt) < epsilon:
+#             count += 1
+#             print(i, sqrt)
+#     return count
 
-print(count_nums_with_sqr_root_close_to(10, 0.1))
+# print(count_nums_with_sqr_root_close_to(10, 0.1))
+
+# ---------------------------------------
+# Function Scope
+# ---------------------------------------
+
+# Example 1: 
+
+# def f(y):
+#     x = 1
+#     x+=1
+#     print(x)
+
+# x = 5
+# f(x) # this will create new environment called function envrionment and runs the opertaions in the function 
+# # since there is no return value it will return None 
+# print(x) # will print the x-> value in the global environment
+
+# # Example 2:
+# def g(x):
+#     print(x) # since there is no x in the function we can cehck outside the function scope if it has x value we can use it.
+#     print(x + 1) # this will simply calculate and print it and doesnt modify any value 
+    
+# x = 5
+# g(x)
+# print(x)
+
+# # Example 3: Error or Faulty code
+# def h(y):
+#     x += 1 # it thinks you are trying to create x inside h and add 1 to x 
+#     # we have not assigned anything "x=" inside the 
+#     # Thats y we get error "local variable is referenced before assignment"
+    
+# x = 5
+# h(x)
+# print(x)
