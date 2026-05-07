@@ -156,3 +156,9 @@ In the fifth line, print True if  has any uppercase characters. Otherwise, print
 #     print(any(c.isdigit() for c in s))
 #     print(any(c.islower() for c in s))
 #     print(any(c.isupper() for c in s))
+
+"""
+
+
+
+"""

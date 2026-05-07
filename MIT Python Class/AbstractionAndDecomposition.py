@@ -262,7 +262,7 @@
 # # return f(z) --> f-> func_b and z-> 3 so it becomes func_b(3)
 
 # Try it Yourself 
-# def apply(crieteria,n):
+# def apply(crieteria,n): # here one of the parameter(crieteria) is function and another one is an integer from this we conclude that functions are objects
 #     count = 0
 #     for i in range(n+1):
 #         if crieteria(i): count +=1
@@ -279,3 +279,22 @@
 # # here crieteria is just a rule i apply to a function... the thing is we can add any crieteris to it.
 
 # print(apply(is_five,10)) # another one just for Trail sake 
+
+# # -------------------------------------------------------------
+# # Lambda Functions (Anonymus Function):
+# # -------------------------------------------------------------
+# def apply(crieteria,n): # here one of the parameter(crieteria) is function and another one is an integer from this we conclude that functions are objects
+#     count = 0
+#     for i in range(n+1):
+#         if crieteria(i): count +=1
+#     return count
+
+# how_many_evens = apply(lambda x: x % 2==0,10)# here we used Lambda function instead of actual Function 
+# how_many_fives = apply(lambda x: x % 5==0,50)
+
+# print("Divisible of 2:",how_many_evens)
+# print("Divisible of 5:",how_many_fives)
+
+# # Also we can do
+# print((lambda x:x%2 == 0)(258)) # this will return "True" 
+# #if we want to reuse it we have to copy Paste it to new line (lambda function is just for one time use)
