@@ -8,9 +8,16 @@
 # print(type(tuple1)) # type of this is an tuple not the integer 
 
 # # Multiple element tuples:
-tup1 = (2, "mit", 3)
-print(tup1[0])
-# [] -> is used to index in tuple 
+# tup1 = (2, "mit", 3)
+# print(tup1[0])
+# # [] -> is used to index in tuple 
+
+# print(tup1[1:3]) # in this way we can slice tuples
+# print(tup1[1:2])
+# print(len(tup1)) # this gives the length of the Tuple
+# print(max(2,4,7,9,3,5,8)) # this tells the maximum of the int tuples 
+# tup1[1] = 4 # This is impossible coz once the tuple is created we can't modify the tuples but its differnt with lists
+
 
 # tup2 = (1, "mit",3) + (6,7) # we use + sign to add extra elemnets to tuples
 # print(tup2) 
