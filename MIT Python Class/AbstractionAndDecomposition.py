@@ -298,3 +298,11 @@
 # # Also we can do
 # print((lambda x:x%2 == 0)(258)) # this will return "True" 
 # #if we want to reuse it we have to copy Paste it to new line (lambda function is just for one time use)
+
+# #Try yourself:
+# def do_twice(n,fn):
+#     return fn(fn(n))
+
+# print(do_twice(3, lambda x:x**2))
+# # initially fn(fn(n)) --> fn(fn(3)) --> fn(3) is 9 (returns 9)--> fn(9) --> returns 81 
+# # this returns 81 to the main function and ends the func envirnoment
