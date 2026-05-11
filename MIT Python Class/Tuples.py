@@ -208,3 +208,23 @@
 # ----------------------------------------------------
 # Variable NUmber of Arguments
 # ----------------------------------------------------
+# ----------------------------------------------------
+# * notation
+# ----------------------------------------------------
+# def mean(*args): # *args or *(var name) helps to take large number of inputs.
+#     tot = 0
+#     for a in args:
+#         tot += a
+#     return tot/len(args)
+
+# print(mean(56,85,89,7,87,96,945,852,879,965))
+# # when we use *(var name) in our function it will create a tuple behind the scenes to store the objects(inputs) in that tuple
+
+# Eg:
+# def mean(args): # here args otself a tuplr
+#     tot = 0
+#     for a in args:
+#         tot += a
+#     return tot/len(args)
+
+# print(mean((1,2,3,4,5,6,8,9,0,9))) # we are giving input in the form of tuple so we use extra brackets (one argument ie tUPLE)

@@ -237,3 +237,12 @@ string last: the last name
 #     first_name = input()
 #     last_name = input()
 #     print_full_name(first_name, last_name)
+
+# -------------------------------------------------------------------
+# * notation
+# -------------------------------------------------------------------
+def mean(*args):
+    tot = 0
+    for a in args:
+        total += a
+    return tot/len(args)
