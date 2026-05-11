@@ -48,10 +48,14 @@
 # ---------------------------------------------------------------
 # Iterating over a tuple just like we iterate over string
 # ----------------------------------------------------------------
-seq = (2,'a',4,(1,2))
-for e in seq:
-    print(e) # we can iterate diredctly on indices rather than over a indeces 
-    
+# seq = (2,'a',4,(1,2))
+# for e in seq:
+#     print(e) # we can iterate diredctly on indices rather than over a indeces 
+
+# ----------------------------------------------------------------------------------------------------------------
+# NOTES FOR REFERNCE
+# ----------------------------------------------------------------------------------------------------------------
+
 # ============================================================
 # DIFFERENCE BETWEEN STRINGS AND TUPLES IN PYTHON
 # ============================================================
@@ -151,3 +155,25 @@ for e in seq:
 
 # String  -> Immutable sequence of characters
 # Tuple   -> Immutable sequence of elements/data types
+
+# ---------------------------------------------------------------------------------------------------------------------
+# # Use of Tuple 
+
+# # we can swap the value with 2 lines instead of creating temp variable 
+# x = 1
+# y = 2
+# (x,y)=(y,x)
+# print(y,x) # y=1 and x=2
+
+# we can return more than 1 value from the function
+def quotient_and_remainder(x,y):
+    q = x // y
+    r = x % y
+    return (q,r)
+
+print(quotient_and_remainder(4,44))
+both = quotient_and_remainder(10,3)
+print(both)
+
+(quot,rem) = quotient_and_remainder(56,7) # we can explicitly save quotient and remainder in different variables
+print(quot,rem)
