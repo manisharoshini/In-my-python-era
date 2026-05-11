@@ -193,14 +193,18 @@
 
 # print(char_count("jesus"))
 
-# 2nd method(Given in Youtube)
-def char_count(s):
-    vowels = 'aeiou'
-    (c,v) = (0,0)
-    for char in s:
-        if char in vowels:
-            v+=1
-        else:
-            c+=1
-    return (c,v)
-print(char_count("abcde"))
+# # 2nd method(Given in Youtube)
+# def char_count(s):
+#     vowels = 'aeiou'
+#     (c,v) = (0,0)
+#     for char in s:
+#         if char in vowels:
+#             v+=1
+#         else:
+#             c+=1
+#     return (c,v)
+# print(char_count("abcde"))
+
+# ----------------------------------------------------
+# Variable NUmber of Arguments
+# ----------------------------------------------------

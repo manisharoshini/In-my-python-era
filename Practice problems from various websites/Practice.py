@@ -158,7 +158,82 @@ In the fifth line, print True if  has any uppercase characters. Otherwise, print
 #     print(any(c.isupper() for c in s))
 
 """
-
-
+You are given a string and your task is to swap cases. 
+In other words, convert all lowercase letters to uppercase letters and vice versa.
+For Example:
+Www.HackerRank.com → wWW.hACKERrANK.COM
+Pythonist 2 → pYTHONIST 2 
 
 """
+
+def swap_case(s):
+  result = ""
+  for i in s:
+    if i.islower():
+      result += i.upper()
+    elif i.isupper():
+      result += i.lower()
+    else:
+      result += i
+  return result
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
+    
+"""
+In Python, a string can be split on a delimiter.
+>>> a = "this is a string"
+>>> a = a.split(" ") # a is converted to a list of strings. 
+>>> print a
+['this', 'is', 'a', 'string']
+
+Joining a string is simple:
+
+>>> a = "-".join(a)
+>>> print a
+this-is-a-string 
+
+"""
+
+# def split_and_join(line):
+#     line = line.split(" ")
+#     para = "-".join(line)
+#     return para
+
+# if __name__ == '__main__':
+#     line = input()
+#     result = split_and_join(line)
+#     print(result)
+    
+"""
+You are given the firstname and lastname of a person on two different lines.
+Your task is to read them and print the following:
+
+Hello firstname lastname! You just delved into python.
+Function Description
+
+Complete the print_full_name function in the editor below.
+print_full_name has the following parameters:
+string first: the first name
+string last: the last name
+
+"""
+
+#
+# Complete the 'print_full_name' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts following parameters:
+#  1. STRING first
+#  2. STRING last
+#
+
+# def print_full_name(first, last):
+#     print(f'Hello {first} {last}! You just delved into python.')
+
+# if __name__ == '__main__':
+#     first_name = input()
+#     last_name = input()
+#     print_full_name(first_name, last_name)
