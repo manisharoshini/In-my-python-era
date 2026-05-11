@@ -165,15 +165,42 @@
 # (x,y)=(y,x)
 # print(y,x) # y=1 and x=2
 
-# we can return more than 1 value from the function
-def quotient_and_remainder(x,y):
-    q = x // y
-    r = x % y
-    return (q,r)
+# # we can return more than 1 value from the function
+# def quotient_and_remainder(x,y):
+#     q = x // y
+#     r = x % y
+#     return (q,r)
 
-print(quotient_and_remainder(4,44))
-both = quotient_and_remainder(10,3)
-print(both)
+# print(quotient_and_remainder(4,44))
+# both = quotient_and_remainder(10,3)
+# print(both)
 
-(quot,rem) = quotient_and_remainder(56,7) # we can explicitly save quotient and remainder in different variables
-print(quot,rem)
+# (quot,rem) = quotient_and_remainder(56,7) # we can explicitly save quotient and remainder in different variables
+# print(quot,rem)
+
+# # TRY IT YOURSELF: String s retule tuple of element where first it will return number of vowels and consonents (My method)
+
+# def char_count(s):
+#     vowels_alpa = ('a','e','i','o','u')
+#     vowels = 0
+#     consonents = 0
+#     for elements in s:
+#         if elements in vowels_alpa:
+#             vowels += 1
+#         else:
+#             consonents += 1
+#     return (vowels,consonents)
+
+# print(char_count("jesus"))
+
+# 2nd method(Given in Youtube)
+def char_count(s):
+    vowels = 'aeiou'
+    (c,v) = (0,0)
+    for char in s:
+        if char in vowels:
+            v+=1
+        else:
+            c+=1
+    return (c,v)
+print(char_count("abcde"))
