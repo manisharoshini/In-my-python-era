@@ -52,7 +52,7 @@ https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN
 - [x] Control Flow (if, loops)  
 - [x] Bisection Search  
 - [x] Functions & Abstraction  
-- [ ] Data Structures (Lists, Tuples)  
+- [x] Data Structures (Lists, Tuples)  
 - [ ] Dictionaries  
 - [ ] Recursion  
 - [ ] Testing & Debugging  
@@ -61,10 +61,10 @@ https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN
 - [ ] Searching & Sorting  
 
 ## 🗂️ Repository Structure  
-📦 In-my-python-era
-┣ 📂 MIT Python Class
-┣ 📂 Practice problems from various websites
-┗ 📄 README.md
+📦 In-my-python-era<br>
+┣ 📂 MIT Python Class<br>
+┣ 📂 Practice problems from various websites<br>
+┗ 📄 README.md<br>
 
 ---
 
