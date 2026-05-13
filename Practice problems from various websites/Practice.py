@@ -166,21 +166,21 @@ Pythonist 2 → pYTHONIST 2
 
 """
 
-def swap_case(s):
-  result = ""
-  for i in s:
-    if i.islower():
-      result += i.upper()
-    elif i.isupper():
-      result += i.lower()
-    else:
-      result += i
-  return result
+# def swap_case(s):
+#   result = ""
+#   for i in s:
+#     if i.islower():
+#       result += i.upper()
+#     elif i.isupper():
+#       result += i.lower()
+#     else:
+#       result += i
+#   return result
 
-if __name__ == '__main__':
-    s = input()
-    result = swap_case(s)
-    print(result)
+# if __name__ == '__main__':
+#     s = input()
+#     result = swap_case(s)
+#     print(result)
     
 """
 In Python, a string can be split on a delimiter.
@@ -238,11 +238,3 @@ string last: the last name
 #     last_name = input()
 #     print_full_name(first_name, last_name)
 
-# -------------------------------------------------------------------
-# * notation
-# -------------------------------------------------------------------
-def mean(*args):
-    tot = 0
-    for a in args:
-        total += a
-    return tot/len(args)
