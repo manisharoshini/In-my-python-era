@@ -53,3 +53,20 @@
 #     return (sum,prod)
 
 # print(sum_and_prod([12,36,69,78,45,96,47,52,63,78,89]))
+
+# ====================================================================
+# IDEA OF MUTABILITY
+# ====================================================================
+
+# L = [2,'a',4,[1,2]]
+# L[3] = 10 # This will replace the element at indice 3 (ie [1,2]) to 10
+# in tuple if we want to replace items we have to create an entire new tuple for that (old tuple still there but we lost the binding)
+
+# --------------------------------
+# OPERATIONS ON LISTS
+# --------------------------------
+# append(element) - used to add the element at end of the list
+# l = [2,1,3]
+# l.append(5) 
+# print(l)
+# # if we do l = l.append(5) --> it will return None (in this we do mutation and return result as None)
