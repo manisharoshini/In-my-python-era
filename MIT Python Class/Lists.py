@@ -110,7 +110,7 @@
 #---------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------
-# Try it yourself: Remove the element from the list which is equal to e
+# # Try it yourself: Remove the element from the list which is equal to e
 # def remove_elem(L,e):
 #     my_list = []
 #     for i in L:
@@ -119,8 +119,77 @@
 #     return my_list
 
 # L = [1,2,2,2]
-# print(remove_elem(L, 2)) 
+# print(remove_elem(L, 2)) # [1]
 
-# Expln: i = 1 Loop becomes i != 2 --> TRUE so it will append to new list
-# i = 2 loop becomes 2 != 2 --> FALSE condition becomes false and gets rejected 
+# L = [1,2,2,2]
+# print(remove_elem(L,1)) # [2, 2, 2]
+
+# L = [1,2,2,2]
+# print(remove_elem(L,0)) # [1, 2, 2, 2]
+
+# # Expln: i = 1 Loop becomes i != 2 --> TRUE so it will append to new list
+# # i = 2 loop becomes 2 != 2 --> FALSE condition becomes false and gets rejected 
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# # We can convert String to LIst and vice versa
+# s = "Jesus Loves You"
+# L = list(s)
+# print(L) # ['J', 'e', 's', 'u', 's', ' ', 'L', 'o', 'v', 'e', 's', ' ', 'Y', 'o', 'u']
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# # Take an input string and split it to a particular charecter
+# s = "Jesus Loves You"
+# L1 = s.split(" ")
+# print(L1) # ['Jesus', 'Loves', 'You']
+
+# L2 = s.split("L")
+# print(L2) # ['Jesus ', 'oves You'] --> will remove L
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# # Lists to Strings - Use 'join()' to join the lists
+
+# L = ['J','e','s','u','s']
+# A = ''.join(L) # --> This means nothing in between
+# print(A)
+
+# B = ' '.join(L) # --> Means Space in between
+# print(B)
+
+# C = '_'.join(L) # --> means underscore in between
+# print(C)
+
+# # D = ''.join([1,2,3]) # --> This will not work coz join works only on String elements not the int ones
+# # print(D)
+
+# E = ''.join(['1','2','3']) # --> here number is in the ''(quotes) it will treat as a string.. and join
+# print(E) # --> 123 is the output 
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 # ------------------------------------------------------------------------------------------------------
