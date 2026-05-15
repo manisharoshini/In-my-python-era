@@ -164,20 +164,21 @@
 # y = 2
 # (x,y)=(y,x)
 # print(y,x) # y=1 and x=2
-
+#---------------------------------------------------------------------------------------------------
 # # we can return more than 1 value from the function
 # def quotient_and_remainder(x,y):
 #     q = x // y
 #     r = x % y
 #     return (q,r)
-
+#---------------------------------------------------------------------------------------------------
 # print(quotient_and_remainder(4,44))
 # both = quotient_and_remainder(10,3)
 # print(both)
 
 # (quot,rem) = quotient_and_remainder(56,7) # we can explicitly save quotient and remainder in different variables
 # print(quot,rem)
-
+#---------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
 # # TRY IT YOURSELF: String s retule tuple of element where first it will return number of vowels and consonents (My method)
 
 # def char_count(s):
@@ -192,7 +193,9 @@
 #     return (vowels,consonents)
 
 # print(char_count("jesus"))
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # # 2nd method(Given in Youtube)
 # def char_count(s):
 #     vowels = 'aeiou'
@@ -204,6 +207,7 @@
 #             c+=1
 #     return (c,v)
 # print(char_count("abcde"))
+#---------------------------------------------------------------------------------------------------
 
 # ----------------------------------------------------
 # Variable NUmber of Arguments
@@ -219,6 +223,7 @@
 
 # print(mean(56,85,89,7,87,96,945,852,879,965))
 # # when we use *(var name) in our function it will create a tuple behind the scenes to store the objects(inputs) in that tuple
+#---------------------------------------------------------------------------------------------------
 
 # Eg:
 # def mean(args): # here args otself a tuplr
@@ -228,3 +233,4 @@
 #     return tot/len(args)
 
 # print(mean((1,2,3,4,5,6,8,9,0,9))) # we are giving input in the form of tuple so we use extra brackets (one argument ie tUPLE)
+#---------------------------------------------------------------------------------------------------

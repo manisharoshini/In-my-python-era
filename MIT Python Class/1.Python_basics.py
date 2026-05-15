@@ -218,6 +218,7 @@ print(verb * 5, end=' ')
 
 print("I can",verb, "better than you !!")
 
+#---------------------------------------------------------------------------------------------------
 # Newton's algorithm 
 
 x = int(input("Enter to find the cube root: "))
@@ -230,7 +231,9 @@ print("Next Guess = ", next_g)
 # While Loop example infinite loop
 while True:
     print("No !!")
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Expand the code to show the sad face when user entered the while loop two more types
 # HINT: USE VARIABLE AS A COUNTER
 count = 0
@@ -242,18 +245,24 @@ while where == "right":
     where = input("Go Left or Right?").lower()
 print("Get lost Bitch !!!")
 print(count, "many times you behaved like a dumb fucker")
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # For Loops Prractice Examples:
 for i in range(1,4,1):
     print("i love u !!")
     print(i)
-
+#---------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
 for j in range(1,4,2):
     print(j ** 2)
-    
+#---------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
 for k in range(4,0,-1):
     print("$"*k)
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 #Fix the code using variables Start and End in the range, to get the total sum between including those values
 #Eg: start = 3 and end = 5 the sum should be 12
 mySum = 0
@@ -268,7 +277,9 @@ end = 5
 for j in range(start,end+1):
     mysum += j
 print(mysum)
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # # write a code that loops a for loop over some range and prints how many even numbers are in the range.
 
 count_evennum = 0
@@ -278,23 +289,29 @@ for i in range(5):
         count_evennum += 1
         print(i)
 print("The count of even numbers: ",count_evennum)
-
+#---------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
 for j in range(10):
     if j % 2 == 0:
         print(j)     
-    
+#---------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
 for k in range(2,9,3):
     if k % 2 == 0:
         print(k)
-    
+#---------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------   
 for l in range(-4,6,2):
     if l % 2 == 0:
         print(l)
-        
+#---------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------        
 for m in range(5,6):
     if m % 2 == 0:
         print(m)
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # # ROBOT CHEERLEADING PRACTICE PROBLEM:
 an_albhabet = 'AEIOUaeiou'
 word = input("I'll cheer for you !!! Enter a word: ")
@@ -308,7 +325,9 @@ for w in word:
 print("What does that spell?")
 for i in range(times):
     print(f'{word} !!!!')
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Assume you are given a list of lowercase letters in variable s. count how many unique variable are in the string 
 s = "abcdefabcdef"
 seen = ""
@@ -325,7 +344,9 @@ else:
    print("Wrong")
 
 print(guess == secret_number)
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Secret number advanced version
 
 if guess == secret_number:
@@ -334,7 +355,9 @@ elif guess < secret_number:
     print("Guess some higher")
 elif guess > secret_number:
     print("Guess something Lower")
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Guess number using for loop:
 found = False
 secret = 4
@@ -345,14 +368,18 @@ if not found: # means if found == False
     print("not found")
 else:
     print("found")
-        
+#---------------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------------        
 # Guess and Check cubes (only positive values)
 
 cube = int(input("Enter a value: "))
 for guess in range(1,100):
     if guess ** 3 == cube:
         print("The cube root of ",cube,"is",guess)
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Guess and Check cubes (only positive and negative values)
 cube = int(input("Enter a number: "))
 for guess in range(abs(cube)): # abs --> Assumes number as positive even if the value is negative 
@@ -360,7 +387,9 @@ for guess in range(abs(cube)): # abs --> Assumes number as positive even if the 
         if cube < 0:
             guess = -guess
         print(f'Cube root of {cube} is {guess}')
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # guessing cube in different way:
 cube = int(input("Enter a number: "))
 for guess in range(abs(cube) + 1):
@@ -372,7 +401,9 @@ else:
     if cube < 0:
         guess = -guess
     print(f'Cube root of {cube} is {guess}')
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Guess and Check with word problems
 # Eg1: Alyssa, Ben and Cindy are selling Tickets to a fundraiser Ben sells 2 fewer than Alyssa. 
 # Cindy Sells twice as many as Alyssa. 10 tickets are sold totally by three peoples. How many tickets did Alyssa sell ?
@@ -387,7 +418,9 @@ for alyssa in range(11):
                 print(f'Ben sold {ben}')
                 print(f'Cindy sold {cindy}')
 # here they listed all thecombination once everything fits it will find remaining two !! similar to BRute Force !!
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # same with Big Numbers 
 # Eg2: Alyssa, Ben and Cindy are selling Tickets to a fundraiser Ben sells 20 fewer than Alyssa. 
 # Cindy Sells twice as many as Alyssa. 1000 tickets are sold totally by three peoples. How many tickets did Alyssa sell ?
@@ -401,7 +434,9 @@ for alyssa in range(1001):
         print(f'Cindy sold {cindy}')
 # max statement: alyssa - 20 = 30, max(30, 0) = 30, Ben sold 30 tickets
 # alyssa - 20 = -10, max(-10, 0) = 0, Ben sold 0 tickets (not negative)
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 #Algo: Square root Guess and Check
 guess = 0
 x = int(input("Enter a number to find the square root: "))
@@ -414,7 +449,9 @@ if guess**2 == x: # if guess squared is equal to x
     print(f"The square root of {x} is {guess}")
 else:
     print(f"{x} is not a perfect square")
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Guess and Check using for loop:
 x = int(input("Enter a number to find the square root: "))
 if x < 0:
@@ -428,7 +465,9 @@ for guess in range(x+1):
 else:
     print(f"{x} is not a perfect square") 
     # this is for else block of for loop, it will execute only if the loop is exhausted without break
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 #Binary Number Logic
 num = int(input("Enter a number: "))
 if num < 0:
@@ -445,7 +484,9 @@ while num > 0:
 print(result)
 if is_neg:
     print("-"+result)
-    
+#---------------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------------    
 # Binary in Fractions
 x = 0.1
 p = 0
@@ -467,7 +508,9 @@ for i in range(p - len(result)):
 result = result[0:-p] + '.' + result[-p:]
 print("The binary representation of result is: "+ str(x) + " is " + str(result))
 # 0.1 is not easy to compute !! 
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Guess and Check using approximation:
 x = 12345
 epsilon = 0.01
@@ -481,3 +524,4 @@ while abs(guess ** 2 - x) >= epsilon:
 
 print('num_guesses = ',num_guesses)
 print(guess, "is the closest approximation")
+#---------------------------------------------------------------------------------------------------

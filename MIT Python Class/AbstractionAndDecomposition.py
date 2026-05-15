@@ -10,7 +10,9 @@
     
 # print(is_even(3))
 # print(is_even1(6))
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # # Try it yourself 
 # def div_by(n,d):
 #     r = n/d
@@ -24,7 +26,9 @@
 #     else:
 #         return False
 # print(div_by(10,5))
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Use of functions in a complex code 
 # This will print Numbers between 1 to 10 and tell us whether its even or odd
 
@@ -37,7 +41,9 @@
 #         print(i, "even")
 #     else:
 #         print(i, "odd")
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Suppose we want to add all the odd integers between a and b including a and b 
 
 # # using for loop 
@@ -51,7 +57,9 @@
 #     return sum_of_odd
 
 # print(sum_odd(2,4))
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Using while loop
 
 # def sum_odd(a,b):
@@ -64,6 +72,7 @@
 #         i+=1
 #     return sum_of_odd
 # print(sum_odd(2,1000))
+#---------------------------------------------------------------------------------------------------
 
 # Try it Yourslef
 
@@ -82,7 +91,9 @@
 #     return remainder == 0
 
 # print(is_even_with_return(5))
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # even function without remainder 
 # def is_even_without_remiander(i):
 #     print("without remainder")
@@ -91,7 +102,9 @@
 #     print(has_rem)
     
 # print(is_even_without_remiander(4))
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # you Try it
 
 # def add(x,y):
@@ -104,7 +117,9 @@
 # mult(3,4) # since the print statement is in the function itself 
 # print(mult(4,5))# print 20 and NONE here entire function calls become none !! so it will become print(None) --> mult(4,5) becomes None 
 # # return only has value inside the function 
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Try it yourself: Triangular Number 
 
 # def is_triangular(n):
@@ -119,8 +134,9 @@
 #     # print(False)        ]  initially used print frunction then used return function
             
 # print(is_triangular(4))
+#---------------------------------------------------------------------------------------------------
 
-
+#---------------------------------------------------------------------------------------------------
 # # Bisection search using Functions:
 # def bisection_root(x):
 #     epsilon = 0.01
@@ -137,7 +153,9 @@
 
 # print(bisection_root(4))
 # print(bisection_root(123))
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # epsilon is the level of error whuch is acceotable or else it goes to infinite loop    
 # ---------------------------------------------------------------------------------------------
 # Try it Yourself
@@ -163,7 +181,7 @@
 # ---------------------------------------
 # Function Scope
 # ---------------------------------------
-
+#---------------------------------------------------------------------------------------------------
 # Example 1: 
 
 # def f(y):
@@ -175,7 +193,7 @@
 # f(x) # this will create new environment called function envrionment and runs the opertaions in the function 
 # # since there is no return value it will return None 
 # print(x) # will print the x-> value in the global environment
-
+#---------------------------------------------------------------------------------------------------
 # # Example 2:
 # def g(x):
 #     print(x) # since there is no x in the function we can cehck outside the function scope if it has x value we can use it.
@@ -184,7 +202,7 @@
 # x = 5
 # g(x)
 # print(x)
-
+#---------------------------------------------------------------------------------------------------
 # # Example 3: Error or Faulty code
 # def h(y):
 #     x += 1 # it thinks you are trying to create x inside h and add 1 to x 
@@ -196,7 +214,7 @@
 # print(x)
 
 # THIS TELLS THAT YOU CAN ACCESS VARIABLE OUTSEIDE THE FUNC BUT YOU CANT CHANGE THE VARIBALE
-
+#---------------------------------------------------------------------------------------------------
 # ---------------------------------------------
 # Functions as Arguments
 # ---------------------------------------------
@@ -227,7 +245,7 @@
 
 
 # print(calc(add,2,2))
-
+#---------------------------------------------------------------------------------------------------
 # Try it Yourself 
 
 # def calc(op,x,y):
@@ -240,11 +258,11 @@
     
 # res = calc(div,4,0) # here it will return None !! 
 # print(res) 
-
+#---------------------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------
 # Another Example of Function to understand the workings of function
 #---------------------------------------------------------------------------
-
+#---------------------------------------------------------------------------------------------------
 # def func_a():
 #     print("Inside Function A")
     
@@ -260,7 +278,9 @@
 # print(5 + func_b(2))
 # print(func_c(func_b, 3)) # here func_c(f,c) --> func_c(func_b,3)
 # # return f(z) --> f-> func_b and z-> 3 so it becomes func_b(3)
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Try it Yourself 
 # def apply(crieteria,n): # here one of the parameter(crieteria) is function and another one is an integer from this we conclude that functions are objects
 #     count = 0
@@ -294,11 +314,12 @@
 
 # print("Divisible of 2:",how_many_evens)
 # print("Divisible of 5:",how_many_fives)
+#---------------------------------------------------------------------------------------------------
 
 # # Also we can do
 # print((lambda x:x%2 == 0)(258)) # this will return "True" 
 # #if we want to reuse it we have to copy Paste it to new line (lambda function is just for one time use)
-
+#---------------------------------------------------------------------------------------------------
 # #Try yourself:
 # def do_twice(n,fn):
 #     return fn(fn(n))
@@ -306,3 +327,5 @@
 # print(do_twice(3, lambda x:x**2))
 # # initially fn(fn(n)) --> fn(fn(3)) --> fn(3) is 9 (returns 9)--> fn(9) --> returns 81 
 # # this returns 81 to the main function and ends the func envirnoment
+
+#---------------------------------------------------------------------------------------------------

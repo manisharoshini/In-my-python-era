@@ -15,6 +15,7 @@ Includes:
 # 🔹 Approximation Method   
 # --------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # x = 54321
 
 # epsilon = 0.01
@@ -51,7 +52,7 @@ Includes:
 # 1 step from old = 10 steps from new,
 # code didnt failed it got a perfect answer !!
 # but the issue here is optimization
-
+#---------------------------------------------------------------------------------------------------
 
 # --------------------------------------
 # 🔹 Bisection Search (Fast Square Root)
@@ -109,6 +110,7 @@ Includes:
 # 🔹 Final Combined Solution ✅
 # --------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # x = float(input("Enter a number: "))
 # epsilon = 0.01
 
@@ -133,7 +135,9 @@ Includes:
 #     guess = (high + low)/2.0
 
 # print(guess, "is close to square root of ", x)
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # # Bisection on cube roots (you try it yourself !!)
 
 # cube = 27
@@ -149,8 +153,11 @@ Includes:
 #         high = guess
 #     guess = (high + low)/2.0 # if we dont do this this will get into an infinite loop.  
 # print(f'{guess} is close to the cube root of {cube}')
+#---------------------------------------------------------------------------------------------------
 
-# Newton - Raphson method 
+#---------------------------------------------------------------------------------------------------
+# # Newton - Raphson method 
+
 # epsilon = 0.01
 # k = 24.0 # try 54321
 # num_guesses = 0
@@ -161,22 +168,25 @@ Includes:
 #     guess = guess - (((guess ** 2) - k)/(2 * guess)) # (guess ** 2) - k) -> f(guess) and (2 * guess) -> f'(guess)
 # print(f'{guess} is close to the square root of {k}')
 # print(f'number of guesses = {num_guesses}')
+#---------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
 # Assume you are given an integer 0 <= N <= 1000. Write a piece of Python code that uses bisection search to
 # guess N. the code prints two lines: count: with how many guesses it took to find N, and answer: with the
 # value of N. Hints: If the halfway value is exactly in between two integers, choose the smaller one
 
-epsilon = 0.01
-N = int(input("Enter an integer between 0 and 1000: "))
-low = 0
-high = 1000
-guess = (high + low) /2
-guesses = 0
-while abs(guess - N) >= epsilon:
-    guesses +=1
-    if guess < N:
-        low = guess
-    else:
-        high = 1000
-print(f'{guess} is close to the square root of {k}')
-print(f'number of guesses = {guesses}')
+# epsilon = 0.01
+# N = int(input("Enter an integer between 0 and 1000: "))
+# low = 0
+# high = 1000
+# guess = (high + low) /2
+# guesses = 0
+# while abs(guess - N) >= epsilon:
+#     guesses +=1
+#     if guess < N:
+#         low = guess
+#     else:
+#         high = 1000
+# print(f'{guess} is close to the square root of {k}')
+# print(f'number of guesses = {guesses}')
+#---------------------------------------------------------------------------------------------------
