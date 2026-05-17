@@ -225,17 +225,19 @@
 
 # print(sort_words("Its me Hii Im the problem"))
 
-# Othe solution (More Precise solution)
-def sort_words(sen):
-    L = sen.split(" ")
-    return sorted(L)
+# # Other solution (More Precise solution)
+# def sort_words(sen):
+#     L = sen.split(" ")
+#     return sorted(L)
 
-print(sort_words("Its me Hii Im the problem"))
-
-# ------------------------------------------------------------------------------------------------------
+# print(sort_words("Its me Hii Im the problem"))
 
 # ------------------------------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------------------------------------
+# Enumerate () --> learn yourself
+
+# Example - square ervery element in the list, mutating original List
 
 
 
