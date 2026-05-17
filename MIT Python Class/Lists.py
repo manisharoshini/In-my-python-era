@@ -169,14 +169,68 @@
 # ------------------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------------------------------
+# # My logic(Wothout lists)
+# def count_words(sen):
+#     space = 0
+#     for i in sen:
+#         if i == " ":
+#             space += 1 
+#     return space+1
 
+# print(count_words("Hello its me Hi I'm the problem"))
 
+# # Given code: (with lists)
+# def count_words(sen):
+#     l1 = sen.split(' ')
+#     return len(l1)
 
+# print(count_words("Hello its me Hi I'm the problem"))
 
+# ------------------------------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------------------------------------
+#  Few opertions for lists 
 
+# # sort() --> this will sort and mutate(change) the L without storing original ones
+# L = [4,2,7]
+# L.sort()
+# print(L) # L is the list of sorted one the original L is not stored
 
+# # reverse() --> This will reverse the list and muatate(change) the L without storing original ones
+# L = [2,5,3,1,8]
+# L.reverse() # this will just reverse the list and the original L is replaced with the reverse L
+# print(L) # [8, 1, 3, 5, 2]
 
+# # sorted() --> this will maintain the original ones and return the sorted version of L (no mutation or changes)
+# L = [5,2,7,8,1]
+# L_new = sorted(L)
+# print(L_new)
+# print(L) # this maintains the original L 
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# # Try it Yourself (My Logic)
+# def sort_words(sen):
+#     s1 = sen.split(" ")
+#     sorted_words = sorted(s1)
+#     return sorted_words
+
+# print(sort_words("Its me Hii Im the problem"))
+
+# # Given solution
+# def sort_words(sen):
+#     l = sen.split(" ")
+#     l.sort()
+#     return l
+
+# print(sort_words("Its me Hii Im the problem"))
+
+# Othe solution (More Precise solution)
+def sort_words(sen):
+    L = sen.split(" ")
+    return sorted(L)
+
+print(sort_words("Its me Hii Im the problem"))
 
 # ------------------------------------------------------------------------------------------------------
 
@@ -189,7 +243,6 @@
 
 
 
-
-
+# ------------------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------------------------------
