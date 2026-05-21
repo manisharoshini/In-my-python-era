@@ -237,14 +237,291 @@
 # ------------------------------------------------------------------------------------------------------
 # Enumerate () --> learn yourself
 
-# Example - square ervery element in the list, mutating original List
+# # Example - square ervery element in the list, mutating original List
+# def square_list(L):
+#     for i in range(len(L)): # here we loop over indices rather than elemnets in the list
+#         L[i] = L[i] ** 2 # by suing this [] we can get each elements in the list and square it
+        
+# # here we choose to work on indices rather than element coz if we iterate elements we'll get typeError
+# # "'list' object cannot be interpreted as an integer" --> this is the error...
+# # here there is no return statement if we use A = sqaure_list(Lin) --> print(A) will become None coz the value returns None 
 
-
-
-
-
-
+# Lin = [2,3,4]
+# print("Before Function call: ", Lin)
+# square_list(Lin)
+# print("After Function Call: ", Lin)
 
 # ------------------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------------------------------
+# # combining Operations in the list
+# L1 = [1,2,3,4]
+# L2 = [5,6,7,8,9]
+# L3 = L1 + L2
+
+# print(L3) # here L1 and L2 remian unchanged in the memory
+
+# # Extend() operations
+# l1 = [1,2,3,4]
+# l1.extend([0,6])
+# print(l1) # this will mutate l1 and add new elements and extend it by 2 elements at the end 
+
+# l2 = [4,5,6,7]
+# l2.extend([[1,2,3],[4,5,6,7]]) # this are the bunch of the parts of elements as list
+# print(l2)
+
+# ------------------------------------------------------------------------------------------------------
+# L =[1,2,3,4]
+# for e in L: # there's no infinity loop coz 'e' binding is still in old L ie L = [1,2,3,4]
+#     L = L+L 
+#     print(L)
+# """
+# [1, 2, 3, 4, 1, 2, 3, 4]
+# [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+# [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+# [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+# """
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# L = [4,5,6]
+# print(id(L)) # --> will store in same memory location (just mutated)
+# L.append(80)
+# print(id(L)) # --> will store in same memory location (just mutated)
+# L.clear()
+# print(id(L)) # --> will store in same memory location (just mutated)
+# L = []
+# print(id(L)) # --> will store in new memory location (new list is created here and L lost binfing from old one to new one)
+# # id() --> this tells the memory location whether the alterted(mutated) data is stored in same location or different location
+
+# =============================================================================================================================================================================
+# LEC 11 :  ALIASING AND CLONING (Lists)
+
+# ------------------------------------------------------------------------------------------------------
+# # Copy of a list to new list 
+# L = [1,2,3,4]
+# Lnew = L[:]
+# print(L)
+# print(Lnew)
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# Try it yourself : mutate to all elements in L that are equals to e returns None
+# Here's a twist we hv to store in same memory.. so first make a copy of the original list and then store it 
+
+# def remove_all(L,e):
+#     Lcopy = L[:] # here we make a copy of L
+#     L.clear() # Clear all the elements in the L
+#     for i in Lcopy: # iterate through the Lcopy rather than original L
+#         if i != e: # check conditions 
+#             L.append(i) # append to original List
+
+# L = [1,2,3,4] # in this there's no need of return function
+# remove_all(L,2) 
+# print(L)
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# # Other Operations on List: Remove
+# # here we remove specific functions of List instead of removing the entire list(using clear())
+# # 1. delete function
+
+# L = [1,2,3,4,5,6,7,8,9]
+# del(L[5]) # will remove the element at specific index 
+# print(L) # [1, 2, 3, 4, 5, 7, 8, 9]
+
+# # 2. Using pop() function -  has return value (will return the value that we pop)
+# L.pop(3) # will remove element at index 3
+# print(L) # [1, 2, 3, 5, 7, 8, 9]
+
+# L.pop() # this will remove last element of the list 
+# print(L) # [1, 2, 3, 5, 7, 8]
+
+# # we can save the return value in a variable 
+# a = L.pop() # this will mutate L and store the removed value in the variable a.
+# print(L) # [1, 2, 3, 5, 7]
+# print(a) # 8
+
+# # 3. Remove Function 
+# L.remove(2) # this will remove the element L in the list 
+# print(L) # [1, 3, 5, 7]
+
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# # Try it yourself : mutate to all elements in L that are equals to e returns None
+# # Here's a twist we hv to store in same memory.. so first make a copy of the original list and then store it 
+# # (This time use any of above 3 functions)
+
+# # using While loop
+# def remove_all(L,e):
+#     while e in L:
+#         L.remove(e)
+    
+#     return L
+
+# L = [1,2,2,3] # in this there's no need of return function
+# remove_all(L,2) 
+# print(L)
+
+# # using For Loop
+# def remove_all(L,e):
+#     for ele in L:
+#         if ele == e:
+#             L.remove(e)
+    
+#     return L
+
+# L = [1,2,2,3] # in this there's no need of return function
+# remove_all(L,2) 
+# print(L) # Incorrecly prints [1, 2] WHILE LOOP WORKS PROPERLY HERE 
+
+# # Why ? coz if we use remove it will remove and shift towards forward.. and pointer goes ahead 
+# # [1,2,2,3] --> it will remove 2 and [2,3] shifts forward and the for loop pointer moves forward to 3 
+# # pointer at 1 [1,2,2,3]
+# # pointer at 2 removes 2 [1,2,3] 2nd 2 is removed here and indices shift happens here 
+# # pointer at 3 for loop will not realize that the shift happened and  points to next element
+
+"""
+------------------------------------------------------------
+EXAMPLE
+------------------------------------------------------------
+
+L = [1,2,2,3]
+
+Expected Output:
+[1,3]
+
+Actual Output:
+[1,2,3]
+
+------------------------------------------------------------
+WHY DOES THIS HAPPEN?
+------------------------------------------------------------
+
+The issue happens because:
+
+1. FOR LOOP uses an internal pointer/index
+2. remove() changes the list size dynamically
+3. Elements shift left after removal
+4. FOR LOOP pointer moves forward anyway
+5. One element gets skipped accidentally
+
+------------------------------------------------------------
+STEP-BY-STEP VISUALIZATION
+------------------------------------------------------------
+
+Initial List:
+
+Index:   0   1   2   3
+        ----------------
+L =     [1,  2,  2,  3]
+
+Pointer starts at index 0
+
+------------------------------------------------------------
+ITERATION 1
+------------------------------------------------------------
+
+Pointer at:
+1
+
+Is 1 == 2 ?
+NO
+
+Move pointer forward
+
+------------------------------------------------------------
+ITERATION 2
+------------------------------------------------------------
+
+Pointer at:
+2
+
+Is 2 == 2 ?
+YES
+
+remove(2) executes
+
+List becomes:
+
+Index:   0   1   2
+        -------------
+L =     [1,  2,  3]
+
+IMPORTANT:
+The SECOND 2 shifted LEFT
+
+BEFORE:
+[1, 2, 2, 3]
+
+AFTER:
+[1, 2, 3]
+     ↑
+shifted here
+
+------------------------------------------------------------
+MAIN PROBLEM
+------------------------------------------------------------
+
+The FOR LOOP pointer already moves forward automatically.
+
+It now jumps to NEXT index.
+
+Pointer goes to:
+3
+
+The shifted 2 gets SKIPPED completely.
+
+------------------------------------------------------------
+FINAL RESULT
+------------------------------------------------------------
+
+Output becomes:
+
+[1,2,3]
+
+instead of:
+
+[1,3]
+
+------------------------------------------------------------
+WHY WHILE LOOP WORKS
+------------------------------------------------------------
+
+WHILE LOOP gives manual control over index movement.
+
+You can:
+
+- remove element
+- stay at SAME index
+- recheck shifted element properly
+
+Therefore:
+
+No elements get skipped.
+
+------------------------------------------------------------
+KEY LEARNING
+------------------------------------------------------------
+
+NEVER modify a list while iterating over it using:
+
+    for element in list
+
+because:
+
+- list indices shift
+- pointer movement becomes incorrect
+- elements may get skipped
+
+Safe approaches:
+
+1. Use WHILE LOOP
+2. Iterate over COPY of list
+3. Create NEW filtered list
+
+============================================================
+
+"""
+
