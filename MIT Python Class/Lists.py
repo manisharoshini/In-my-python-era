@@ -527,5 +527,99 @@ Safe approaches:
 # ------------------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------------------------------
-# TRICKY EXAMPLE
-# Mutate L1 to remove any duplicates in L2 
+# # TRICKY EXAMPLE
+# # Mutate L1 to remove any duplicates in L2 
+
+# # the code with bugs 
+# def remove_dups(L1,L2):
+#     for e in L1:
+#         if e in L2:
+#             L1.remove(e)
+#     return L1
+            
+# L1 = [10,20,30,80]
+# L2 = [10,20,40,50]
+# print(remove_dups(L1,L2)) 
+# # In this we have to remove both 10 and 20.. but only 10 is removed not 20 coz of that pointer issues. 
+
+# # So the correct code of above problem is: to create a copy of the L1 and remove elements of L1 and iteration(pointes) should be in original L1
+
+# def remove_dups(L1,L2):
+#     L1_copy = L1[:]
+#     for e in L1_copy:
+#         if e in L2:
+#             L1.remove(e)
+#     return L1
+
+# L1 = [10,20,30,80]
+# L2 = [10,20,40,50]
+# print(remove_dups(L1,L2))
+# # here we iterated over copy (instead of real L1)
+# # Mutated(changes) happened in original Lists
+# # Indexing is consistent here
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# Aliases - means giving another name for the same object
+
+# def remove_dups(L1,L2):
+#     l1_copy = L1 # alisas of L1
+#     for e in L1: 
+#         if e in L1:
+#             L1.remove(e)
+#         # return L1
+# La = [10,20,30,40]
+# Lb = [10,20,50,60] 
+# remove_dups(La,Lb)
+# print(La)
+
+# here [10,20,30,40] - list is pointed by 3 names L1,La and L1_copy
+# here [10,20,50,60] - list is pointed by 2 names L2,Lb
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# # List inside List
+
+# old_list = [[1,2],[3,4],[5,'foo']]
+# new_list = old_list
+
+# new_list[2][1] = 6
+# print("New List: ",new_list)
+# print("Old list: ",old_list) # mutating objects changes other objs as well 
+# ------------------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# CONTROL COPYING
+# # two types of copy: Shallow Copy and Deep Copy 
+
+# # 1. Shallow Copy - only copies [ , , ] thats it no other copies are done further 
+
+# import copy
+# old_list = [[1,2],[3,4],[5,6]]
+# new_list = copy.copy(old_list)
+
+# print("Old Copy: ",old_list)
+# print("New Copy: ",new_list)
+
+# old_list.append([7,8]) # this will append only in old list beacuse [7,8] are not shared to new list other all elements are shared to new list
+# old_list[1][1] = 9 # this will change in both new and old coz the elements inside the list are shared elements (like they share same elements)
+# # since the elements are shared the chnages are visible in both new and old list 
+
+# print("Old Copy: ",old_list)
+# print("New Copy: ",new_list)
+
+# # 2. Deep copy - goes to all the deeper level to copy 
+
+# import copy
+# old_list = [[1,2],[3,4],[5,6]]
+# new_list = copy.deepcopy(old_list)
+
+# print("Old Copy: ",old_list)
+# print("New Copy: ",new_list)
+
+# old_list.append([7,8]) # changes happens only in old list since new list is completely different 
+# old_list[1][1] = 9  # chnages is done only in old list since the elemnts are not shared they are copied
+# # so the old list is completely seperate from l=new list
+
+# print("Old Copy: ",old_list)
+# print("New Copy: ",new_list)
