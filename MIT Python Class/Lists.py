@@ -623,3 +623,48 @@ Safe approaches:
 
 # print("Old Copy: ",old_list)
 # print("New Copy: ",new_list)
+
+# ===============================================================================================================
+# # LEC 12: LIST COMPREHENSIONS 
+# # List comprehension - creates a new list and apply function to every element and another iterable that satiesfies test
+
+# # Eg 1:
+# def f(L):
+#     Lnew = []
+#     for e in L:
+#         Lnew.append(e**2)
+#     return Lnew
+
+# L = [1,2,3,4]
+# print(f(L))
+
+# # The above code will be converted to one liner 
+# L = [1,2,3,4]
+# Lnew1 = [e**2 for e in L]
+# print(Lnew1)
+
+# # Eg2: 
+# def f(L):
+#     lnew = []
+#     for e in L:
+#         if e % 2 == 0:
+#             lnew.append(e**2)
+#     return lnew
+
+# L = [1,2,3,4]
+# print(f(L))
+
+# # The Eg2 will be converted into one liner by list comprehension method
+# L = [1,2,3,4]
+# Lnew = [e**2 for e in L if e % 2 == 0]
+# print(Lnew)
+
+# # we can aslo do something like this 
+# lnew = [e ** 2 for e in range(6)]
+# print(lnew)
+
+# lnew1 = [r**2 for r in range(6) if r%2 == 0]
+# print(lnew1)
+
+lnew2 = [[e,e**2] for e in range(8) if e % 2 != 0]
+print(lnew2) # [odd number, square of odd number]
