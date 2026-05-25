@@ -69,15 +69,15 @@
 # print(a,b)
 # ----------------------------------------------------------
 
-# Functions can return functions
-def make_prod(a):
-    def g(b):
-        return a*b
-    return g 
+# # Functions can return functions
+# def make_prod(a):
+#     def g(b):
+#         return a*b
+#     return g 
 
-val = make_prod(2)(3) # -- chaining functions together 
-print(val)
+# val = make_prod(2)(3) # -- chaining functions together 
+# print(val)
 
-doubler = make_prod(2)
-val = doubler(3)
-print(val)
+# doubler = make_prod(2)
+# val = doubler(3)
+# print(val) # -- refer notes or screenshots for refernce 
