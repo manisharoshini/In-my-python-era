@@ -666,5 +666,9 @@ Safe approaches:
 # lnew1 = [r**2 for r in range(6) if r%2 == 0]
 # print(lnew1)
 
-lnew2 = [[e,e**2] for e in range(8) if e % 2 != 0]
-print(lnew2) # [odd number, square of odd number]
+# lnew2 = [[e,e**2] for e in range(8) if e % 2 != 0]
+# print(lnew2) # [odd number, square of odd number]
+
+# # TRY IT yourslef:
+# Lis = [len(x) for x in ['xy','abcd',34,'2.0'] if type(x) == str]
+# print(Lis)
