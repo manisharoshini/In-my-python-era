@@ -53,3 +53,31 @@
 # # -- will not work --
 # # print(bisection_search(epsilon=0.01,123)) # -- syntax error
 # # print(bisection_search(0.001,123)) # -- will give the wrong answer
+
+# ========================================================================================================
+# # FUNCTIONS RETURNING FUNCTIONS
+# def is_even(i):
+#     return i % 2 == 0
+
+# r = 2
+# pi = 22/7
+# my_func = is_even
+
+# a = my_func(3)
+# b = is_even(4)
+
+# print(a,b)
+# ----------------------------------------------------------
+
+# Functions can return functions
+def make_prod(a):
+    def g(b):
+        return a*b
+    return g 
+
+val = make_prod(2)(3) # -- chaining functions together 
+print(val)
+
+doubler = make_prod(2)
+val = doubler(3)
+print(val)
