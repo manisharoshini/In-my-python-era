@@ -72,9 +72,11 @@
 # print(sum_digits("123abcdef"))  
 
 # # -- Try it yourself --
-# # 2 list Lnom and Ldeno of equal lengths -- returns new list whose elements are pairwise 
-# # division of an Lnum by an element in Ldeom -- 
-# # -- Raise Value error if Ldeno contains zero
+"""
+2 list Lnom and Ldeno of equal lengths -- returns new list whose elements are pairwise 
+division of an Lnum by an element in Ldeom -- 
+-- Raise Value error if Ldeno contains zero
+"""
 
 # def pairwise_div(Lnum,Ldeno):
 #     L = []
@@ -97,4 +99,24 @@
 # print(pairwise_div(L1,L2))
 
 # ============================================================================================
-# -- Assertions -- 
+# -- Assertions -- (Defensive Programming Tool)
+
+"""
+A contract between the one who uses the function and the one who creates the function
+assert <statement that should be True>, "message if not True" 
+
+"""
+# -- Example: --
+def sum_digits(s):
+    assert len(s) != 0, "s is empty"
+    total = 0
+    for char in s:
+        try:
+            val = int(char)
+            total += val
+        except:
+            raise ValueError ("String contained a Charecter.. ")
+    return total
+
+print(sum_digits("1234abcd")) # ValueError: String contained a Charecter.. 
+# print(sum_digits("")) # AssertionError: s is empty
