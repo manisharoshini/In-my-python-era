@@ -55,7 +55,7 @@ https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN
 - [x] Data Structures (Lists, Tuples)  
 - [ ] Dictionaries  
 - [ ] Recursion  
-- [ ] Testing & Debugging  
+- [x] Testing & Debugging  
 - [ ] Object-Oriented Programming  
 - [ ] Algorithmic Complexity  
 - [ ] Searching & Sorting  
