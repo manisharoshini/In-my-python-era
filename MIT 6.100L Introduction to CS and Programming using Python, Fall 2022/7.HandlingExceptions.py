@@ -106,17 +106,95 @@ A contract between the one who uses the function and the one who creates the fun
 assert <statement that should be True>, "message if not True" 
 
 """
-# -- Example: --
-def sum_digits(s):
-    assert len(s) != 0, "s is empty"
-    total = 0
-    for char in s:
-        try:
-            val = int(char)
-            total += val
-        except:
-            raise ValueError ("String contained a Charecter.. ")
-    return total
+# # -- Example: --
+# def sum_digits(s):
+#     assert len(s) != 0, "s is empty"
+#     total = 0
+#     for char in s:
+#         try:
+#             val = int(char)
+#             total += val
+#         except:
+#             raise ValueError ("String contained a Charecter.. ")
+#     return total
 
-print(sum_digits("1234abcd")) # ValueError: String contained a Charecter.. 
-# print(sum_digits("")) # AssertionError: s is empty
+# print(sum_digits("1234abcd")) # ValueError: String contained a Charecter.. 
+# # print(sum_digits("")) # AssertionError: s is empty
+
+# # -- Try it Yourself --
+
+# def pairwise(Lnom, Ldeno):
+#     assert len(Lnom) == len(Ldeno),'Differnt Lengths'
+#     assert len(Lnom) != 0 and len(Ldeno) != 0 , 'There should be no empty List'
+#     L = []
+#     try:
+#         for e in range(len(Lnom)):
+#             L.append(Lnom[e]/Ldeno[e])
+#     except:
+#         raise ValueError ("There's a string in the element")
+#     return L
+
+# # -- Uncomment one by one to get the correct answer or else the program will halt --
+# # L1 = [1,2,3,4,6]
+# # L2 = [1,5,6,7]
+# # print(pairwise(L1,L2)) # AssertionError: Differnt Lengths
+
+# # L1 = []
+# # L2 = []
+# # print(pairwise(L1,L2)) # AssertionError: There should be no empty List
+
+# # L1 = [1,2,'a']
+# # L2 = [0,5,4]
+# # print(pairwise(L1,L2)) # ValueError: There's a string in the element
+
+# # L1 = [1,2,3]
+# # L2 = [4,5,6]
+# # print(pairwise(L1,L2)) # [0.25, 0.4, 0.5]
+
+# ---------------------------------------------------------------------------------------------------
+# -- Another Example --
+def get_stats(class_list):
+    new_stats =[]
+    for stu in class_list:
+        new_stats.append([stu[0],stu[1],avg(stu[1])]) # here the avg is another function 
+    return new_stats
+
+def avg(grades):
+    try:
+        return sum(grades)/len(grades)
+    except ZeroDivisionError: # if the code enters Except block there's no return statement so it will return None. 
+        print("Warning No Grade Data")
+        return 0.0 # if we want answer in the form of number we can return 0.0 
+
+print(get_stats([[['peter','parker'],[80.0,70.0,56.0]], 
+                 [['Bruce','Wayne'],[75.0,100.0,78.0]],
+                 [['Juliana','Paulius'],[100.0,90.0,95.0]],
+                 [['Blacky'],[]]
+                 ]))
+"""
+This is the output of above Code 
+
+Warning No Grade Data
+[[['peter', 'parker'], [80.0, 70.0, 56.0], 68.66666666666667], 
+[['Bruce', 'Wayne'], [75.0, 100.0, 78.0], 84.33333333333333], 
+[['Juliana', 'Paulius'], [100.0, 90.0, 95.0], 95.0], [['Blacky'], [], None]]
+"""
+
+# -- Same Example - Another Method 
+
+def get_stats(class_list):
+    new_stats =[]
+    for stu in class_list:
+        new_stats.append([stu[0],stu[1],avg(stu[1])]) # here the avg is another function 
+    return new_stats
+
+def avg(grades):
+    assert len(grades) != 0, "no Grades data"
+
+print(get_stats([[['peter','parker'],[80.0,70.0,56.0]], 
+                 [['Bruce','Wayne'],[75.0,100.0,78.0]],
+                 [['Juliana','Paulius'],[100.0,90.0,95.0]],
+                 [['Blacky'],[]]
+                 ]))
+
+# ---------------------------------------------------------------------------------------------------
