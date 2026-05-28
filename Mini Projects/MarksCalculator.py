@@ -1,18 +1,79 @@
-num_of_sub = int(input("Enter Number of Subjects: "))
-total = 0
-percentage = 0
+# # ---------------------------------------------------------------------------------------------------------
+# def calculate_marks():
+#     num_of_sub = int(input("Enter Number of Subjects: "))
+#     total_obtained_marks = 0
+#     total_maximum_marks = 0
+#     percentage = 0
+
+#     for i in range(num_of_sub):
+#         maximum_total = int(input("Enter out off Marks Maximum total marks: "))
+#         obtained_marks = float(input("Enter the Marks of Each Subject: "))
+#         total_maximum_marks += maximum_total
+#         total_obtained_marks += obtained_marks
+
+#     percentage = (total_obtained_marks/total_maximum_marks) * 100 # if we put this in a loop the percentage will recalculate for every iteration and takes unnecessary space in memory
+#     return percentage, total_maximum_marks, total_obtained_marks
+
+# percentage, total_maximum_marks, total_obtained_marks = calculate_marks() # unpacking returned values
+# # the above code means take returned tuple and store each value separately
+# print(f'you got {total_obtained_marks}/{total_maximum_marks} and Your Percentage is {percentage:.2f}')
+
+# # note : add try and except at the end !!!
+
+
+# def calculate_grade(percentage):
+#     grade = 0
+#     if percentage > 91 and percentage < 100:
+#         grade = "A+"
+#     elif percentage > 81 and percentage < 90:
+#         grade = "A"
+#     elif percentage > 65 and percentage < 80:
+#         grade = "B"
+#     elif percentage > 51 and percentage < 64:
+#         grade = "C"
+#     elif percentage > 40 and percentage < 50:
+#         grade = "D"
+#     else:
+#         print("Bitch do better next time !!!!!")
+
+#     return grade
+# print(calculate_grade())
+
+# # def calculate_cgpa():
+# #     return
+
+# # def calculate_cgpa_grade():
+# #     return
+
+# -------------------------------------------------------------------------------------------------
+num_of_sub = int(input("Enter the number of subjects: "))
+total_maximum_marks = 0
+total_obtained_marks = 0
 
 for i in range(num_of_sub):
-    marks = float(input("Enter the Marks of Each Subject: "))
-    total += marks
+    maximum_marks = int(input("Enter Maximum Marks of Each subject: "))
+    obtained_marks = int(input("Enter Obtained Marks of Each subject: "))
+    total_maximum_marks += maximum_marks
+    total_obtained_marks += obtained_marks
 
-percentage = total/num_of_sub # if we put this in a loop the percentage will recalculate for every iteration and takes unnecessary space in memory
-print(total, percentage)
+def calcPercentAndGrade(total_maximum_marks,total_obtained_marks):
+    percentage = (total_obtained_marks/total_maximum_marks) * 100 # if we put this in a loop the percentage will recalculate for every iteration and takes unnecessary space in memory
+    grade = 0
+    if percentage >= 91 and percentage <= 100:
+        grade = "A+"
+    elif percentage >= 80:
+        grade = "A"
+    elif percentage >= 65:
+        grade = "B"
+    elif percentage >= 51:
+        grade = "C"
+    elif percentage >= 40:
+        grade = "D"
+    else:
+        grade = "Fail"
+    print(f"Grade: {grade}")
+    return percentage,grade
 
-
-# -----------------------------------------------------------
-def calculate_marks():
-    return 
-
-def calculate_cgpa():
-    return
+percentage,grade = calcPercentAndGrade(total_maximum_marks, total_obtained_marks) # unpacking returned values
+# # the above code means take returned tuple and store each value separately
+print(f'you got {total_obtained_marks}/{total_maximum_marks} and Your Percentage is {percentage:.2f}')
