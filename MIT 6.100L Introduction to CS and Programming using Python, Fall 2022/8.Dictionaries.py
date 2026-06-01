@@ -8,19 +8,32 @@
 # grades = ['A+', 'A','A++']
 # print(get_grades('Mano',names,grades))
 
-# -- Another approach using List --
-def get_grades (who,what,data):
-    for stud in data:
-        if stud[0] == who:
-            for info in stud[1:]:
-                if info[0] == what:
-                    return who,info
+# # -- Another approach using List --
+# def get_grades (who,what,data):
+#     for stud in data:
+#         if stud[0] == who:
+#             for info in stud[1:]:
+#                 if info[0] == what:
+#                     return who,info
                 
-eric = ['eric',['ps',[8,4,5]],['mq',[6,7]]]
-Ana = ['Ana',['ps',[9,5,5]],['mq',[4,8]]]
-John = ['John',['ps',[7,6,8]],['mq',[9,8]]]
+# eric = ['eric',['ps',[8,4,5]],['mq',[6,7]]]
+# Ana = ['Ana',['ps',[9,5,5]],['mq',[4,8]]]
+# John = ['John',['ps',[7,6,8]],['mq',[9,8]]]
 
-grades = [eric, Ana, John]
+# grades = [eric, Ana, John]
 
-print(get_grades('eric','mq',grades))
-print(get_grades('Ana','ps',grades))
+# print(get_grades('eric','mq',grades))
+# print(get_grades('Ana','ps',grades))
+
+# ---------------------------------------------------------------------------------------------------------------
+# # DICTIONARY : mapping a key to a value (means here we are customizing the index with the name we want)
+# # {} --> Store Dictionaries
+# my_dict = {} # length of dictionary is Zero
+# d = {4:16} # Single element dictionary 
+# grades = {'Ana':'B', 'Matt':'A', 'Kayl':'A'}
+# # print(grades)
+
+# # -- how do we look up the value associated with the key ? --
+# print(grades['Matt']) # here grades['Matt'] -> replaced by the value A
+# # print(grades['Grace']) # will give KeyError
+# # ---------------------------------------------------------------------------------------------------------------
