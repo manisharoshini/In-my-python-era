@@ -219,18 +219,18 @@ print(verb * 5, end=' ')
 print("I can",verb, "better than you !!")
 
 #---------------------------------------------------------------------------------------------------
-# Newton's algorithm 
+# # Newton's algorithm 
 
-x = int(input("Enter to find the cube root: "))
-g = int(input("Enter Initial guess: "))
+# x = int(input("Enter to find the cube root: "))
+# g = int(input("Enter Initial guess: "))
 
-print("current estimated cube = ",g**3)
-next_g = g - ((g**3 - x)/(3*g**2))
-print("Next Guess = ", next_g)
+# print("current estimated cube = ",g**3)
+# next_g = g - ((g**3 - x)/(3*g**2))
+# print("Next Guess = ", next_g)
 
-# While Loop example infinite loop
-while True:
-    print("No !!")
+# # While Loop example infinite loop
+# while True:
+#     print("No !!")
 #---------------------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------------------
