@@ -12,3 +12,11 @@ class Solution:
 git add .
 git commit -m "first commit"
 git push -u origin main
+
+------------------------------------------------------------------------------------------
+🎵 Spotify Wrapped Clone
+Subject: Data Visualization
+What it does:
+— Upload a listening history file (or use sample data)
+— Generate a “wrapped”-style page with top songs, artists, and genres
+------------------------------------------------------------------------------------------

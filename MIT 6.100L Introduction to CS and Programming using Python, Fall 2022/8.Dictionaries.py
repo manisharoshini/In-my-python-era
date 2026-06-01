@@ -36,4 +36,14 @@
 # # -- how do we look up the value associated with the key ? --
 # print(grades['Matt']) # here grades['Matt'] -> replaced by the value A
 # # print(grades['Grace']) # will give KeyError
+
 # # ---------------------------------------------------------------------------------------------------------------
+# Try Yourself: grades in dict mapping student names str to grades str. Here Student is the list of Student names
+# this returns list containing grades for students in same order
+
+def find_grades(grades,students):
+     
+    return 
+
+d = {'Anabell':'B', 'Matt':'A', 'Katy':'C'}
+print(find_grades(d,['Matt','Katy'])) # returns ['C','A']
