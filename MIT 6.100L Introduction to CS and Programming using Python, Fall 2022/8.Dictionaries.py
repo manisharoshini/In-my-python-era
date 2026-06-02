@@ -53,17 +53,42 @@
 # print(find_grades(d,['Matt','Katy'])) # returns ['A','C']
 
 # # ---------------------------------------------------------------------------------------------------------------
-# -- OPERATIONS ON DICTIONARY --
-# -- Add an Entry -- 
+# # -- OPERATIONS ON DICTIONARY --
+# # -- Add an Entry -- 
 
-grades = {'Ana':'B', 'Matt':'A', 'Kayl':'A'}
-grades['Grace'] = 'A+'
-print(grades)
+# grades = {'Ana':'B', 'Matt':'A', 'Kayl':'A'}
+# grades['Grace'] = 'A+'
+# print(grades)
 
-# -- Change an Entry 
-grades['Grace'] = 'C'
-print(grades)
+# # -- Change an Entry 
+# grades['Grace'] = 'C'
+# print(grades)
 
-# -- Delete Entry --
-del(grades['Grace'])
-print(grades)
+# # -- Delete Entry --
+# del(grades['Grace'])
+# print(grades)
+
+# # -- to check f the keys in dictionary (for that we use in operator)
+# print('John' in grades) # gives boolean value as output.. this will only check keys and will not change it.
+# print('Ana' in grades)
+
+# # ---------------------------------------------------------------------------------------------------------------
+'''
+-- Try it Yourself --
+Ld is a list of dicts and k is an int.. returns True if k is a key in any dicts of Ld and False otherwise
+'''
+
+# def find_k_Ld(Ld,k):
+#     for elem in Ld: # here elem is key1,val1
+#         if k in elem:
+#             return True
+#     return False
+
+# d1 = {1:2, 3:4, 5:6}
+# d2 = {2:4, 4:6}
+# d3 = {1:1, 3:9, 4:16, 5:25}
+
+# print(find_k_Ld([d1,d2,d3],2))
+# print(find_k_Ld([d1,d2,d3],25))
+
+# # ---------------------------------------------------------------------------------------------------------------
