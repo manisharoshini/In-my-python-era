@@ -38,12 +38,32 @@
 # # print(grades['Grace']) # will give KeyError
 
 # # ---------------------------------------------------------------------------------------------------------------
-# Try Yourself: grades in dict mapping student names str to grades str. Here Student is the list of Student names
-# this returns list containing grades for students in same order
+# # Try Yourself: grades in dict mapping student names str to grades str. Here Student is the list of Student names
+# # this returns list containing grades for students in same order
 
-def find_grades(grades,students):
+# def find_grades(grades,students):
+#     Lnew = []
+#     for elem in students: # here elem is 'Anabell', 'Matt', 'Katy'
+#         grade = grades[elem]
+#         Lnew.append(grade)
      
-    return 
+#     return Lnew
 
-d = {'Anabell':'B', 'Matt':'A', 'Katy':'C'}
-print(find_grades(d,['Matt','Katy'])) # returns ['C','A']
+# d = {'Anabell':'B', 'Matt':'A', 'Katy':'C'}
+# print(find_grades(d,['Matt','Katy'])) # returns ['A','C']
+
+# # ---------------------------------------------------------------------------------------------------------------
+# -- OPERATIONS ON DICTIONARY --
+# -- Add an Entry -- 
+
+grades = {'Ana':'B', 'Matt':'A', 'Kayl':'A'}
+grades['Grace'] = 'A+'
+print(grades)
+
+# -- Change an Entry 
+grades['Grace'] = 'C'
+print(grades)
+
+# -- Delete Entry --
+del(grades['Grace'])
+print(grades)
