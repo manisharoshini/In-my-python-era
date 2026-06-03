@@ -92,3 +92,57 @@ Ld is a list of dicts and k is an int.. returns True if k is a key in any dicts 
 # print(find_k_Ld([d1,d2,d3],25))
 
 # # ---------------------------------------------------------------------------------------------------------------
+# # More Operations:
+# grades = {'Ana':'B', 'Matt':'A', 'Kayl':'A'}
+
+# # -- To iterate over KEYS
+# print(grades.keys()) # will return New Data Type named "dict_keys" output: dict_keys(['Ana', 'Matt', 'Kayl'])
+# print(list(grades.keys())) # will return keys in the list format
+
+# # -- TO iterate over Vlues
+# print(grades.values()) # will return New Data Type named "dict_values" Output: dict_values(['B', 'A', 'A'])
+# print(list(grades.values())) # will return values in the list format
+# # There's no order like list.. the only order it follows the way we are entering the data
+
+# # -- TO iterate over both Keys and Values
+# print(grades.items())
+# print(list(grades.items()))
+
+# # -- looping 
+# for key,value in grades.items():
+#     print(f"key is {key} and Value is {value}") # key is Ana and Value is B key is Matt and Value is A key is Kayl and Value is A
+
+# # ---------------------------------------------------------------------------------------------------------------
+
+# -- TRY IT YOURSELF --
+# key == values 
+
+# My logic
+# def count_match(d):
+#     counter = 0
+#     for k,v in d.items():
+#         if k == v:
+#             counter += 1
+#     return counter
+
+# d = {1:2, 3:4, 5:6}
+# print(count_match(d))
+
+# d = {1:d, 'a':'a', 5:5}
+# print(count_match(d))
+
+# # -- Other way: 
+# def count_match(d):
+#     counter = 0
+#     for x in d.keys():
+#         if d[x] == x:
+#             counter += 1 
+#     return counter
+
+# d = {1:2, 3:4, 5:6}
+# print(count_match(d))
+
+# d = {1:d, 'a':'a', 5:5}
+# print(count_match(d))
+
+# # ---------------------------------------------------------------------------------------------------------------
