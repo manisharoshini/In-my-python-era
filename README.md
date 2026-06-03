@@ -53,7 +53,7 @@ https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN
 - [x] Bisection Search  
 - [x] Functions & Abstraction  
 - [x] Data Structures (Lists, Tuples)  
-- [ ] Dictionaries  
+- [x] Dictionaries  
 - [ ] Recursion  
 - [x] Testing & Debugging  
 - [ ] Object-Oriented Programming  
