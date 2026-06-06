@@ -169,13 +169,21 @@ Expected Output: Middle Three: [30, 40, 50]
 
 """
 
+# List = [10, 20]
+# try:
+#     middle = len(List) // 2
+#     print(List[middle - 1],List[middle],List[middle +1])
+# except:
+#     print("Length is less than 3")
 
 
 """
 Exercise 12. Swap Two Elements at Given Indices
 Practice Problem: Write a script to swap the positions of two elements in a list based on their indices.
 
-Exercise Purpose: Swapping is the heart of every sorting algorithm like Bubble Sort or Quick Sort. While other languages require a temporary variable to hold a value during the swap, Python offers an elegant, one-line tuple unpacking method that is faster to write and less error-prone.
+Exercise Purpose: Swapping is the heart of every sorting algorithm like Bubble Sort or Quick Sort. 
+While other languages require a temporary variable to hold a value during the swap, 
+Python offers an elegant, one-line tuple unpacking method that is faster to write and less error-prone.
 
 Given Input:
 List: [23, 65, 19, 90]
@@ -183,14 +191,19 @@ Indices to Swap: 0 and 2
 
 """
 
-
-
+# List = [23, 65, 19, 90]
+# temp = List[0]
+# List[0]=List[2]
+# List[2]=temp
+# print(List)
 
 """
 Exercise 13. Access Nested Lists (Simple Indexing)
 Practice Problem: Given a “list of lists,” access a specific item hidden inside the inner list.
 
-Exercise Purpose: This exercise teaches you to navigate Multi-dimensional Data. Think of nested lists like a spreadsheet (Rows and Columns) or a theater seating chart. To find a specific seat, you need the row and seat numbers.
+Exercise Purpose: This exercise teaches you to navigate Multi-dimensional Data. 
+Think of nested lists like a spreadsheet (Rows and Columns) or a theater seating chart. 
+To find a specific seat, you need the row and seat numbers.
 
 Given Input:
 
@@ -199,14 +212,16 @@ Goal: Access the number 5.
 Expected Output: Accessed Value: 5
 
 """
-
+# Nested_List = [[1, 2], [3, 4, 5], [6, 7]]
+# print(f"The list: {Nested_List[1][2]}")
 
 
 """
 Exercise 14. Check if List Contains a Specific Item
 Practice Problem: Write a check to see if a certain value exists within a list and print a message based on the result.
 
-Exercise Purpose: This is a Membership Test. It’s the logic used for “Is this username taken?” or “Is this item in the shopping cart?” Python’s in operator makes this incredibly readable, almost like plain English.
+Exercise Purpose: This is a Membership Test. It's the logic used for “Is this username taken?” 
+or “Is this item in the shopping cart?” Python's in operator makes this incredibly readable, almost like plain English.
 
 Given Input:
 Inventory: ["Laptop", "Mouse", "Monitor", "Keyboard"]
@@ -214,36 +229,59 @@ Target: "Tablet"
 
 """
 
+# Inventory = ["Laptop", "Mouse", "Monitor", "Keyboard"]
+# Target = "Tablet"
+# if Target in Inventory:
+#     print("Yes")
+# else:
+#     print("no")
+
 
 """
 Exercise 15. Find the Longest String in a List
 Practice Problem: In a list of strings, identify which string has the most characters.
 
-Exercise Purpose: This combines Iteration with Comparison. It teaches you how to evaluate an attribute of an object (its length) rather than just its raw value. This is used in text processing, UI layout, and data cleaning.
+Exercise Purpose: This combines Iteration with Comparison.
+It teaches you how to evaluate an attribute of an object (its length) rather than just its raw value. 
+This is used in text processing, UI layout, and data cleaning.
 
-Given Input: Words: ["PHP", "Exercises", "Backend", "Python"]
+Given Input:
+Words: ["PHP", "Exercises", "Backend", "Python"]
 Expected Output: Longest word: Exercises
 
 """
+# Words = ["PHP", "Exercises", "Backend", "Python"]
+# longest = max(Words,key=len) # this will not compare words it will compare length of the each element 
+# print(f"THe longest ones are: {longest}")
+
 
 
 """
 Exercise 16. Turn Every Item of a List into its Square (List Comprehension)
 Practice Problem: Given a list of numbers, create a new list where each number is replaced by its square (n2) using a single line of code.
 
-Exercise Purpose: This is your introduction to List Comprehensions. In Python, writing a full for loop to build a new list is often considered un-Pythonic. List comprehensions execute faster and are cleaner to read, providing a concise way to map a function across a collection.
+Exercise Purpose: This is your introduction to List Comprehensions. 
+In Python, writing a full for loop to build a new list is often considered un-Pythonic. 
+List comprehensions execute faster and are cleaner to read, providing a concise way to map a function across a collection.
 
 Given Input: List: [1, 2, 3, 4, 5]
 Expected Output: Squared List: [1, 4, 9, 16, 25]
 
 """
-
+# List = [1, 2, 3, 4, 5]
+# List1 = []
+# for i in List:
+#     i = i*i
+#     List1.append(i)
+# print(List1)
 
 """
 Exercise 17. Count Occurrences of an Item
 Practice Problem: Find out how many times a specific value appears in a list.
 
-Exercise Purpose: This is a basic form of Frequency Analysis. It’s used in everything from counting word occurrences in a document to verifying how many times a specific error code appears in a server log.
+Exercise Purpose: This is a basic form of Frequency Analysis. 
+Its used in everything from counting word occurrences in a document to verifying 
+how many times a specific error code appears in a server log.
 
 Given Input:
 
@@ -252,14 +290,23 @@ Target: 10
 Expected Output: The number 10 appears 3 times.
 
 """
-
-
+# List = [10, 20, 30, 10, 40, 10, 50]
+# Target = 10
+# count = 0
+# for i in List:
+#     if i == Target:
+#         count += 1
+# print(f"The Number {Target} appears {count} times")
+        
 
 """
 Exercise 18. Remove All Occurrences of a Specific Item
 Practice Problem: Delete every instance of a specific value from a list.
 
-Exercise Purpose: This is a Filtering Operation. A common mistake is using .remove(), which deletes only the first occurrence. To remove all instances, you need to filter the list. This is essential for data scrubbing when you need to purge “bad data” or “flagged entries” entirely.
+Exercise Purpose: This is a Filtering Operation. 
+A common mistake is using .remove(), which deletes only the first occurrence. 
+To remove all instances, you need to filter the list. 
+This is essential for data scrubbing when you need to purge “bad data” or “flagged entries” entirely.
 
 Given Input:
 List: [5, 20, 15, 20, 25, 50, 20]
@@ -267,6 +314,14 @@ Item to remove: 20
 Expected Output: Cleaned List: [5, 15, 25, 50]
 
 """
+
+# List = [5, 20, 15, 20, 25, 50, 20]
+# Item_to_remove = 20
+# Cleaned_List = []
+# for i in List:
+#     if i != Item_to_remove:
+#         Cleaned_List.append(i)
+# print(f"Cleaned List = {Cleaned_List}")
 
 
 """
@@ -280,6 +335,20 @@ Expected Output: Cleaned Names: ['Mike', 'Emma', 'Kelly', 'Brad']
 
 """
 
+# # -- Method 1:
+# List = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+# Cleaned_names = []
+# for i in List:
+#     if len(i) != 0:
+#         Cleaned_names.append(i)
+# print(f"CLeaned List = {Cleaned_names}")
+
+# # -- Method 2:
+# List = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+# for i in List:
+#     if len(i) == 0:
+#         List.remove(i)
+# print(f"Cleaned List = {List}")
 
 
 """
@@ -294,6 +363,19 @@ Given Input: List: [10, 20, 10, 30, 40, 40, 20, 50]
 Expected Output: Unique List: [10, 20, 30, 40, 50]
 
 """
+
+# # -- Method 1
+# List = [10, 20, 10, 30, 40, 40, 20, 50]
+# unique_list = []
+# for i in List:
+#     if i not in unique_list:
+#         unique_list.append(i)
+# print(f"Unique List = {unique_list}")
+
+# # -- Method 2: here order of set is not preserved
+# List = [10, 20, 10, 30, 40, 40, 20, 50]
+# unique = set(List)
+# print(f"The Unique List = {unique}")
 
 
 """
@@ -310,7 +392,12 @@ Expected Output: Even Numbers: [2, 4, 6, 8, 10]
 
 """
 
-
+# List = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# even_list = []
+# for i in List:
+#     if i % 2 == 0:
+#         even_list.append(i)
+# print(f"Even Numbers in the list = {even_list}")
 
 
 """
@@ -327,6 +414,16 @@ List 2: ["thon", " ", "ome"]
 Expected Output: Merged: ['Python', 'is ', 'awesome']
 
 """
+
+# List1 = ["Py", "is", "awes"]
+# List2 = ["thon", " ", "ome"]
+# concatinated_list = []
+
+# for i in range(len(List1)):
+#     concatinated_list.append(List1[i] + List2[i])
+# print(f"The concatinated List = {concatinated_list}")
+
+
 
 
 """
@@ -348,7 +445,13 @@ Expected Output:
 30 300
 
 """
+# List1 = [10, 20, 30]
+# List2 = [100, 200, 300]
+# for i in range(len(List1)):
+#     print(List1[i],List2[i])
 
+# note: if we want to iterate through the elements of the list -- we will use for i in List 
+# if we want to iterante through index for i in range(len(list)) is used 
 
 """
 Exercise 24. Add New Item After a Specified Item
@@ -366,7 +469,13 @@ New Item: 35
 Expected Output: Updated List: [10, 20, 30, 35, 40, 50]
 
 """
-
+List = [10, 20, 30, 40, 50]
+element = 30
+NewItem = 35
+for i in range(len(List)):
+    if List[i] == element:
+        List.insert(i+1,NewItem) # synatx of insert(position,value)
+print(f"The Updated List = {List}")
 
 """
 Exercise 25. Replace List’s Item with New Value if Found
@@ -740,5 +849,7 @@ Given Input: List: [1, 2, 3]
 Expected Output:
 Subsets: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
 
-
 """
+List = [1, 2, 3]
+subsets = []
+
