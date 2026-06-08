@@ -469,13 +469,13 @@ New Item: 35
 Expected Output: Updated List: [10, 20, 30, 35, 40, 50]
 
 """
-List = [10, 20, 30, 40, 50]
-element = 30
-NewItem = 35
-for i in range(len(List)):
-    if List[i] == element:
-        List.insert(i+1,NewItem) # synatx of insert(position,value)
-print(f"The Updated List = {List}")
+# List = [10, 20, 30, 40, 50]
+# element = 30
+# NewItem = 35
+# for i in range(len(List)):
+#     if List[i] == element:
+#         List.insert(i+1,NewItem) # synatx of insert(position,value)
+# print(f"The Updated List = {List}")
 
 """
 Exercise 25. Replace List’s Item with New Value if Found
@@ -492,10 +492,14 @@ Replace with: 200
 Expected Output: Modified List: [5, 10, 15, 200, 25]
 
 """
+# List = [5, 10, 15, 20, 25]
+# Find = 20
+# Replace = 200
 
-
-
-
+# for i in range(len(List)):
+#     if List[i] == Find:
+#         List[i] = Replace
+# print(f"Updated List = {List}")
 
 """
 Exercise 26. Find the Second Largest Number in a List
@@ -513,7 +517,28 @@ Expected Output: Second Largest: 34
 
 """
 
+# List = [12, 35, 1, 10, 34, 1, 35]
 
+# for i in List:
+#     largest = max(List)
+#     if i == largest:
+#         List.remove(largest)
+# # print(List)
+# SecondLargest = max(List)
+# print(f"Second Largest = {SecondLargest}")
+
+
+# List = [12, 35, 1, 10, 34, 1, 35]
+# iter = sorted(List)
+# large = len(iter)
+# largest_element = iter[large-1]
+# print(f" The largest Element in the list is {largest_element}")
+# if iter[large - 2] == iter[large - 1]:
+#     second_large = iter[large - 3]
+# else:
+#     second_large = iter[large - 2]
+
+# print(f"Second Large  is {second_large}")
 
 """
 Exercise 27. Find the Most Frequent Element
@@ -528,6 +553,15 @@ Given Input: List: [1, 3, 3, 2, 1, 1, 4, 3, 3]
 Expected Output: Mode: 3
 
 """
+# List = [1, 3, 3, 2, 1, 1, 4, 3, 3]
+# Frequency = {}
+# for i in List:
+#     if i in Frequency:
+#         Frequency[i] +=1
+#     else:
+#         Frequency[i] = 1
+# print(Frequency)
+# print(f"The Mode value is {max(Frequency,key = Frequency.get)}")
 
 
 
@@ -547,6 +581,14 @@ n: 3
 Expected Output: Result: ['a', 'd', 'g']
 
 """
+
+
+
+
+
+
+
+
 
 
 """
