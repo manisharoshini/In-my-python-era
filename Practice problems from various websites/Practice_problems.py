@@ -581,14 +581,9 @@ n: 3
 Expected Output: Result: ['a', 'd', 'g']
 
 """
-
-
-
-
-
-
-
-
+# List = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+# n = 3
+# print(List[::n])
 
 
 """
@@ -604,9 +599,11 @@ Given Input: List: [1, 2, 3, 2, 1]
 Expected Output: Is Palindrome: True
 
 """
+# def palindrome(list):
+#     return list == list[::-1] #list[::-1] -- means reverse
 
-
-
+# List = [1, 2, 3, 2, 1]
+# print(f"{palindrome(List)} ")
 
 
 """
@@ -626,8 +623,15 @@ List C: [3, 4, 15, 20, 30, 70, 80]
 Expected Output: Common Elements: [20]
 
 """
+# def common_elements(List1,List2,List3):
+#     common = set(List1) & set(List2) & set(List3)
+#     return list(common)
 
+# ListA = [1, 5, 10, 20]
+# ListB = [6, 7, 20, 80, 100]
+# ListC = [3, 4, 15, 20, 30, 70, 80]
 
+# print(f"The common elements in all 3 lists are {common_elements(ListA,ListB,ListC)}")
 
 """
 Exercise 31. Filter Strings by Length in a List
@@ -644,8 +648,12 @@ k: 5
 Expected Output: Filtered List: ['apple', 'banana']
 
 """
+# def filter_by_length(List,k):
+#     return [s for s in List if len(s)>=k]
 
 
+# List = ["apple", "pie", "banana", "kiwi", "pear"]
+# print(f"The elements that are greater than is {filter_by_length(List,5)}")
 
 
 """
@@ -661,8 +669,11 @@ Given Input: List: [10, 20, 30, 25, 40]
 Expected Output: Is Sorted: False
 
 """
+# def check_sort(List):
+#     return List == sorted(List)
 
-
+# List = [10, 20, 30, 25, 40]
+# print(check_sort(List))
 
 """
 Exercise 33. List to Dictionary Conversion
@@ -683,8 +694,13 @@ Dictionary: {'name': 'Alice', 'age': 25, 'city': 'New York'}
 
 """
 
+# def mydict(keys,values):
+#     return dict(zip(keys,values))# zip creates an iterator of Tuple and the tuple is converted to dictionary
 
+# Keys = ["name", "age", "city"]
+# Values = ["Alice", 25, "New York"]
 
+# print(f"The Student information is {mydict(Keys,Values)}")
 
 
 """
@@ -702,6 +718,13 @@ List B: [2, 4, 6]
 Expected Output: Difference (A - B): [1, 3, 5]
 
 """
+# ListA = [1, 2, 3, 4, 5]
+# ListB = [2, 4, 6]
+# List  = []
+# for i in ListA:
+#     if i not in ListB:
+#         List.append(i)
+# print(List)
 
 """
 Exercise 35. Remove Negative Numbers In-place
@@ -716,6 +739,12 @@ Given Input: List: [10, -5, 20, -1, 0, -8]
 Expected Output: Modified List: [10, 20, 0]
 
 """
+# List = [10, -5, 20, -1, 0, -8]
+# ModifiedList = []
+# for i in List:
+#     if i >= 0:
+#         ModifiedList.append(i)
+# print(ModifiedList)
 
 
 
@@ -735,6 +764,12 @@ To Append: "elderberry"
 Expected Output: Modified List: [['apple', 'banana', 'elderberry'], ['cherry', 'date', 'elderberry']]
 
 """
+# List = [['apple', 'banana'], ['cherry', 'date']]
+# app = "elderberry"
+# List[0].append(app)
+# List[1].append(app)
+# print(List)
+
 
 """
 Exercise 37. Concatenate Two Lists in a Specific Order
@@ -772,6 +807,9 @@ Given Input: 2D List: [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
 Expected Output: 1D List: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 """
+# List = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+# List1d = List[0] + List[1] + List[2]
+# print(List1d)
 
 
 """
@@ -788,7 +826,17 @@ Given Input: Deep List: [1, [2, [3, 4], 5], 6, [7, 8]]
 Expected Output: Flattened: [1, 2, 3, 4, 5, 6, 7, 8]
 """
 
+# def deeplist(List):
+#     result = []
+#     for i in List:
+#         if isinstance(i,list):
+#             result.extend(deeplist(i))
+#         else:
+#             result.append(i)
+#     return result
 
+# DList = [1, [2, [3, 4], 5], 6, [7, 8]]
+# print(deeplist(DList))
 
 
 """
@@ -804,6 +852,16 @@ Given Input: List: [10, 20, 30, 40]
 Expected Output: Cumulative Sum: [10, 30, 60, 100]
 
 """
+# def sumoflist(List):
+#     total = 0 # we use this for iteration or increasing purpose
+#     sums = [] # this is to store the value
+#     for i in List:
+#         total += i
+#         sums.append(total)
+#     return sums
+
+# List = [10, 20, 30, 40]
+# print(F"The cummulative sums of list {List} is {sumoflist(List)}")
 
 
 """
@@ -823,6 +881,17 @@ Expected Output: Rotated List: [3, 4, 5, 1, 2]
 
 """
 
+# def rotate_list(List,k):
+#     List1 = List[0:k]
+#     List2 = List[k:len(List)]
+#     return List2 + List1
+
+# List = [1, 2, 3, 4, 5]
+# k = 2
+# print(rotate_list(List,k))
+
+
+
 """
 Exercise 42. Split List into Chunks of Size N
 Practice Problem: Create a function that takes a list and an integer N, and breaks the list into smaller sublists, 
@@ -841,6 +910,18 @@ Chunks: [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
 
 """
 
+# def breakList(List,k):
+#     result = []
+#     # return [List[i : i + k] for i in range(0, len(List), k)]
+#     for i in range(0, len(List),k):
+#         result.append(List[i:i+k])
+#     return result
+
+# list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# print(breakList(list,3))
+# # First we divided it into small chunks and then appended it into the greater one 
+
+
 """
 Exercise 43. Move All Zeros to the End (Maintaining Order)
 Practice Problem: Given a list of numbers, push all zeros to the end of the list while maintaining 
@@ -854,8 +935,19 @@ Given Input: List: [0, 1, 0, 3, 12]
 Expected Output: Result: [1, 3, 12, 0, 0]
 
 """
+# def zerosInlist(List):
+#     result = []
+#     zeroList = []
+#     for i in List:
+#         if i == 0:
+#             zeroList.append(i)
+#         else:
+#             result.append(i)
+#     return sorted(result) + zeroList
 
 
+# List = [0, 1, 0, 3, 12]
+# print(zerosInlist(List))
 
 
 """
@@ -874,6 +966,9 @@ Expected Output: Primes: [2, 3, 5, 7, 11, 13, 17, 19]
 
 """
 
+# n = 20
+# for i in range(0,n+1):
+    
 
 
 
@@ -894,4 +989,5 @@ Subsets: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
 """
 List = [1, 2, 3]
 subsets = []
+
 
