@@ -52,14 +52,14 @@ Semantically: A programming technique where a function calls itself (with differ
 
 # print(power_recur(6,2))
 
-# --  Recurisve factorial:
-def rec_fac(n):
-    if n == 1:
-        return 1
-    else:
-        return n * rec_fac(n-1)
+# # --  Recurisve factorial:
+# def rec_fac(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n * rec_fac(n-1)
     
-print(rec_fac(6))
+# print(rec_fac(6))
 
 """
 Each function call has its own environment.. they dont interfere in other env and even though they have same name (diff parameters)
@@ -80,4 +80,32 @@ Eg: Experssions - when we create our own calculator(in code) we dont know how ma
 Here we hv to go through each paranthesis until we reach base operations
 
 """
+# ==========================================================================================================================
 
+# -----------------------------------------------------------
+# -- Lecture 16: Recursion on non numerics
+# -----------------------------------------------------------
+
+# -- fibonacci series -- 
+
+# def fib(x):
+#     if x == 1 or x == 2:
+#         return 1
+#     else:
+#         return fib(x-1) + fib(x-2) # it calls itself twice 
+    
+# print(fib(6))
+
+"""
+Since in this we are recalculating the value again and agin we use more efficinet way.
+We have to keep track of the data and numbers.. So we use dictionaries for that to store values
+"""
+
+def fib_efficient(n,d):
+    if n in d:
+        return d[n]
+    else:
+        
+    
+
+d = {1:1, 2:1}

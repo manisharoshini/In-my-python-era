@@ -987,7 +987,23 @@ Expected Output:
 Subsets: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
 
 """
+def get_power_set(lst): # -- not solved by me 
+    result = [[]]
+    for element in lst:
+        # For every existing subset, create a new one including the 'element'
+        new_subsets = [subset + [element] for subset in result]
+        result.extend(new_subsets)
+    return result
+        
 List = [1, 2, 3]
-subsets = []
+print(get_power_set(List))
 
+# Explanation to Solution:
 
+# Iterative Building:
+
+# Start with [[]].
+# Add 1: Current subsets [] + new subset [1] = [[], [1]].
+# Add 2: Current subsets [], [1] + new ones [2], [1, 2] = [[], [1], [2], [1, 2]].
+# This doubling effect continues for every element, resulting in exactly 2n subsets.
+# Order: This specific method generates subsets in a logical order, gradually increasing the complexity of the combinations.
