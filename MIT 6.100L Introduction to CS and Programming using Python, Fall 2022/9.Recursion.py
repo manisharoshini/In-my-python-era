@@ -101,11 +101,15 @@ Since in this we are recalculating the value again and agin we use more efficine
 We have to keep track of the data and numbers.. So we use dictionaries for that to store values
 """
 
-def fib_efficient(n,d):
+def fib_efficient(n,d): # memorized fibonacci series solution 
     if n in d:
         return d[n]
     else:
-        
-    
+        ans = fib_efficient(n-1,d) + fib_efficient(n-2,d)
+        d[n] = ans
+        # print(d[n]) # for my convenience
+    return ans
 
 d = {1:1, 2:1}
+print(fib_efficient(6,d)) 
+# here it will check for repeated calculations if it found it will use that and there's no need to solve again 
