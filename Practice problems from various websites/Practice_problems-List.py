@@ -1,7 +1,6 @@
+"""Website Link: https://pynative.com/python-list-exercise-with-solutions/"""
+
 """
-
-Website Link: https://pynative.com/python-list-exercise-with-solutions/
-
 Practice Problem: Write a script to perform the following three operations on given list
 
 Access the third element of a list
