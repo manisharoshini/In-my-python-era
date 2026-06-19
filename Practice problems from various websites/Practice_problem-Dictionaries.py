@@ -13,6 +13,13 @@ Expected Output: {"name": "Alice", "age": 21, "grade": "B", "city": "New York"} 
 
 """
 
+student = {"name": "Alice", "age": 20, "grade": "B"}
+
+print(student["name"])
+
+
+
+
 """
 Exercise 2: Dictionary Operations
 

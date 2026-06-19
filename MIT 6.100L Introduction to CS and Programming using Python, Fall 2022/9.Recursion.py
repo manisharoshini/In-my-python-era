@@ -80,13 +80,13 @@ Eg: Experssions - when we create our own calculator(in code) we dont know how ma
 Here we hv to go through each paranthesis until we reach base operations
 
 """
-# ==========================================================================================================================
+# # ==========================================================================================================================
 
-# -----------------------------------------------------------
-# -- Lecture 16: Recursion on non numerics
-# -----------------------------------------------------------
+# # -----------------------------------------------------------
+# # -- Lecture 16: Recursion on non numerics
+# # -----------------------------------------------------------
 
-# -- fibonacci series -- 
+# # -- fibonacci series -- 
 
 # def fib(x):
 #     if x == 1 or x == 2:
@@ -101,15 +101,42 @@ Since in this we are recalculating the value again and agin we use more efficine
 We have to keep track of the data and numbers.. So we use dictionaries for that to store values
 """
 
-def fib_efficient(n,d): # memorized fibonacci series solution 
-    if n in d:
-        return d[n]
-    else:
-        ans = fib_efficient(n-1,d) + fib_efficient(n-2,d)
-        d[n] = ans
-        # print(d[n]) # for my convenience
-    return ans
+# def fib_efficient(n,d): # memorized fibonacci series solution 
+#     if n in d:
+#         return d[n] 
+#     else:
+#         ans = fib_efficient(n-1,d) + fib_efficient(n-2,d)
+#         d[n] = ans
+#         print(d[n]) # for my convenience
+#     return ans
 
-d = {1:1, 2:1}
-print(fib_efficient(6,d)) 
-# here it will check for repeated calculations if it found it will use that and there's no need to solve again 
+# d = {1:1, 2:1}
+# print(fib_efficient(7,d))
+# print(fib_efficient(34,d)) # -- here in upper code it will make 11 million calls for functions
+# # but in efficent one there's only 65 calls made
+# # the 1st code stores nothing but it is slow.. BUt efficeint algo stores things uses memory and is fast
+
+# # here it will check for repeated calculations if it found it will use that and there's no need to solve again 
+# # mo need to calculate just check the dictionary dict 
+
+# # ---------------------------------------------------------------------------------------------------------------==
+# # -- Try It Yourslef: Returns all ways to make a score of x by adding 1,2 and/or 3 together. Order doesnt matter ..
+
+# def score_count(x):
+#     if x == 1:
+#         return 1
+#     elif x == 2:
+#         return 2
+#     elif x == 3:
+#         return 3
+#     else:
+#         return score_count(x-1) + score_count(x-2) + score_count(x-3)
+    
+# print(score_count(10)) # try using efiicinet method 
+
+# # ---------------------------------------------------------------------------------------------------------------
+# # SUM OF LIST NUMBERS
+
+# # Lists can have other list inside it other lists (nested list can be at any level deep)
+# # Iteration is possible only till certain ;evel and its hard
+# # Instead we can use recursive method - no matter how deep the nested list goes.. we can work using repeated steps
