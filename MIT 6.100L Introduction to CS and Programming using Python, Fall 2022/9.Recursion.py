@@ -210,3 +210,16 @@ We have to keep track of the data and numbers.. So we use dictionaries for that 
 # tes = [2,1,5,8]
 # print(improve_inlist(tes,1)) # --returns True 
 
+# # ---------------------------------------------------------------------------------------------------------------
+
+# # -- FLATTEN a LIST with only ONE LEVEL of LIST ELEMENTS 
+# Eg: [[1,2],[3,4],[9,8,7]] ----> [1,2,3,4,9,8,7]
+
+# def flatten(L):
+#     if len(L) == 1:
+#         return L[0] # -- [[2,3,4]]--> grab the 2,3,4 and flatten it 
+#     else: 
+#         return L[0] + flatten(L[1:]) # -- note L[start:end] slicing starts at 1 skips 0th index 
+
+# test = [[1,2],[3,4],[9,8,7]]
+# print(flatten(test))
