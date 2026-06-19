@@ -8,11 +8,11 @@ List Length: Print the total number of items
 Check if the list is empty
 
 """
-# numbers = [10, 20, 30, 40, 50]
-# print(f"Third Element: {numbers[3]}")
-# print(f"Length of the list: {len(numbers)}")
-# is_empty = len(numbers) ==0
-# print(f"IS the list is empty? {is_empty}")
+numbers = [10, 20, 30, 40, 50]
+print(f"Third Element: {numbers[3]}")
+print(f"Length of the list: {len(numbers)}")
+is_empty = len(numbers) ==0
+print(f"IS the list is empty? {is_empty}")
 
 """
 Exercise 2. Perform List Manipulation
@@ -26,17 +26,17 @@ Remove Element (by index): Remove the element at index 0 from the list print the
 Exercise Purpose: Python lists are mutable, meaning they can be changed after they are created. This exercise demonstrates the various ways to “reshape” your data dynamically during execution.
 """
 
-# Initial_list =[100, 50, 400, 500]
-# Initial_list[1] = 200
-# print(f"Updated List at 2nd place {Initial_list}")
-# Initial_list.append(600)
-# print(f"Appended List = {Initial_list}")
-# Initial_list.insert(2,300)  
-# print(f"Updated Insert: {Initial_list}")
-# Initial_list.remove(600)
-# print(f"Initial List: {Initial_list}")
-# Initial_list.pop(4)
-# print(f"Initial List: {Initial_list}")
+Initial_list =[100, 50, 400, 500]
+Initial_list[1] = 200
+print(f"Updated List at 2nd place {Initial_list}")
+Initial_list.append(600)
+print(f"Appended List = {Initial_list}")
+Initial_list.insert(2,300)  
+print(f"Updated Insert: {Initial_list}")
+Initial_list.remove(600)
+print(f"Initial List: {Initial_list}")
+Initial_list.pop(4)
+print(f"Initial List: {Initial_list}")
 
 """
 Exercise 3. Sum and Average of All Numbers in a List
@@ -47,10 +47,10 @@ This exercise teaches you how to reduce a collection of multiple data points int
 
 """
 
-# Numbers = [10, 20, 30, 40, 50]
-# total = sum(Numbers)
-# avg = total / len(Numbers)
-# print(f"Sum of Numbers: {total} and Average of Numbers: {avg}")
+Numbers = [10, 20, 30, 40, 50]
+total = sum(Numbers)
+avg = total / len(Numbers)
+print(f"Sum of Numbers: {total} and Average of Numbers: {avg}")
 
 
 """
@@ -62,8 +62,8 @@ or detecting “outlier” data points in a dataset.
 
 """
 
-# Data = [45, 12, 89, 2, 67]
-# print(f"Maximumu {max(Data)} and Minimum {min(Data)}")
+Data = [45, 12, 89, 2, 67]
+print(f"Maximumu {max(Data)} and Minimum {min(Data)}")
 
 
 """
@@ -71,12 +71,12 @@ Excercise 5: Calculate the Product of All Elements
 Practice Problem: Multiply every number in a list together to find the total product.
 
 """
-# Factors = [2, 3, 5, 7]
-# product = 1
+Factors = [2, 3, 5, 7]
+product = 1
 
-# for i in Factors:
-#     product *= i
-# print(f"Products = {product}")
+for i in Factors:
+    product *= i
+print(f"Products = {product}")
 
 """
 Excercise 6: Count Even and Odd Numbers
@@ -88,15 +88,15 @@ In real-world apps, this is the foundation for things like alternating row color
 
 """
 
-# Numbers = [10, 21, 4, 45, 66, 93, 11]
-# even_count = 0
-# odd_count = 0
-# for i in Numbers:
-#     if i % 2 == 0:
-#         even_count += 1
-#     else:
-#         odd_count += 1
-# print(f"Even Count = {even_count} and Odd Count = {odd_count}")
+Numbers = [10, 21, 4, 45, 66, 93, 11]
+even_count = 0
+odd_count = 0
+for i in Numbers:
+    if i % 2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+print(f"Even Count = {even_count} and Odd Count = {odd_count}")
 
 """
 Exercise 7. Reverse a List
@@ -110,9 +110,9 @@ Given Input: List: [100, 200, 300, 400, 500]
 Expected Output: Reversed List: [500, 400, 300, 200, 100]
 
 """
-# List = [100, 200, 300, 400, 500]
-# reversed_list = List[::-1]
-# print(f"Reversed List = {reversed_list}")
+List = [100, 200, 300, 400, 500]
+reversed_list = List[::-1]
+print(f"Reversed List = {reversed_list}")
 
 """
 Exercise 8. Sort a List of Numbers
@@ -125,9 +125,9 @@ Given Input: Unsorted: [56, 12, 89, 3, 22]
 Expected Output: Sorted List: [3, 12, 22, 56, 89]
 
 """
-# Unsorted = [56, 12, 89, 3, 22]
-# Unsorted.sort()
-# print(f"Sorted list = {Unsorted}")
+Unsorted = [56, 12, 89, 3, 22]
+Unsorted.sort()
+print(f"Sorted list = {Unsorted}")
 
 """
 Exercise 9. Create a Copy of a List
@@ -135,9 +135,9 @@ Create a Copy of a List
 Practice Problem: Create a copy of an existing list so that modifying the copy does not change the original.
 
 """
-# Original = ["Apple", "Banana", "Cherry"]
-# Copy = Original.copy()
-# print(f"Original List: {Original} and Copy of the list {Copy}")
+Original = ["Apple", "Banana", "Cherry"]
+Copy = Original.copy()
+print(f"Original List: {Original} and Copy of the list {Copy}")
 
 """
 Exercise 10. Combine Two Lists
@@ -152,10 +152,10 @@ List B: ["Maths", "Biology"]
 Expected Output: Combined List: ['Physics', 'Chemistry', 'Maths', 'Biology']
 
 """
-# ListA = ["Physics", "Chemistry"]
-# ListB = ["Maths", "Biology"]
-# CombinedList = ListA + ListB
-# print(f"Concatinated List is {CombinedList}")
+ListA = ["Physics", "Chemistry"]
+ListB = ["Maths", "Biology"]
+CombinedList = ListA + ListB
+print(f"Concatinated List is {CombinedList}")
 
 """
 Exercise 11. List Slicing: Extract Middle Elements
@@ -168,12 +168,12 @@ Expected Output: Middle Three: [30, 40, 50]
 
 """
 
-# List = [10, 20]
-# try:
-#     middle = len(List) // 2
-#     print(List[middle - 1],List[middle],List[middle +1])
-# except:
-#     print("Length is less than 3")
+List = [10, 20]
+try:
+    middle = len(List) // 2
+    print(List[middle - 1],List[middle],List[middle +1])
+except:
+    print("Length is less than 3")
 
 
 """
@@ -190,11 +190,11 @@ Indices to Swap: 0 and 2
 
 """
 
-# List = [23, 65, 19, 90]
-# temp = List[0]
-# List[0]=List[2]
-# List[2]=temp
-# print(List)
+List = [23, 65, 19, 90]
+temp = List[0]
+List[0]=List[2]
+List[2]=temp
+print(List)
 
 """
 Exercise 13. Access Nested Lists (Simple Indexing)
@@ -211,8 +211,8 @@ Goal: Access the number 5.
 Expected Output: Accessed Value: 5
 
 """
-# Nested_List = [[1, 2], [3, 4, 5], [6, 7]]
-# print(f"The list: {Nested_List[1][2]}")
+Nested_List = [[1, 2], [3, 4, 5], [6, 7]]
+print(f"The list: {Nested_List[1][2]}")
 
 
 """
@@ -228,12 +228,12 @@ Target: "Tablet"
 
 """
 
-# Inventory = ["Laptop", "Mouse", "Monitor", "Keyboard"]
-# Target = "Tablet"
-# if Target in Inventory:
-#     print("Yes")
-# else:
-#     print("no")
+Inventory = ["Laptop", "Mouse", "Monitor", "Keyboard"]
+Target = "Tablet"
+if Target in Inventory:
+    print("Yes")
+else:
+    print("no")
 
 
 """
@@ -249,9 +249,9 @@ Words: ["PHP", "Exercises", "Backend", "Python"]
 Expected Output: Longest word: Exercises
 
 """
-# Words = ["PHP", "Exercises", "Backend", "Python"]
-# longest = max(Words,key=len) # this will not compare words it will compare length of the each element 
-# print(f"THe longest ones are: {longest}")
+Words = ["PHP", "Exercises", "Backend", "Python"]
+longest = max(Words,key=len) # this will not compare words it will compare length of the each element 
+print(f"THe longest ones are: {longest}")
 
 
 
@@ -267,12 +267,12 @@ Given Input: List: [1, 2, 3, 4, 5]
 Expected Output: Squared List: [1, 4, 9, 16, 25]
 
 """
-# List = [1, 2, 3, 4, 5]
-# List1 = []
-# for i in List:
-#     i = i*i
-#     List1.append(i)
-# print(List1)
+List = [1, 2, 3, 4, 5]
+List1 = []
+for i in List:
+    i = i*i
+    List1.append(i)
+print(List1)
 
 """
 Exercise 17. Count Occurrences of an Item
@@ -289,13 +289,13 @@ Target: 10
 Expected Output: The number 10 appears 3 times.
 
 """
-# List = [10, 20, 30, 10, 40, 10, 50]
-# Target = 10
-# count = 0
-# for i in List:
-#     if i == Target:
-#         count += 1
-# print(f"The Number {Target} appears {count} times")
+List = [10, 20, 30, 10, 40, 10, 50]
+Target = 10
+count = 0
+for i in List:
+    if i == Target:
+        count += 1
+print(f"The Number {Target} appears {count} times")
         
 
 """
@@ -314,13 +314,13 @@ Expected Output: Cleaned List: [5, 15, 25, 50]
 
 """
 
-# List = [5, 20, 15, 20, 25, 50, 20]
-# Item_to_remove = 20
-# Cleaned_List = []
-# for i in List:
-#     if i != Item_to_remove:
-#         Cleaned_List.append(i)
-# print(f"Cleaned List = {Cleaned_List}")
+List = [5, 20, 15, 20, 25, 50, 20]
+Item_to_remove = 20
+Cleaned_List = []
+for i in List:
+    if i != Item_to_remove:
+        Cleaned_List.append(i)
+print(f"Cleaned List = {Cleaned_List}")
 
 
 """
@@ -334,20 +334,20 @@ Expected Output: Cleaned Names: ['Mike', 'Emma', 'Kelly', 'Brad']
 
 """
 
-# # -- Method 1:
-# List = ["Mike", "", "Emma", "Kelly", "", "Brad"]
-# Cleaned_names = []
-# for i in List:
-#     if len(i) != 0:
-#         Cleaned_names.append(i)
-# print(f"CLeaned List = {Cleaned_names}")
+# -- Method 1:
+List = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+Cleaned_names = []
+for i in List:
+    if len(i) != 0:
+        Cleaned_names.append(i)
+print(f"CLeaned List = {Cleaned_names}")
 
-# # -- Method 2:
-# List = ["Mike", "", "Emma", "Kelly", "", "Brad"]
-# for i in List:
-#     if len(i) == 0:
-#         List.remove(i)
-# print(f"Cleaned List = {List}")
+# -- Method 2:
+List = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+for i in List:
+    if len(i) == 0:
+        List.remove(i)
+print(f"Cleaned List = {List}")
 
 
 """
@@ -363,18 +363,18 @@ Expected Output: Unique List: [10, 20, 30, 40, 50]
 
 """
 
-# # -- Method 1
-# List = [10, 20, 10, 30, 40, 40, 20, 50]
-# unique_list = []
-# for i in List:
-#     if i not in unique_list:
-#         unique_list.append(i)
-# print(f"Unique List = {unique_list}")
+# -- Method 1
+List = [10, 20, 10, 30, 40, 40, 20, 50]
+unique_list = []
+for i in List:
+    if i not in unique_list:
+        unique_list.append(i)
+print(f"Unique List = {unique_list}")
 
-# # -- Method 2: here order of set is not preserved
-# List = [10, 20, 10, 30, 40, 40, 20, 50]
-# unique = set(List)
-# print(f"The Unique List = {unique}")
+# -- Method 2: here order of set is not preserved
+List = [10, 20, 10, 30, 40, 40, 20, 50]
+unique = set(List)
+print(f"The Unique List = {unique}")
 
 
 """
@@ -391,12 +391,12 @@ Expected Output: Even Numbers: [2, 4, 6, 8, 10]
 
 """
 
-# List = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# even_list = []
-# for i in List:
-#     if i % 2 == 0:
-#         even_list.append(i)
-# print(f"Even Numbers in the list = {even_list}")
+List = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_list = []
+for i in List:
+    if i % 2 == 0:
+        even_list.append(i)
+print(f"Even Numbers in the list = {even_list}")
 
 
 """
@@ -414,15 +414,13 @@ Expected Output: Merged: ['Python', 'is ', 'awesome']
 
 """
 
-# List1 = ["Py", "is", "awes"]
-# List2 = ["thon", " ", "ome"]
-# concatinated_list = []
+List1 = ["Py", "is", "awes"]
+List2 = ["thon", " ", "ome"]
+concatinated_list = []
 
-# for i in range(len(List1)):
-#     concatinated_list.append(List1[i] + List2[i])
-# print(f"The concatinated List = {concatinated_list}")
-
-
+for i in range(len(List1)):
+    concatinated_list.append(List1[i] + List2[i])
+print(f"The concatinated List = {concatinated_list}")
 
 
 """
@@ -444,10 +442,10 @@ Expected Output:
 30 300
 
 """
-# List1 = [10, 20, 30]
-# List2 = [100, 200, 300]
-# for i in range(len(List1)):
-#     print(List1[i],List2[i])
+List1 = [10, 20, 30]
+List2 = [100, 200, 300]
+for i in range(len(List1)):
+    print(List1[i],List2[i])
 
 # note: if we want to iterate through the elements of the list -- we will use for i in List 
 # if we want to iterante through index for i in range(len(list)) is used 
@@ -468,13 +466,13 @@ New Item: 35
 Expected Output: Updated List: [10, 20, 30, 35, 40, 50]
 
 """
-# List = [10, 20, 30, 40, 50]
-# element = 30
-# NewItem = 35
-# for i in range(len(List)):
-#     if List[i] == element:
-#         List.insert(i+1,NewItem) # synatx of insert(position,value)
-# print(f"The Updated List = {List}")
+List = [10, 20, 30, 40, 50]
+element = 30
+NewItem = 35
+for i in range(len(List)):
+    if List[i] == element:
+        List.insert(i+1,NewItem) # synatx of insert(position,value)
+print(f"The Updated List = {List}")
 
 """
 Exercise 25. Replace List’s Item with New Value if Found
@@ -491,14 +489,14 @@ Replace with: 200
 Expected Output: Modified List: [5, 10, 15, 200, 25]
 
 """
-# List = [5, 10, 15, 20, 25]
-# Find = 20
-# Replace = 200
+List = [5, 10, 15, 20, 25]
+Find = 20
+Replace = 200
 
-# for i in range(len(List)):
-#     if List[i] == Find:
-#         List[i] = Replace
-# print(f"Updated List = {List}")
+for i in range(len(List)):
+    if List[i] == Find:
+        List[i] = Replace
+print(f"Updated List = {List}")
 
 """
 Exercise 26. Find the Second Largest Number in a List
@@ -516,28 +514,28 @@ Expected Output: Second Largest: 34
 
 """
 
-# List = [12, 35, 1, 10, 34, 1, 35]
+List = [12, 35, 1, 10, 34, 1, 35]
 
-# for i in List:
-#     largest = max(List)
-#     if i == largest:
-#         List.remove(largest)
-# # print(List)
-# SecondLargest = max(List)
-# print(f"Second Largest = {SecondLargest}")
+for i in List:
+    largest = max(List)
+    if i == largest:
+        List.remove(largest)
+# print(List)
+SecondLargest = max(List)
+print(f"Second Largest = {SecondLargest}")
 
 
-# List = [12, 35, 1, 10, 34, 1, 35]
-# iter = sorted(List)
-# large = len(iter)
-# largest_element = iter[large-1]
-# print(f" The largest Element in the list is {largest_element}")
-# if iter[large - 2] == iter[large - 1]:
-#     second_large = iter[large - 3]
-# else:
-#     second_large = iter[large - 2]
+List = [12, 35, 1, 10, 34, 1, 35]
+iter = sorted(List)
+large = len(iter)
+largest_element = iter[large-1]
+print(f" The largest Element in the list is {largest_element}")
+if iter[large - 2] == iter[large - 1]:
+    second_large = iter[large - 3]
+else:
+    second_large = iter[large - 2]
 
-# print(f"Second Large  is {second_large}")
+print(f"Second Large  is {second_large}")
 
 """
 Exercise 27. Find the Most Frequent Element
@@ -552,15 +550,15 @@ Given Input: List: [1, 3, 3, 2, 1, 1, 4, 3, 3]
 Expected Output: Mode: 3
 
 """
-# List = [1, 3, 3, 2, 1, 1, 4, 3, 3]
-# Frequency = {}
-# for i in List:
-#     if i in Frequency:
-#         Frequency[i] +=1
-#     else:
-#         Frequency[i] = 1
-# print(Frequency)
-# print(f"The Mode value is {max(Frequency,key = Frequency.get)}")
+List = [1, 3, 3, 2, 1, 1, 4, 3, 3]
+Frequency = {}
+for i in List:
+    if i in Frequency:
+        Frequency[i] +=1
+    else:
+        Frequency[i] = 1
+print(Frequency)
+print(f"The Mode value is {max(Frequency,key = Frequency.get)}")
 
 
 
@@ -569,7 +567,7 @@ Exercise 28. Extract Every Nth Element from a List
 Practice Problem: Write a function that accepts a list and an integer n, returning a new list 
 containing every nth element from the original, starting from the first element (index 0).
 
-Exercise Purpose: This exercise explores List Slicing, one of Python’s most powerful features. 
+Exercise Purpose: This exercise explores List Slicing, one of Python's most powerful features. 
 Understanding slicing notation allows you to manipulate sequences with minimal code, which is 
 essential for tasks like data sampling.
 
@@ -580,9 +578,9 @@ n: 3
 Expected Output: Result: ['a', 'd', 'g']
 
 """
-# List = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-# n = 3
-# print(List[::n])
+List = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+n = 3
+print(List[::n])
 
 
 """
@@ -598,11 +596,11 @@ Given Input: List: [1, 2, 3, 2, 1]
 Expected Output: Is Palindrome: True
 
 """
-# def palindrome(list):
-#     return list == list[::-1] #list[::-1] -- means reverse
+def palindrome(list):
+    return list == list[::-1] #list[::-1] -- means reverse
 
-# List = [1, 2, 3, 2, 1]
-# print(f"{palindrome(List)} ")
+List = [1, 2, 3, 2, 1]
+print(f"{palindrome(List)} ")
 
 
 """
@@ -622,15 +620,15 @@ List C: [3, 4, 15, 20, 30, 70, 80]
 Expected Output: Common Elements: [20]
 
 """
-# def common_elements(List1,List2,List3):
-#     common = set(List1) & set(List2) & set(List3)
-#     return list(common)
+def common_elements(List1,List2,List3):
+    common = set(List1) & set(List2) & set(List3)
+    return list(common)
 
-# ListA = [1, 5, 10, 20]
-# ListB = [6, 7, 20, 80, 100]
-# ListC = [3, 4, 15, 20, 30, 70, 80]
+ListA = [1, 5, 10, 20]
+ListB = [6, 7, 20, 80, 100]
+ListC = [3, 4, 15, 20, 30, 70, 80]
 
-# print(f"The common elements in all 3 lists are {common_elements(ListA,ListB,ListC)}")
+print(f"The common elements in all 3 lists are {common_elements(ListA,ListB,ListC)}")
 
 """
 Exercise 31. Filter Strings by Length in a List
@@ -647,12 +645,12 @@ k: 5
 Expected Output: Filtered List: ['apple', 'banana']
 
 """
-# def filter_by_length(List,k):
-#     return [s for s in List if len(s)>=k]
 
+def filter_by_length(List,k):
+    return [s for s in List if len(s)>=k]
 
-# List = ["apple", "pie", "banana", "kiwi", "pear"]
-# print(f"The elements that are greater than is {filter_by_length(List,5)}")
+List = ["apple", "pie", "banana", "kiwi", "pear"]
+print(f"The elements that are greater than is {filter_by_length(List,5)}")
 
 
 """
@@ -668,11 +666,11 @@ Given Input: List: [10, 20, 30, 25, 40]
 Expected Output: Is Sorted: False
 
 """
-# def check_sort(List):
-#     return List == sorted(List)
+def check_sort(List):
+    return List == sorted(List)
 
-# List = [10, 20, 30, 25, 40]
-# print(check_sort(List))
+List = [10, 20, 30, 25, 40]
+print(check_sort(List))
 
 """
 Exercise 33. List to Dictionary Conversion
@@ -693,13 +691,13 @@ Dictionary: {'name': 'Alice', 'age': 25, 'city': 'New York'}
 
 """
 
-# def mydict(keys,values):
-#     return dict(zip(keys,values))# zip creates an iterator of Tuple and the tuple is converted to dictionary
+def mydict(keys,values):
+    return dict(zip(keys,values))# zip creates an iterator of Tuple and the tuple is converted to dictionary
 
-# Keys = ["name", "age", "city"]
-# Values = ["Alice", 25, "New York"]
+Keys = ["name", "age", "city"]
+Values = ["Alice", 25, "New York"]
 
-# print(f"The Student information is {mydict(Keys,Values)}")
+print(f"The Student information is {mydict(Keys,Values)}")
 
 
 """
@@ -717,13 +715,13 @@ List B: [2, 4, 6]
 Expected Output: Difference (A - B): [1, 3, 5]
 
 """
-# ListA = [1, 2, 3, 4, 5]
-# ListB = [2, 4, 6]
-# List  = []
-# for i in ListA:
-#     if i not in ListB:
-#         List.append(i)
-# print(List)
+ListA = [1, 2, 3, 4, 5]
+ListB = [2, 4, 6]
+List  = []
+for i in ListA:
+    if i not in ListB:
+        List.append(i)
+print(List)
 
 """
 Exercise 35. Remove Negative Numbers In-place
@@ -738,12 +736,13 @@ Given Input: List: [10, -5, 20, -1, 0, -8]
 Expected Output: Modified List: [10, 20, 0]
 
 """
-# List = [10, -5, 20, -1, 0, -8]
-# ModifiedList = []
-# for i in List:
-#     if i >= 0:
-#         ModifiedList.append(i)
-# print(ModifiedList)
+
+List = [10, -5, 20, -1, 0, -8]
+ModifiedList = []
+for i in List:
+    if i >= 0:
+        ModifiedList.append(i)
+print(ModifiedList)
 
 
 
@@ -763,11 +762,11 @@ To Append: "elderberry"
 Expected Output: Modified List: [['apple', 'banana', 'elderberry'], ['cherry', 'date', 'elderberry']]
 
 """
-# List = [['apple', 'banana'], ['cherry', 'date']]
-# app = "elderberry"
-# List[0].append(app)
-# List[1].append(app)
-# print(List)
+List = [['apple', 'banana'], ['cherry', 'date']]
+app = "elderberry"
+List[0].append(app)
+List[1].append(app)
+print(List)
 
 
 """
@@ -806,9 +805,9 @@ Given Input: 2D List: [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
 Expected Output: 1D List: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 """
-# List = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
-# List1d = List[0] + List[1] + List[2]
-# print(List1d)
+List = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+List1d = List[0] + List[1] + List[2]
+print(List1d)
 
 
 """
@@ -825,17 +824,17 @@ Given Input: Deep List: [1, [2, [3, 4], 5], 6, [7, 8]]
 Expected Output: Flattened: [1, 2, 3, 4, 5, 6, 7, 8]
 """
 
-# def deeplist(List):
-#     result = []
-#     for i in List:
-#         if isinstance(i,list):
-#             result.extend(deeplist(i))
-#         else:
-#             result.append(i)
-#     return result
+def deeplist(List):
+    result = []
+    for i in List:
+        if isinstance(i,list):
+            result.extend(deeplist(i))
+        else:
+            result.append(i)
+    return result
 
-# DList = [1, [2, [3, 4], 5], 6, [7, 8]]
-# print(deeplist(DList))
+DList = [1, [2, [3, 4], 5], 6, [7, 8]]
+print(deeplist(DList))
 
 
 """
@@ -851,16 +850,16 @@ Given Input: List: [10, 20, 30, 40]
 Expected Output: Cumulative Sum: [10, 30, 60, 100]
 
 """
-# def sumoflist(List):
-#     total = 0 # we use this for iteration or increasing purpose
-#     sums = [] # this is to store the value
-#     for i in List:
-#         total += i
-#         sums.append(total)
-#     return sums
+def sumoflist(List):
+    total = 0 # we use this for iteration or increasing purpose
+    sums = [] # this is to store the value
+    for i in List:
+        total += i
+        sums.append(total)
+    return sums
 
-# List = [10, 20, 30, 40]
-# print(F"The cummulative sums of list {List} is {sumoflist(List)}")
+List = [10, 20, 30, 40]
+print(F"The cummulative sums of list {List} is {sumoflist(List)}")
 
 
 """
@@ -880,14 +879,14 @@ Expected Output: Rotated List: [3, 4, 5, 1, 2]
 
 """
 
-# def rotate_list(List,k):
-#     List1 = List[0:k]
-#     List2 = List[k:len(List)]
-#     return List2 + List1
+def rotate_list(List,k):
+    List1 = List[0:k]
+    List2 = List[k:len(List)]
+    return List2 + List1
 
-# List = [1, 2, 3, 4, 5]
-# k = 2
-# print(rotate_list(List,k))
+List = [1, 2, 3, 4, 5]
+k = 2
+print(rotate_list(List,k))
 
 
 
@@ -909,16 +908,16 @@ Chunks: [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
 
 """
 
-# def breakList(List,k):
-#     result = []
-#     # return [List[i : i + k] for i in range(0, len(List), k)]
-#     for i in range(0, len(List),k):
-#         result.append(List[i:i+k])
-#     return result
+def breakList(List,k):
+    result = []
+    # return [List[i : i + k] for i in range(0, len(List), k)]
+    for i in range(0, len(List),k):
+        result.append(List[i:i+k])
+    return result
 
-# list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# print(breakList(list,3))
-# # First we divided it into small chunks and then appended it into the greater one 
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(breakList(list,3))
+# First we divided it into small chunks and then appended it into the greater one 
 
 
 """
@@ -934,19 +933,19 @@ Given Input: List: [0, 1, 0, 3, 12]
 Expected Output: Result: [1, 3, 12, 0, 0]
 
 """
-# def zerosInlist(List):
-#     result = []
-#     zeroList = []
-#     for i in List:
-#         if i == 0:
-#             zeroList.append(i)
-#         else:
-#             result.append(i)
-#     return sorted(result) + zeroList
+def zerosInlist(List):
+    result = []
+    zeroList = []
+    for i in List:
+        if i == 0:
+            zeroList.append(i)
+        else:
+            result.append(i)
+    return sorted(result) + zeroList
 
 
-# List = [0, 1, 0, 3, 12]
-# print(zerosInlist(List))
+List = [0, 1, 0, 3, 12]
+print(zerosInlist(List))
 
 
 """
