@@ -140,3 +140,73 @@ We have to keep track of the data and numbers.. So we use dictionaries for that 
 # # Lists can have other list inside it other lists (nested list can be at any level deep)
 # # Iteration is possible only till certain ;evel and its hard
 # # Instead we can use recursive method - no matter how deep the nested list goes.. we can work using repeated steps
+
+
+# #  -- Normal Method 
+# def total_iter(L):
+#     result = 0
+#     for i in L:
+#         result += i
+#     return result
+
+# print(total_iter([10,20,30,40,50]))
+
+# # -- Recursive Method 
+# def total_recur(L):
+#     if L == 0:
+#         return 0
+#     elif len(L) == 1:
+#         return L[0]
+#     else:
+#         return L[0] + total_recur(L[1:])
+
+# print(total_recur([10,20,30,40,50]))
+
+# # -- Try it yourself --
+# # Modify the code we wrote to return the total length of all strings in L 
+
+# def total_len_recur(L):
+#     if len(L) == 1:
+#         return len(L[0])
+#     else:
+#         return len(L[0]) + total_len_recur(L[1:])
+# print(total_len_recur(["ab","cd","efgh"]))
+# # the normal one is more efficient as compared to this.. this has repeated fuction calls
+# # Uing build in ones are more efficient rather than this one 
+
+# # ---------------------------------------------------------------------------------------------------------------
+
+# # Looking for an element in the list 
+# # Base Case - len of element 1 is the same element we are looking for 
+# def in_list(L,e):
+#     print(e,L) # -- to check exactly whats going on loop 
+#     if len(L) == e:
+#         return L[0] == e
+#     else:
+#         if L[0] == e:
+#             return True
+#         return in_list(L[1:],e)
+
+# test = [2,8,4,1]
+# print(in_list(test,1)) # -- returns True
+
+# tes = [2,1,5,8]
+# print(in_list(tes,1)) # -- returns False coz the above code is checking only the last element is the element we are looking for 
+# # it is not looking the first element or somethinggg only comparing the last element with the element we needed 
+# # extracts first element but dosent do anything 
+
+# # -- improved way to write it in more pythonic way:
+# def improve_inlist(L,e):
+#     if len(L) == e:
+#         return False
+#     elif L[0] == e:
+#         return True
+#     else:
+#         return improve_inlist(L[1:],e)
+
+# test = [2,8,4,1]
+# print(improve_inlist(test,1)) # -- returns True
+
+# tes = [2,1,5,8]
+# print(improve_inlist(tes,1)) # --returns True 
+
