@@ -262,5 +262,46 @@ We have to keep track of the data and numbers.. So we use dictionaries for that 
 # # this code will just reverse the top list not list withinn list is reversed 
 
 # # ---------------------------------------------------------------------------------------------------------------
-# -- Reverse all the elements in the sublists too. 
+# # -- Reverse all the elements in the sublists too. 
 
+# def deep_rev(L):
+#     if len(L) == 1:
+#         if type(L[0]) != list:
+#             return L
+#         return [deep_rev(L[0])]
+#     else:
+#         if type(L[0]) != list:
+#             return deep_rev(L[1:]) + [L[0]]
+#         return deep_rev(L[1:]) + [deep_rev(L[0])]
+
+# list1 = [1,['d'],['e',['f','g']]]
+# print(deep_rev(list1))
+
+# list2 = [[1,2,3],[4,5],[[9],[2,8,5]]]
+# print(deep_rev(list2))
+
+# # -- CLEANED UP CODE:
+
+# def deep_rev_cleaned(L):
+#     if L == []:
+#         return []
+#     elif type(L[0]) != list:
+#         return deep_rev_cleaned(L[1:]) + [L[0]]
+#     else:
+#         return deep_rev_cleaned(L[1:]) + [deep_rev_cleaned(L[0])]
+
+# list1 = [1,['d'],['e',['f','g']]]
+# print(deep_rev_cleaned(list1))
+
+# list2 = [[1,2,3],[4,5],[[9],[2,8,5]]]
+# print(deep_rev_cleaned(list2))
+
+# # -- same code and logic can work on tuples and strings except for one since we dont have strings within strings concept.
+
+"""
+tips:
+tip1: Base case and other cases return should return something of same type else we'll have type mismatches
+tip2: The functions doesnt need to be efficient at the first pass. like its not necessary to be a clean code kindoff
+
+""" 
+# # ==== Need to LISTEN TO THE LECTURE AGAIN - its very confusing
