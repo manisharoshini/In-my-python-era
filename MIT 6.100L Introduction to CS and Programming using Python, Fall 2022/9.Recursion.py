@@ -247,3 +247,20 @@ We have to keep track of the data and numbers.. So we use dictionaries for that 
 # # That's the recursive pattern
 
 # # ---------------------------------------------------------------------------------------------------------------
+# # -- Reverse the elements in the list using recursion --
+# def reverse_list(L):
+#     if len(L) == 1:
+#         return L
+#     else:
+#         return reverse_list(L[1:]) + [L[0]]
+    
+# list = [1,2,'abc']
+# print(reverse_list(list))
+
+# list1 = [1,['d'],['e',['f','g']]]
+# print(reverse_list(list1))
+# # this code will just reverse the top list not list withinn list is reversed 
+
+# # ---------------------------------------------------------------------------------------------------------------
+# -- Reverse all the elements in the sublists too. 
+
