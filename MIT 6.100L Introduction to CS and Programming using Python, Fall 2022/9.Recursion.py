@@ -223,3 +223,27 @@ We have to keep track of the data and numbers.. So we use dictionaries for that 
 
 # test = [[1,2],[3,4],[9,8,7]]
 # print(flatten(test))
+
+# # ---------------------------------------------------------------------------------------------------------------
+# # -- Try it yourself: L is list whose elements are lists containing ints. Return True if e is found within the list of L. else return FALSE.
+
+# def list_in_list(L,e):
+#     if len(L) == 1:
+#         return e in L[0]
+#     else:
+#         first = L[0]
+#         if e in first:
+#             return True
+#         return list_in_list(L[1:],e)
+
+# test = [[1,2],[3,4],[5,6,7]]
+# print(list_in_list(test, 4))
+
+# # You keep throwing away the first box (L[1:]) until either:
+
+# # You find the number → True
+# # You reach the last box and it's not there → False
+
+# # That's the recursive pattern
+
+# # ---------------------------------------------------------------------------------------------------------------
