@@ -54,7 +54,7 @@ https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN
 - [x] Functions & Abstraction  
 - [x] Data Structures (Lists, Tuples)  
 - [x] Dictionaries  
-- [ ] Recursion  
+- [x] Recursion  
 - [x] Testing & Debugging  
 - [ ] Object-Oriented Programming  
 - [ ] Algorithmic Complexity  
