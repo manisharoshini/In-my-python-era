@@ -52,6 +52,23 @@ becomes useless (or just variables) as soon as the function gets terminated
 
 To persist x and y throughout the object we define self.x and self.y
 
+Suppose you write:
+p1 = Coordinate(3,5)
+
+Python secretly does:
+self = p1
+xval = 3
+yval = 5
+
+Then executes:
+self.x = xval
+self.y = yval
+
+which becomes:
+p1.x = 3
+p1.y = 5
+
+
 """
 # # ---------------------------------------------------------------------------------------------------------------
 
@@ -61,6 +78,8 @@ method is just a function that works with this class (or we can say its own clas
 
 To create method in python we just pass the 'self' as first parameter 
 
+self - is the one whoever called the method.
+
 """
 # Define a method for coordinate class and going to calculate the distance
 
@@ -68,7 +87,13 @@ class Cordinate:
     def __init__(self,xval,yval):
         self.x = xval
         self.y = yval
-    def distance(self,other):
+    def distance(self,other): # works only with the class type cordinate we use 'self' here
         x_diff_sq = (self.x - other.x) ** 2
         y_diff_sq = (self.y - other.y) ** 2
         return (x_diff_sq+y_diff_sq) ** 0.5
+    
+c = Cordinate(3,4)
+orig = Cordinate(0,0)
+
+print(Cordinate.distance(c,orig))
+print(c.distance(orig)) # similar to mylist.append(5)

@@ -19,11 +19,3 @@ print(student["name"])
 
 
 
-
-"""
-Exercise 2: Dictionary Operations
-
-
-
-
-"""
