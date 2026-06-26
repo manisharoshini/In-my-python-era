@@ -30,5 +30,45 @@ YPU WRITE CLASS BEACUSE YOU MAKE DESIGN DECISIONS. - here we decide what data re
 what behaviors represent the class.
 
 """
-# refer notebook notes for more clear notes.
+# # refer notebook notes for more clear notes.
+# class Cordinate:
+#     def __init__(self,xval,yval):
+#         self.x = xval
+#         self.y = yval
 
+# c = Cordinate(3,4) # here 3 is xval and 4 is yval and the self becomes Cordinate(3,4) we have created (also this becomes an object)
+# origin = Cordinate(0,0)
+
+# print(c.x) # this will grab the value of x from the "c" variable. 
+# print(origin.x)  # this will grab the value of x from the "origin" variable.
+
+# a = 1
+# orig = Cordinate(a,a)
+# print(orig.x)
+
+"""
+Note: (c.x) is possible if we declare self.x and self.y in the function or else it will just be the variables that will soon 
+becomes useless (or just variables) as soon as the function gets terminated 
+
+To persist x and y throughout the object we define self.x and self.y
+
+"""
+# # ---------------------------------------------------------------------------------------------------------------
+
+"""
+What is method ?
+method is just a function that works with this class (or we can say its own class or we can say object of its type).
+
+To create method in python we just pass the 'self' as first parameter 
+
+"""
+# Define a method for coordinate class and going to calculate the distance
+
+class Cordinate:
+    def __init__(self,xval,yval):
+        self.x = xval
+        self.y = yval
+    def distance(self,other):
+        x_diff_sq = (self.x - other.x) ** 2
+        y_diff_sq = (self.y - other.y) ** 2
+        return (x_diff_sq+y_diff_sq) ** 0.5
