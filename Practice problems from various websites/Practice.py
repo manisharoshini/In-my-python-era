@@ -297,10 +297,10 @@ Print the result of .
 
 """
 
-if __name__ == '__main__':
-    n = int(raw_input())
-    integer_list = map(int, raw_input().split())
-    t = tuple(integer_list)
-    print(hash(t))
+# if __name__ == '__main__':
+#     n = int(raw_input())
+#     integer_list = map(int, raw_input().split())
+#     t = tuple(integer_list)
+#     print(hash(t))
 
 # This will work only when the version of pythin changes from Python 3 to python 2 
