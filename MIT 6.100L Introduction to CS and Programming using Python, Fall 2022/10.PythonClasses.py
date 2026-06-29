@@ -103,18 +103,18 @@ self - is the one whoever called the method.
 # Lec 18: More Python Classes Methods 
 # ===============================================================================================================
 
-class Cordinate:
-    def __init__(self,xval,yval):
-        self.x = xval
-        self.y = yval
-    def distance(self,other): # works only with the class type cordinate we use 'self' here
-        # Returns eucdian distance between two coord objects 
-        x_diff_sq = (self.x - other.x) ** 2
-        y_diff_sq = (self.y - other.y) ** 2
-        return (x_diff_sq+y_diff_sq) ** 0.5
-    def to_origin(self):
-        self.x = 0
-        self.y = 0
+# class Cordinate:
+#     def __init__(self,xval,yval):
+#         self.x = xval
+#         self.y = yval
+#     def distance(self,other): # works only with the class type cordinate we use 'self' here
+#         # Returns eucdian distance between two coord objects 
+#         x_diff_sq = (self.x - other.x) ** 2
+#         y_diff_sq = (self.y - other.y) ** 2
+#         return (x_diff_sq+y_diff_sq) ** 0.5
+#     def to_origin(self):
+#         self.x = 0
+#         self.y = 0
 # c = Cordinate(3,4)
 # origin = Cordinate(0,0)
 
@@ -125,23 +125,74 @@ class Cordinate:
 # print(c.x,c.y)
 
 # # ---------------------------------------------------------------------------------------------------------------
-# USING CLASSES TO BUILD OTHER CLASSES 
+# # USING CLASSES TO BUILD OTHER CLASSES 
 
-# Example: use coordinates to build cirle 
-# Hint: here the centre is a cordinate so we here make use of cordinate class to make a complex class 
+# # Example: use coordinates to build cirle 
+# # Hint: here the centre is a cordinate so we here make use of cordinate class to make a complex class 
 
-# -- You try it: 
-# Add a code to init method to check that type of center is obj and type of radius is int if not then raise ValueError 
+# # -- You try it: 
+# # Add a code to init method to check that type of center is obj and type of radius is int if not then raise ValueError 
 
-class Circle(object):
-    def __init__(self, center, radius):
-        if type(center) != Cordinate or type(radius) != int:
-            raise ValueError
-        self.center = center
-        self.radius = radius
+# class Cordinate:
+#     def __init__(self,xval,yval):
+#         self.x = xval
+#         self.y = yval
+#     def distance(self,other): # works only with the class type cordinate we use 'self' here
+#         # Returns eucdian distance between two coord objects 
+#         x_diff_sq = (self.x - other.x) ** 2
+#         y_diff_sq = (self.y - other.y) ** 2
+#         return (x_diff_sq+y_diff_sq) ** 0.5
+#     def to_origin(self):
+#         self.x = 0
+#         self.y = 0
+
+# class Circle(object):
+#     def __init__(self, center, radius):
+#         if type(center) != Cordinate or type(radius) != int:
+#             raise ValueError
+#         self.center = center
+#         self.radius = radius
     
-# center = Cordinate(2,2
+# center = Cordinate(2,2)
 # my_circle = Circle(center,2)
 
 # my_circle = Circle(2,2)
 # my_circle = Circle(center, 'two')
+
+
+# # ---------------------------------------------------------------------------------------------------------------
+# # Circle Class: defination and instances 
+
+# # This will calculate the distance of point from center of circle, 
+# # if its greater than the radius -- the point is outside the circle else its inside the circle
+
+# class Cordinate:
+#     def __init__(self,xval,yval):
+#         self.x = xval
+#         self.y = yval
+#     def distance(self,other): # works only with the class type cordinate we use 'self' here
+#         # Returns eucdian distance between two coord objects 
+#         x_diff_sq = (self.x - other.x) ** 2
+#         y_diff_sq = (self.y - other.y) ** 2
+#         return (x_diff_sq+y_diff_sq) ** 0.5
+#     def to_origin(self):
+#         self.x = 0
+#         self.y = 0
+
+# class Circle(object):
+#     def __init__(self, center, radius):
+#         # if type(center) != Cordinate or type(radius) != int:
+#         #     raise ValueError
+#         self.center = center # here its a cordinate object 
+#         self.radius = radius # here its an int 
+#     def is_inside(self,point):
+#         return point.distance(self.center) < self.radius
+#     def is_inside2(self,point):
+#         return (self.center).distance(point) <self.radius # -- here this means it doesnt really care in which cordinate it runs on !!
+
+    
+# center = Cordinate(2,2)
+# my_circle = Circle(center,2)
+
+# p = Cordinate(1,1)
+# print(my_circle.is_inside(p))
