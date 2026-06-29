@@ -81,19 +81,50 @@ To create method in python we just pass the 'self' as first parameter
 self - is the one whoever called the method.
 
 """
-# Define a method for coordinate class and going to calculate the distance
+# # Define a method for coordinate class and going to calculate the distance
 
-class Cordinate:
-    def __init__(self,xval,yval):
-        self.x = xval
-        self.y = yval
-    def distance(self,other): # works only with the class type cordinate we use 'self' here
-        x_diff_sq = (self.x - other.x) ** 2
-        y_diff_sq = (self.y - other.y) ** 2
-        return (x_diff_sq+y_diff_sq) ** 0.5
+# class Cordinate:
+#     def __init__(self,xval,yval):
+#         self.x = xval
+#         self.y = yval
+#     def distance(self,other): # works only with the class type cordinate we use 'self' here
+#         # Returns eucdian distance between two coord objects 
+#         x_diff_sq = (self.x - other.x) ** 2
+#         y_diff_sq = (self.y - other.y) ** 2
+#         return (x_diff_sq+y_diff_sq) ** 0.5
     
-c = Cordinate(3,4)
-orig = Cordinate(0,0)
+# c = Cordinate(3,4)
+# orig = Cordinate(0,0)
 
-print(Cordinate.distance(c,orig))
-print(c.distance(orig)) # similar to mylist.append(5)
+# print(Cordinate.distance(c,orig))
+# print(c.distance(orig)) # similar to mylist.append(5)
+
+# ===============================================================================================================
+# Lec 18: More Python Classes Methods 
+# ===============================================================================================================
+
+# class Cordinate:
+#     def __init__(self,xval,yval):
+#         self.x = xval
+#         self.y = yval
+#     def distance(self,other): # works only with the class type cordinate we use 'self' here
+#         # Returns eucdian distance between two coord objects 
+#         x_diff_sq = (self.x - other.x) ** 2
+#         y_diff_sq = (self.y - other.y) ** 2
+#         return (x_diff_sq+y_diff_sq) ** 0.5
+#     def to_origin(self):
+#         self.x = 0
+#         self.y = 0
+# c = Cordinate(3,4)
+# origin = Cordinate(0,0)
+
+# print(f"c's x-cord is {c.x} and origin's x-cord is {origin.x}  ")
+# print(c.distance(origin))
+
+# c.to_origin()
+# print(c.x,c.y)
+
+# # ---------------------------------------------------------------------------------------------------------------
+# USING CLASSES TO BUILD OTHER CLASSES 
+
+# Example: use coordinates to build cirle
