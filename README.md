@@ -40,7 +40,7 @@ Every commit represents something new I've learned—whether it's a programming 
 
 | Stage            | Status         |
 | ---------------- | -------------- |
-| Python           | ✅ Completed    |
+| Python           | 🔄 In Progress |
 | NumPy            | 🔄 In Progress |
 | Pandas           | ⏳ Next         |
 | Data Analysis    | 🔒 Planned     |
