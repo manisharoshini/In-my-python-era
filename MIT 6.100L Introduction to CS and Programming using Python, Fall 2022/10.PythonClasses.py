@@ -196,3 +196,53 @@ self - is the one whoever called the method.
 
 # p = Cordinate(1,1)
 # print(my_circle.is_inside(p))
+
+# # ---------------------------------------------------------------------------------------------------------------
+# # Create a new type to represent fraction:
+# # Internal representation of two integers Numerator and Denominator 
+# # Methods to interact with Fractions are -- Add, Subtract and invert 
+
+# class SimpleFraction(object):
+#     def __init__(self,n,d):
+#         self.num = n
+#         self.denom = d
+
+#     def multiply(self,oth):
+#         top = self.num * oth.num
+#         bottom = self.denom*oth.denom
+#         return top/bottom
+    
+#     def addition(self,other):
+#         top = (self.num*other.denom) + (self.denom*other.num)
+#         bottom = self.denom*other.denom
+#         return top/bottom
+    
+#     def get_inverse(self):
+#         return 1/(self.num/self.denom)
+    
+#     def invert(self):
+#         # temp = self.num
+#         # self.num = self.denom
+#         # self.denom = temp
+#         # other way:
+#         (self.num,self.denom) = (self.denom,self.num)
+#         pass
+
+        
+# f1 = SimpleFraction(3,4)
+# f2 = SimpleFraction(1,4)
+
+# print(f"The invert of f1 and f2 is {f1.invert()} and {f2.invert()}") # The invert of f1 and f2 is 0.75 and 0.25
+# print(f"The inverse value of f1 and f2 is {f1.get_inverse()} and {f2.get_inverse()}") # The inverse value of f1 and f2 is 1.3333333333333333 and 4.0
+
+# print("----Perfrom Invert function: -----")
+# print(f"Initially num = {f1.num} and denom = {f1.denom}")
+# f1.invert()
+# print(f"After Inverting Num and denom, our new num = {f1.num} and new denom = {f1.denom}")
+
+# print(f"the numerator and denominator of F1 fraction is {f1.num} and {f1.denom}") # the numerator and denominator of F1 fraction is 3 and 4
+# print(f"the numerator and denominator of F1 fraction is {f2.num} and {f2.denom}") # the numerator and denominator of F1 fraction is 1 and 4
+
+# print(f"Addition of f1 and f2 = {f1.addition(f2)}") # Addition of f1 and f2 = 1.0
+# print(f"Multiplication of f1 and f2 = {f1.multiply(f2)}") # Multiplication of f1 and f2 = 0.1875
+
