@@ -1,105 +1,175 @@
-# 🚀 In My Python Era  
+# 🚀 In My Python Era
 
-<h3 align="center">✨ Building consistency, one line of code at a time ✨</h3>
+<div align="center">
+
+### *Learning Python, exploring Data Science, and building toward AI.*
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy"/>
+<img src="https://img.shields.io/badge/Status-Actively%20Learning-success?style=for-the-badge"/>
+<img src="https://img.shields.io/github/stars/manisharoshini/In-my-python-era?style=for-the-badge"/>
+<img src="https://img.shields.io/github/forks/manisharoshini/In-my-python-era?style=for-the-badge"/>
+
+</div>
+
+---
+
+# 👋 About
+
+Welcome to **In My Python Era**!
+
+This repository is a collection of my coding journey as I build a strong foundation in Python and gradually transition into Data Science, Machine Learning, and Artificial Intelligence.
+
+Every commit represents something new I've learned—whether it's a programming concept, a coding exercise, or a small project.
+
+---
+
+# 🎯 Goals
+
+* 🐍 Master Python fundamentals
+* 📊 Learn NumPy
+* 🐼 Learn Pandas
+* 📈 Explore Data Analysis
+* 🤖 Study Machine Learning
+* 🧠 Build AI projects
+* 💻 Keep learning consistently
+
+---
+
+# 🌱 Current Learning
+
+| Stage            | Status         |
+| ---------------- | -------------- |
+| Python           | ✅ Completed    |
+| NumPy            | 🔄 In Progress |
+| Pandas           | ⏳ Next         |
+| Data Analysis    | 🔒 Planned     |
+| Machine Learning | 🔒 Planned     |
+| Deep Learning    | 🔒 Planned     |
+
+---
+
+# 📚 Learning Resources
+
+## 🐍 Python
+
+**MIT OpenCourseWare — Introduction to Computer Science and Programming in Python (6.0001)**
+
+📺 https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN
+
+---
+
+## 📊 NumPy
+
+**CampusX — Complete NumPy Course**
+
+📺 https://www.youtube.com/live/XF6DCrNTzug?si=RrEhrbabo7EUfq64
+
+---
+
+# 📂 Repository
+
+```text
+📦 In-my-python-era
+│
+├── 📂 MIT Python
+├── 📂 NumPy
+├── 📂 Practice Problems
+├── 📂 Notes
+└── 📄 README.md
+```
+
+---
+
+# 📖 What You'll Find
+
+### 🐍 Python
+
+* Variables & Data Types
+* Operators
+* Loops
+* Functions
+* Recursion
+* Strings
+* Lists
+* Tuples
+* Dictionaries
+* Sets
+* Object-Oriented Programming
+* File Handling
+* Exception Handling
+* Debugging
+
+---
+
+### 📊 NumPy *(Current Focus)*
+
+* Arrays
+* Indexing
+* Slicing
+* Reshaping
+* Broadcasting
+* Mathematical Operations
+* Universal Functions
+* Random Module
+
+---
+
+### 💻 Practice
+
+* Logic Building
+* Coding Exercises
+* Practice Programs
+* Concept Revision
+
+---
+
+
+# 🛠️ Tech Stack
+
+**Language**
+
+* Python
+
+**Libraries**
+
+* NumPy *(Learning)*
+
+**Tools**
+
+* VS Code
+* Git
+* GitHub
+* Jupyter Notebook
+
+---
+
+# 🌟 Why This Repository?
+
+This repository isn't just about writing code—it's about documenting my growth as a programmer.
+
+I'm learning step by step, building strong fundamentals, solving problems, and preparing for more advanced topics in Data Science and AI.
+
+---
+
+# 📊 GitHub Streak
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Code-Python-blue?style=for-the-badge&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-yellow?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Focus-Data%20Science%20%7C%20AI-green?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Repo%20Status-Active-success?style=for-the-badge">
-  <img src="https://img.shields.io/github/stars/manisharoshini/In-my-python-era?style=for-the-badge">
-  <img src="https://img.shields.io/github/forks/manisharoshini/In-my-python-era?style=for-the-badge">
+<img src="https://streak-stats.demolab.com?user=manisharoshini&theme=tokyonight&hide_border=true"/>
 </p>
 
 ---
 
-## 🌸 About This Repository  
+# 💭 Quote
 
-Welcome to my Python learning journey 💻✨  
-
-This repository documents my progress through the **MIT Introduction to Computer Science and Programming in Python (6.0001)** course.  
-I’m building strong fundamentals in programming, problem-solving, and computational thinking.  
+> *"Great software isn't built in a day. It's built one commit at a time."*
 
 ---
 
-## 🎥 Course Reference  
+# ⭐ Support
 
-📺 MIT Python Playlist:  
-https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN  
+If you find this repository interesting or helpful, consider giving it a ⭐.
 
----
+It encourages me to keep learning and sharing my progress.
 
-## 🧠 Topics Covered  
-
-✨ Introduction to Computation  
-✨ Control Flow  
-✨ Problem Solving Techniques  
-✨ Functions & Abstraction  
-✨ Data Structures  
-✨ Recursion & Dictionaries  
-✨ Testing & Debugging  
-✨ Object-Oriented Programming  
-✨ Algorithmic Thinking  
-✨ Searching & Sorting  
-
----
-
-## 📈 MIT Course Progress Tracker  
-
-### 🧠 MIT 6.0001 Progress  
-
-- [x] Introduction to Computation  
-- [x] Control Flow (if, loops)  
-- [x] Bisection Search  
-- [x] Functions & Abstraction  
-- [x] Data Structures (Lists, Tuples)  
-- [x] Dictionaries  
-- [x] Recursion  
-- [x] Testing & Debugging  
-- [ ] Object-Oriented Programming  
-- [ ] Algorithmic Complexity  
-- [ ] Searching & Sorting  
-
-## 🗂️ Repository Structure  
-📦 In-my-python-era<br>
-┣ 📂 MIT Python Class<br>
-┣ 📂 Practice problems from various websites<br>
-┗ 📄 README.md<br>
-
----
-
-## 🔥 Contribution Streak  
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=manisharoshini&theme=tokyonight&hide_border=true">
-</p>
-
----
-
-## 🎯 Goals  
-
-✔ Build strong Python fundamentals  
-✔ Improve problem-solving skills  
-✔ Prepare for Data Science & ML  
-✔ Stay consistent  
-
----
-
-## 🌷 Learning Mindset  
-
-> “Consistency beats intensity.”  
-
----
-
-## 💡 Note  
-
-This repository is for learning purposes.  
-All course credits go to MIT and respective instructors.  
-
----
-
-## ⭐ Support  
-
-If you like this repo, consider giving it a ⭐  
-
----
+Happy Coding! 🚀
