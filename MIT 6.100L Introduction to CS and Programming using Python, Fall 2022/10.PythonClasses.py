@@ -270,18 +270,30 @@ Python secretly does 10.__add__(20) similary for all the shorthand functions
 """
 
 # # ---------------------------------------------------------------------------------------------------------------
-# -- Defining our own print methods 
-class Cordinate(object):
-    def __init__(self,xval,yval):
-        self.x = xval
-        self.y = yval
-    def distance(self,other):
-        x_diff_sq = (self.x - other.x)**2
-        y_diff_sq = (self.y - other.y)**2
-        return (x_diff_sq + y_diff_sq)*0.5
-    def __str__(self): # __str__ is a name of special method 
-        return "<"+str(self.x)+","+str(self.y)+">"
+# # -- Defining our own print methods 
+# class Cordinate(object):
+#     def __init__(self,xval,yval):
+#         self.x = xval
+#         self.y = yval
+#     def distance(self,other):
+#         x_diff_sq = (self.x - other.x)**2
+#         y_diff_sq = (self.y - other.y)**2
+#         return (x_diff_sq + y_diff_sq)*0.5
+#     def __str__(self): # __str__ is a name of special method 
+#         return "<"+str(self.x)+","+str(self.y)+">"
     
-cor = Cordinate(3,4)
-origin = Cordinate(2,2)
-print(cor.distance(origin))
+# cor = Cordinate(3,4)
+# origin = Cordinate(2,2)
+# print(cor.distance(origin))
+
+# # -- check whether __str__ is working or not 
+# print(f"This is the way that we wanted python to code the string (manipulating __str__): {cor}")
+# print(origin)
+# print(f"Here the type of object cor is {type(cor)}, ie the name of the class we have created in")
+
+# print(f"The type of cordinate class is {type(Cordinate)},ie we are defining a new type in the python thats y its type is 'type' ")
+
+# print(isinstance(cor,Cordinate)) # another way to check the type of the class 
+
+# # ---------------------------------------------------------------------------------------------------------------
+# Example: Fractions with Dunder methods (To make better fractions method)
