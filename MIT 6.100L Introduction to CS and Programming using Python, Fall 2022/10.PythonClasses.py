@@ -246,3 +246,42 @@ self - is the one whoever called the method.
 # print(f"Addition of f1 and f2 = {f1.addition(f2)}") # Addition of f1 and f2 = 1.0
 # print(f"Multiplication of f1 and f2 = {f1.multiply(f2)}") # Multiplication of f1 and f2 = 0.1875
 
+"""
+dunder methods:
+* + len() print() all are shorthand methods
+behind the scenes the code runs dunder methods as listed to run or perform the operations 
+__add__(self, other)      →    self + other
+__sub__(self, other)      →    self - other
+__mul__(self, other)      →    self * other
+__truediv__(self, other)  →    self / other
+__eq__(self, other)       →    self == other
+__lt__(self, other)       →    self < other
+__len__(self)             →    len(self)
+__str__(self)             →    print(self)
+__float__(self)           →    float(self)  i.e. cast
+__pow__(self, other)      →    self ** other
+
+Eg: 
+a + b ie
+
+10 + 20
+Python secretly does 10.__add__(20) similary for all the shorthand functions  
+
+"""
+
+# # ---------------------------------------------------------------------------------------------------------------
+# -- Defining our own print methods 
+class Cordinate(object):
+    def __init__(self,xval,yval):
+        self.x = xval
+        self.y = yval
+    def distance(self,other):
+        x_diff_sq = (self.x - other.x)**2
+        y_diff_sq = (self.y - other.y)**2
+        return (x_diff_sq + y_diff_sq)*0.5
+    def __str__(self): # __str__ is a name of special method 
+        return "<"+str(self.x)+","+str(self.y)+">"
+    
+cor = Cordinate(3,4)
+origin = Cordinate(2,2)
+print(cor.distance(origin))
