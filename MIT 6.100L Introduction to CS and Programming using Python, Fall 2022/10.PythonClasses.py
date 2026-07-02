@@ -159,7 +159,6 @@ self - is the one whoever called the method.
 # my_circle = Circle(2,2)
 # my_circle = Circle(center, 'two')
 
-
 # # ---------------------------------------------------------------------------------------------------------------
 # # Circle Class: defination and instances 
 
@@ -189,7 +188,6 @@ self - is the one whoever called the method.
 #         return point.distance(self.center) < self.radius
 #     def is_inside2(self,point):
 #         return (self.center).distance(point) <self.radius # -- here this means it doesnt really care in which cordinate it runs on !!
-
     
 # center = Cordinate(2,2)
 # my_circle = Circle(center,2)
@@ -228,7 +226,6 @@ self - is the one whoever called the method.
 #         (self.num,self.denom) = (self.denom,self.num)
 #         pass
 
-        
 # f1 = SimpleFraction(3,4)
 # f2 = SimpleFraction(1,4)
 
@@ -296,4 +293,4 @@ Python secretly does 10.__add__(20) similary for all the shorthand functions
 # print(isinstance(cor,Cordinate)) # another way to check the type of the class 
 
 # # ---------------------------------------------------------------------------------------------------------------
-# Example: Fractions with Dunder methods (To make better fractions method)
+# # Example: Fractions with Dunder methods (To make better fractions method)

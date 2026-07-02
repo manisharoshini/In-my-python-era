@@ -72,10 +72,10 @@ Every commit represents something new I've learned—whether it's a programming 
 ```text
 📦 In-my-python-era
 │
-├── 📂 MIT Python
-├── 📂 NumPy
-├── 📂 Practice Problems
-├── 📂 Notes
+├── 📂 MIT 6.100L Introduction to CS and Programming using Python, Fall 2022
+├── 📂 Practice Problems from various websites
+├── 📂 Python Libraries
+├── 📂 Mini Projects
 └── 📄 README.md
 ```
 
