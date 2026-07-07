@@ -79,5 +79,20 @@ Encapsulation ← This is where getters and setters come in.
 
 Encapsulation means:
 Don't let everyone directly touch your object's internal data. Instead, provide controlled methods to read or modify it.
+------------------------
+
+Python is not good at hiding things:
+a.age --> access data outside the class
+a.age = 'infinte' --> modify it to the any type from outside the class. (we can set it to any data type which can cause risk) 
+     if we give age = "twenty four" and outside people will give age = 24 it will create a major risk 
+a.sise --> allow u to create attribute for an instance from outside the class..
+BECAUSE OF ALL THIS WE CAN RISK THE CODE 
 
 """
+
+# # --------------------------------------------------------------------------------------------------------------------
+"""
+Create a new class it should be the dictionary of any kind of elements and will select only non negative ints
+and the dictionary should map each one of these numbers (ie keys) to the Animal objects with the ages ie Animal(6) or Animal(7)
+"""
+
