@@ -94,5 +94,9 @@ BECAUSE OF ALL THIS WE CAN RISK THE CODE
 """
 Create a new class it should be the dictionary of any kind of elements and will select only non negative ints
 and the dictionary should map each one of these numbers (ie keys) to the Animal objects with the ages ie Animal(6) or Animal(7)
-"""
 
+here the dictionary should have keys that is ints and values should be Animal object like 
+
+2:Animal(2) --> in this way 
+
+"""
