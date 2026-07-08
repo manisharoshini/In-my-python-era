@@ -120,12 +120,15 @@ class Animal(object):
     def set_name(self,newname = ""):
         self.name = newname
 
-
+# here we are checking if the list has only int values (no negative or string values are allowed)
+# -- Adding it to "d" dictionary
 def animal_dict(L):
     d = {}
     for n in L:
         if type(n) == int and n >= 0:
             d[n] = Animal(n)
+            # here means d[0] -- means the key of dict 
+            # animal[0] -- means the value of dic
     return d
 
 L = [2,3,-5,'a',0]
@@ -140,11 +143,20 @@ for n,a in animals.items():
 # An animal object at index i has the age and name correspondingly to same index in L1 and L2, respectively
 
 def make_animals(l1,l2):
+    l3 = []
+    for i in range(len(l1)):
+        # i is 0,1,2,3.. prolly the index (not values)
+        age = l1[i]
+        name = l2[i]
+        a = Animal(age)
+        a.set_name(name)
+        l3.append(a)
 
-    return
+    return l3
 
 l1 = [2,3,4]
 l2 = ["blobfish","jellyfish","goldfish"]
 fish = make_animals(l1,l2)
+
 for i in fish:
-    print(f"")
+    print(f"{i}")
