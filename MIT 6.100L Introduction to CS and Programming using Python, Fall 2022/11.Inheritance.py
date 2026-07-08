@@ -5,26 +5,26 @@ Why use OOP and classes of Objects?
 
 """
 
-# here we create animal class - will tell age and name and as per that we have to classify which animal it is. 
-class Animal(object):
-    def __init__(self,age):
-        self.age = age
-        self.name = None # later we'll create methods that we use to give names 
- # 2nd Step: We are adding __str__ to the method to change how the way we print: 
- # if we dont initialize __str__ method it will bydefault print the memory location of the object that we have created. 
-    def __str__(self):
-        return "Animal:" + str(self.name) + ":" + str(self.age)
- # adding getters and setters
-   # -- Getters --> simple functions that will return the values of the Data attributes that this object has 
-    def get_age(self):
-        return self.age
-    def get_name(self):
-        return self.name
-   # -- Setters --> same idea but here we are allowing someone using our class to set the values of these data 
-    def set_age(self,newage):
-        self.age = newage
-    def set_name(self,newname = ""):
-        self.name = newname
+# # here we create animal class - will tell age and name and as per that we have to classify which animal it is. 
+# class Animal(object):
+#     def __init__(self,age):
+#         self.age = age
+#         self.name = None # later we'll create methods that we use to give names 
+#  # 2nd Step: We are adding __str__ to the method to change how the way we print: 
+#  # if we dont initialize __str__ method it will bydefault print the memory location of the object that we have created. 
+#     def __str__(self):
+#         return "Animal:" + str(self.name) + ":" + str(self.age)
+#  # adding getters and setters
+#    # -- Getters --> simple functions that will return the values of the Data attributes that this object has 
+#     def get_age(self):
+#         return self.age
+#     def get_name(self):
+#         return self.name
+#    # -- Setters --> same idea but here we are allowing someone using our class to set the values of these data 
+#     def set_age(self,newage):
+#         self.age = newage
+#     def set_name(self,newname = ""):
+#         self.name = newname
 
 # Testing the objects that we create: 
 
@@ -100,3 +100,51 @@ here the dictionary should have keys that is ints and values should be Animal ob
 2:Animal(2) --> in this way 
 
 """
+class Animal(object):
+    def __init__(self,age):
+        self.age = age
+        self.name = None # later we'll create methods that we use to give names 
+ # 2nd Step: We are adding __str__ to the method to change how the way we print: 
+ # if we dont initialize __str__ method it will bydefault print the memory location of the object that we have created. 
+    def __str__(self):
+        return "Animal:" + str(self.name) + ":" + str(self.age)
+ # adding getters and setters
+   # -- Getters --> simple functions that will return the values of the Data attributes that this object has 
+    def get_age(self):
+        return self.age
+    def get_name(self):
+        return self.name
+   # -- Setters --> same idea but here we are allowing someone using our class to set the values of these data 
+    def set_age(self,newage):
+        self.age = newage
+    def set_name(self,newname = ""):
+        self.name = newname
+
+
+def animal_dict(L):
+    d = {}
+    for n in L:
+        if type(n) == int and n >= 0:
+            d[n] = Animal(n)
+    return d
+
+L = [2,3,-5,'a',0]
+animals = animal_dict(L)
+# print(animals) # -- this doesnt print recursively it just prints the top level thing (knows to print integers doesnt know to print the dictionaries)
+for n,a in animals.items():
+    print(f"Key {n} and the value {a}")
+    # -- here we are running print on key and value seperately..  
+
+# -- Try it Yourself -- 
+# L1 --> list of ints and L2 --> list of str.. L1 and L2 are of same length. Creates a list of Animals of same length as L1 and L2
+# An animal object at index i has the age and name correspondingly to same index in L1 and L2, respectively
+
+def make_animals(l1,l2):
+
+    return
+
+l1 = [2,3,4]
+l2 = ["blobfish","jellyfish","goldfish"]
+fish = make_animals(l1,l2)
+for i in fish:
+    print(f"")
