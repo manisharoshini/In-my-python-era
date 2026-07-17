@@ -42,7 +42,7 @@ Every commit represents something new I've learned—whether it's a programming 
 | ---------------- | -------------- |
 | Python           | 🔄 In Progress |
 | Basic NumPy      | ✅ Completed  |
-| Advance NumPy    | ✅ Completed  |
+| Advance NumPy    | 🔄 In Progress  |
 | Pandas           | ⏳ Next         |
 | Data Analysis    | 🔒 Planned     |
 | Machine Learning | 🔒 Planned     |
