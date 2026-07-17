@@ -64,6 +64,8 @@ Every commit represents something new I've learned—whether it's a programming 
 **CampusX — Complete NumPy Course**
 
 📺 https://www.youtube.com/live/XF6DCrNTzug?si=RrEhrbabo7EUfq64
+📺 https://www.youtube.com/live/40xGMygHMDU?si=HkrOZ_V7T6qp0vKw
+📺 https://www.youtube.com/live/jFBpnd0G09o?si=iHhTJjwc6L5xNssg
 
 ---
 
@@ -133,7 +135,8 @@ Every commit represents something new I've learned—whether it's a programming 
 
 **Libraries**
 
-* NumPy *(Learning)*
+* NumPy 
+* Advance Numpy *(Learning)*
 
 **Tools**
 
