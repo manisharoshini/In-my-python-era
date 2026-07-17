@@ -41,7 +41,8 @@ Every commit represents something new I've learned—whether it's a programming 
 | Stage            | Status         |
 | ---------------- | -------------- |
 | Python           | 🔄 In Progress |
-| NumPy            | ✅ Completed |
+| Basic NumPy      | ✅ Completed  |
+| Advance NumPy    | ✅ Completed  |
 | Pandas           | ⏳ Next         |
 | Data Analysis    | 🔒 Planned     |
 | Machine Learning | 🔒 Planned     |
