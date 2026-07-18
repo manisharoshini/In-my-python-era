@@ -1,162 +1,77 @@
-# 🚀 In My Python Era
+# In My Python Era
 
 <div align="center">
 
-### *Learning Python, exploring Data Science, and building toward AI.*
+Learning Python, exploring Data Science, and building toward AI.
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy"/>
-<img src="https://img.shields.io/badge/Status-Actively%20Learning-success?style=for-the-badge"/>
-<img src="https://img.shields.io/github/stars/manisharoshini/In-my-python-era?style=for-the-badge"/>
-<img src="https://img.shields.io/github/forks/manisharoshini/In-my-python-era?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy"/>
+<img src="https://img.shields.io/badge/Status-Actively%20Learning-success?style=flat-square"/>
+<img src="https://img.shields.io/github/stars/manisharoshini/In-my-python-era?style=flat-square"/>
+<img src="https://img.shields.io/github/forks/manisharoshini/In-my-python-era?style=flat-square"/>
 
 </div>
 
----
+## About
 
-# 👋 About
+A record of my journey learning Python and building toward Data Science, Machine Learning, and AI. Each commit reflects a concept learned, an exercise solved, or a small project built.
 
-Welcome to **In My Python Era**!
+## Goals
 
-This repository is a collection of my coding journey as I build a strong foundation in Python and gradually transition into Data Science, Machine Learning, and Artificial Intelligence.
+- Master Python fundamentals
+- Learn NumPy and Pandas
+- Explore data analysis
+- Study machine learning and deep learning
+- Keep learning consistently
 
-Every commit represents something new I've learned—whether it's a programming concept, a coding exercise, or a small project.
+## Progress
 
----
+| Stage | Status |
+|---|---|
+| Python | In Progress |
+| NumPy — Basics | Completed |
+| NumPy — Advanced | In Progress |
+| Pandas | Next |
+| Data Analysis | Planned |
+| Machine Learning | Planned |
+| Deep Learning | Planned |
 
-# 🎯 Goals
+## Repository Structure
 
-* 🐍 Master Python fundamentals
-* 📊 Learn NumPy
-* 🐼 Learn Pandas
-* 📈 Explore Data Analysis
-* 🤖 Study Machine Learning
-* 🧠 Build AI projects
-* 💻 Keep learning consistently
-
----
-
-# 🌱 Current Learning
-
-| Stage            | Status         |
-| ---------------- | -------------- |
-| Python           | 🔄 In Progress |
-| Basic NumPy      | ✅ Completed  |
-| Advance NumPy    | 🔄 In Progress  |
-| Pandas           | ⏳ Next         |
-| Data Analysis    | 🔒 Planned     |
-| Machine Learning | 🔒 Planned     |
-| Deep Learning    | 🔒 Planned     |
-
----
-
-# 📚 Learning Resources
-
-## 🐍 Python
-
-**MIT OpenCourseWare — Introduction to Computer Science and Programming in Python (6.0001)**
-
-📺 https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN
-
----
-
-## 📊 NumPy
-
-**CampusX — Complete NumPy Course**
-
-📺 https://www.youtube.com/live/XF6DCrNTzug?si=RrEhrbabo7EUfq64 <br>
-📺 https://www.youtube.com/live/40xGMygHMDU?si=HkrOZ_V7T6qp0vKw <br>
-📺 https://www.youtube.com/live/jFBpnd0G09o?si=iHhTJjwc6L5xNssg 
-
----
-
-# 📂 Repository
-
-```text
-📦 In-my-python-era
-│
-├── 📂 MIT 6.100L Introduction to CS and Programming using Python, Fall 2022
-├── 📂 Practice Problems from various websites
-├── 📂 Python Libraries
-├── 📂 Mini Projects
-└── 📄 README.md
+```
+In-my-python-era/
+├── MIT 6.100L — Intro to CS and Programming using Python (Fall 2022)
+├── Practice Problems
+├── Python Libraries
+├── Mini Projects
+└── README.md
 ```
 
----
+## What's Inside
 
-# 📖 What You'll Find
+**Python** — variables & data types, operators, loops, functions, recursion, strings, lists, tuples, dictionaries, sets, OOP, file handling, exception handling, debugging
 
-### 🐍 Python
+**NumPy** *(current focus)* — arrays, indexing & slicing, reshaping, broadcasting, mathematical operations, universal functions, random module
 
-* Variables & Data Types
-* Operators
-* Loops
-* Functions
-* Recursion
-* Strings
-* Lists
-* Tuples
-* Dictionaries
-* Sets
-* Object-Oriented Programming
-* File Handling
-* Exception Handling
-* Debugging
+**Practice** — logic-building exercises, coding problems, concept revision
 
----
+## Tech Stack
 
-### 📊 NumPy *(Current Focus)*
+**Language:** Python
+**Libraries:** NumPy, (Pandas — upcoming)
+**Tools:** VS Code, Git, GitHub, Jupyter Notebook
 
-* Arrays
-* Indexing
-* Slicing
-* Reshaping
-* Broadcasting
-* Mathematical Operations
-* Universal Functions
-* Random Module
+## Learning Resources
 
----
+**Python**
+[MIT OpenCourseWare — Intro to CS and Programming in Python (6.0001)](https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN)
 
-### 💻 Practice
+**NumPy**
+[CampusX — Complete NumPy Course (Part 1)](https://www.youtube.com/live/XF6DCrNTzug?si=RrEhrbabo7EUfq64)
+[Part 2](https://www.youtube.com/live/40xGMygHMDU?si=HkrOZ_V7T6qp0vKw)
+[Part 3](https://www.youtube.com/live/jFBpnd0G09o?si=iHhTJjwc6L5xNssg)
 
-* Logic Building
-* Coding Exercises
-* Practice Programs
-* Concept Revision
-
----
-
-
-# 🛠️ Tech Stack
-
-**Language**
-
-* Python
-
-**Libraries**
-
-* NumPy 
-* Advance Numpy *(Learning)*
-
-**Tools**
-
-* VS Code
-* Git
-* GitHub
-* Jupyter Notebook
-
----
-
-# 🌟 Why This Repository?
-
-This repository isn't just about writing code—it's about documenting my growth as a programmer.
-
-I'm learning step by step, building strong fundamentals, solving problems, and preparing for more advanced topics in Data Science and AI.
-
----
-
-# 📊 GitHub Streak
+## GitHub Streak
 
 <p align="center">
 <img src="https://streak-stats.demolab.com?user=manisharoshini&theme=tokyonight&hide_border=true"/>
@@ -164,16 +79,6 @@ I'm learning step by step, building strong fundamentals, solving problems, and p
 
 ---
 
-# 💭 Quote
-
 > *"Great software isn't built in a day. It's built one commit at a time."*
 
----
-
-# ⭐ Support
-
-If you find this repository interesting or helpful, consider giving it a ⭐.
-
-It encourages me to keep learning and sharing my progress.
-
-Happy Coding! 🚀
+If this repository is useful or interesting to you, consider giving it a star — it helps keep the momentum going.
