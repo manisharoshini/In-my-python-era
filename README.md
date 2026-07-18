@@ -14,27 +14,33 @@ Learning Python, exploring Data Science, and building toward AI.
 
 ## About
 
-A record of my journey learning Python and building toward Data Science, Machine Learning, and AI. Each commit reflects a concept learned, an exercise solved, or a small project built.
+This repo tracks my progress through MIT's **6.0001 — Introduction to Computer Science and Programming in Python**, taught by Prof. Ana Bell, alongside a parallel track in NumPy. Every commit is something specific I worked through — a lecture's worth of concepts, a solved problem set, or a small project — not just a generic "learning Python" log.
 
-## Goals
+## Where I Am Right Now
 
-- Master Python fundamentals
-- Learn NumPy and Pandas
-- Explore data analysis
-- Study machine learning and deep learning
-- Keep learning consistently
+- Completed **MIT 6.0001 through Lecture 16**
+- Currently deep in **object-oriented programming**: how objects are laid out in memory, what `self` actually refers to, and patterns like storing object instances in a dictionary (`d[n] = Animal(n)`)
+- On the NumPy side, done with the basics and now working through the advanced material (broadcasting, universal functions, random module)
 
 ## Progress
 
 | Stage | Status |
 |---|---|
-| Python | In Progress |
+| Python (MIT 6.0001, through Lec. 16) | In Progress |
 | NumPy — Basics | Completed |
 | NumPy — Advanced | In Progress |
 | Pandas | Next |
 | Data Analysis | Planned |
 | Machine Learning | Planned |
 | Deep Learning | Planned |
+
+## Featured Work
+
+**Practice Set — Lectures 1–16**
+Ten problems built around the topics from the course so far, with a deliberate focus on recursion: memoization, generating power sets, flattening nested lists, and recursive palindrome checking.
+
+**Mini Project — Library Management System**
+A small OOP project using `Book` and `Library` classes to model checking books in and out — built to put the object/`self` concepts from Lecture 16 into practice rather than just reading about them.
 
 ## Repository Structure
 
@@ -53,8 +59,6 @@ In-my-python-era/
 
 **NumPy** *(current focus)* — arrays, indexing & slicing, reshaping, broadcasting, mathematical operations, universal functions, random module
 
-**Practice** — logic-building exercises, coding problems, concept revision
-
 ## Tech Stack
 
 **Language:** Python
@@ -64,7 +68,7 @@ In-my-python-era/
 ## Learning Resources
 
 **Python**
-[MIT OpenCourseWare — Intro to CS and Programming in Python (6.0001)](https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN)
+[MIT OpenCourseWare — Intro to CS and Programming in Python (6.0001), Prof. Ana Bell](https://youtu.be/0fEJFRKJN4U?si=gTACcu4yYSx3qaNN)
 
 **NumPy**
 [CampusX — Complete NumPy Course (Part 1)](https://www.youtube.com/live/XF6DCrNTzug?si=RrEhrbabo7EUfq64)
