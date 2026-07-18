@@ -62,7 +62,6 @@ Exercises pulled from various sites, worked through independently:
 | `Practice_classes.py` | 8 OOP exercises from pynative.com — `Vehicle`, `Rectangle`, `Student`, `Product`, `BankAccount`, `User` (with password validation), `Notebook` classes |
 | `Practice_problem-Dictionaries.py` | Core dictionary operations — insert, update, lookup |
 | `Practice_problems-List.py` | 45 list exercises from pynative.com — from basic indexing up through list comprehensions, recursion (flattening nested lists), power sets, palindrome checks, prefix sums, and list rotation |
-| `TwoArray.txt` | Two Sum (LeetCode-style) solution plus scratch notes |
 
 ## 🛠️ Mini Projects
 
