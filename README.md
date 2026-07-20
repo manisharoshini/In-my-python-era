@@ -88,7 +88,7 @@ Just getting started here — `pandas.ipynb` currently has the import set up, re
 | Python fundamentals (MIT 6.100L) | 🔄 In Progress — through OOP & Inheritance |
 | Practice problems (lists, dicts, classes) | 🔄 Ongoing |
 | NumPy — Basics | ✅ Completed |
-| NumPy — Advanced | 🔄 In Progress |
+| NumPy — Advanced | ✅ Completed |
 | Pandas | 🔄 Just Started |
 | Data Analysis | 🔒 Planned |
 | Machine Learning | 🔒 Planned |
