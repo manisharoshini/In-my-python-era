@@ -196,3 +196,29 @@ class Animal(object):
     
     def __str__(self):
         return "animal: "+ str(self.name)+ " : " + str(self.age)
+    
+class Cat(Animal): # -- inherits all the attributes(behaviors) of parent class Animal
+    def speak(self):
+        print("meow")
+    def __str__(self):
+        return "Cat:" + str(self.name)+ ":" + str(self.age)
+    # here like python goes into animal class --> copying everything thats in animal class --> pasting it in the cat class 
+    # here we dont have any __init__ inside the class so it uses parentclass init method
+    # parent class is a python object so the child class is also an python object 
+    # the parent class has age and name attributes --> all these attributes are passed to cat class also
+
+# print("------cat animal test----------")
+# c = Cat(5)
+# c.set_name("Fluffy")
+# print(c) #--> Cat:Fluffy:5
+# c.speak() # --> "meow" as output
+
+# print(c.get_age()) # --> will print 5
+# a = Animal(4)
+# a.speak() # --> This will throw an error coz we dont have speak() method in cat class not in animal class 
+
+class Person(Animal):
+    def __init__(self,name,age):
+        Animal.__init__(self,age)
+        self.set_name(name)
+        self.friends = []
