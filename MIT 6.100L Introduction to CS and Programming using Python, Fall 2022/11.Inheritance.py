@@ -291,17 +291,17 @@ class Student(Person):
             print("I'm just scrolling ")
     
 # -- Testers --
-s1 = Student("Manisha",24,"Data Science")
-s2 = Student("Roshini",24)
+# s1 = Student("Manisha",24,"Data Science")
+# s2 = Student("Roshini",24)
 
-print(s1)
-print(s2)
+# print(s1)
+# print(s2)
 
-print(s1.get_name(),":Says:")
-s1.speak()
+# print(s1.get_name(),":Says:")
+# s1.speak()
 
-print(s2.get_name(),":says:")
-s2.speak()
+# print(s2.get_name(),":says:")
+# s2.speak()
 
 # Another subclass Rabbit --
 class rabbit(Animal):
@@ -312,7 +312,31 @@ class rabbit(Animal):
         self.parent2 = parent2
         self.rid = rabbit.tag # rID --> is a unique id for each rabbit -- 1st rabbit we create here gets tag = 1 value. 
         rabbit.tag += 1 # here we increement the rabbit.tag before next rabbit gets created and next rabbit grabs the value 2. 
+    # -- getters for rabbit function (we dont need setters here) -- 
+    # note: HERE THE TAG RID GETS ASSIGNED TO TAG THEN AFTER THAT TAG GETS INCREEMENTED.
 
+    def get_rid(self):
+        return str(self.rid).zfill(5) # this makes number look like an id likeit prefills '0000' before 1 so it will look like '00001'
+    def get_parent1(self):
+        return self.parent1
+    def get_parent2(self):
+        return self.parent2
+    def __add__(self,other): # coz rabbits mate here 
+        # returns object same type as class
+        return rabbit(0,self,other) # here its creates a new rabbit so the rID gets increased and assigned to the baby rabbit
+    # here if the two rabbits are added together.. we create a new rabbit object 
+    # here we use dunder method to add on self and other --> in front of the scene all we do is r4 = r2 + r3
+    # reult will be a rabbit with objects who has parent1 as r2 and parent2 as r3. Since the rabbit os new born --> its age is 0. 
+    # rabbit(age = 0, parent1 = self, parent2 = other) ie parent1 = r2 and parent2 = r3
+    def __eq__(self,other):
+        parent_same = (self.parent1.rid == other.parent1.rid and other.parent2.rid == self.parent2.rid)
+        parent_opp = (self.parent1.rid == other.parent2.rid and self.parent2.rid == other.parent1.rid)
+        return parent_same or parent_opp
+    # here we are checking for ids ie rID coz we have unique id
+    # we cant compare objects directly like self.parent1 == other.parent1 --> problems here is at some point we compare None and rabbit object together.
+    # code will crash -- instead we can compare rIDs since here we are comparing numbers over parent1 or parent2
+    def __str__(self):
+        return "rabbit: " + self.get_rid()
 """
 Class variable have shared instances. Its a shared resource --> any instance can access as well as modify
 if modified --> all instaces see the modified values
@@ -320,6 +344,29 @@ Here in Raabit class -  we are using it to count the instances of type Rabbit we
 
 """
 
-# -- Testers --
+# -- Testers -- 
 r1 = rabbit(8) # rabbot.tag --> becomes 1 (age = 8, parent1 = None, parent2 = None) and rabbit.tag gets increemented before next rabit is created
-r2 = rabbit(6) # rabbit.tag --> becomes 2 and tabit.tag gets increemented before new rabbit gets created.
+r2 = rabbit(6) # rabbit.tag --> becomes 2 and tabit.tag gets increemented before new rabbit gets created --> becomes 3
+r3 = rabbit(10) # rabbit.tag --> becomes 3 
+
+print("r1: ",r1)
+print("r2: ",r2)
+print("r3: ",r3)
+
+print("r1 parents: ",r1.get_parent1(),r1.get_parent2())
+print("r2 parents: ",r2.get_parent1(),r2.get_parent2())
+
+# if we do:
+r4 = r1 + r2
+print(r4)
+print("r4 parents: ",r4.get_parent1(),r4.get_parent2())
+
+#  -- Testing Equality --
+r5 = r3 + r4
+r6 = r4 + r3
+print(r5)
+print("r5 Parents: ", r5.get_parent1(),r5.get_parent2())
+print("r6 parents: ",r6.get_parent1(),r5.get_parent2())
+
+print(f"Checking if r5 and r6 are siblings or not: {r5 == r6}")
+print(f"Checking if r4 and r6 are siblings or not {r4 == r6}")
