@@ -243,26 +243,83 @@ class Person(Animal):
 self.age = age → initializes only one attribute.
 Animal.__init__(self, age) → runs all the initialization code inside the parent class."""
 
+# # -- Testers --
+# p1 = Person("Jack",23)
+# p2 = Person("Jill", 22)
+
+# print(p1)
+
+# print(p1.get_name())
+# print(p1.get_age())
+# print(p2.get_name())
+# print(p2.get_age())
+
+# p1.speak() # if i add print statement i'll get the output as well as the None value 
+# p2.speak() 
+
+# p1.age_diff(p2)
+
+# p1.add_friends('Bobby')
+# p1.add_friends('Brianna')
+# p2.add_friends('Brianna')
+# p2.add_friends('Bobby')
+
+# print(p1.get_friends())
+# print(p2.get_friends()) # we can have mutual friends too in this 
+
+import random
+def make_pets(d):
+    for k,v in d.items(): # k --> person and v --> cat
+        print(k.get_name() + ":" + v.get_name())
+
+# -- Another Subclass: Student inherited from Subclass Person --
+class Student(Person):
+    def __init__(self,name,age,major = None):
+        Person.__init__(self,name,age)
+        self.major = major
+    def change_major(self,major):
+        self.major = major
+    def speak(self):
+        r = random.random()
+        if r < 0.25:
+            print("I have a Homework !!!!")
+        elif 0.25 <=  r < 0.5:
+            print("I need to sleep !!")
+        elif 0.5 <= r < 0.75:
+            print("want to eattt !!!")
+        else:
+            print("I'm just scrolling ")
+    
 # -- Testers --
-p1 = Person("Jack",23)
-p2 = Person("Jill", 22)
+s1 = Student("Manisha",24,"Data Science")
+s2 = Student("Roshini",24)
 
-print(p1)
+print(s1)
+print(s2)
 
-print(p1.get_name())
-print(p1.get_age())
-print(p2.get_name())
-print(p2.get_age())
+print(s1.get_name(),":Says:")
+s1.speak()
 
-p1.speak() # if i add print statement i'll get the output as well as the None value 
-p2.speak() 
+print(s2.get_name(),":says:")
+s2.speak()
 
-p1.age_diff(p2)
+# Another subclass Rabbit --
+class rabbit(Animal):
+    tag = 1 # a plain variable
+    def __init__(self,age,parent1 = None,parent2 = None):
+        Animal.__init__(self,age)
+        self.parent1 = parent1 # will inherit Amil class attributes as well as this class attributes
+        self.parent2 = parent2
+        self.rid = rabbit.tag # rID --> is a unique id for each rabbit -- 1st rabbit we create here gets tag = 1 value. 
+        rabbit.tag += 1 # here we increement the rabbit.tag before next rabbit gets created and next rabbit grabs the value 2. 
 
-p1.add_friends('Bobby')
-p1.add_friends('Brianna')
-p2.add_friends('Brianna')
-p2.add_friends('Bobby')
+"""
+Class variable have shared instances. Its a shared resource --> any instance can access as well as modify
+if modified --> all instaces see the modified values
+Here in Raabit class -  we are using it to count the instances of type Rabbit we have created in this program
 
-print(p1.get_friends())
-print(p2.get_friends()) # we can have mutual friends too in this 
+"""
+
+# -- Testers --
+r1 = rabbit(8) # rabbot.tag --> becomes 1 (age = 8, parent1 = None, parent2 = None) and rabbit.tag gets increemented before next rabit is created
+r2 = rabbit(6) # rabbit.tag --> becomes 2 and tabit.tag gets increemented before new rabbit gets created.
