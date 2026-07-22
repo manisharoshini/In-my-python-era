@@ -219,6 +219,50 @@ class Cat(Animal): # -- inherits all the attributes(behaviors) of parent class A
 
 class Person(Animal):
     def __init__(self,name,age):
-        Animal.__init__(self,age)
+        Animal.__init__(self,age) # -- line means "Initialize everything that belongs to an Animal."
+        # this goes to animal class and calls self.age = age from parent class instead of doing it on children's class 
+        # instead of rewriting we simply called it from parent class.. if we made any chnages in parent class it will be easy !! or else we have to 
+        # change it again in children class
         self.set_name(name)
         self.friends = []
+    
+    def get_friends(self):
+        return self.friends.copy()
+    def add_friends(self,fname):
+        if fname not in self.friends:
+            self.friends.append(fname)
+    def speak(self):
+        print(f"Hello !!!! I'm {self.name}")
+    def age_diff(self,other):
+        diff = self.age - other.age
+        print(f"Year Difference is {abs(diff)}")
+    def __str__(self):
+        return "person:" + str(self.name) + ":" + str(self.age)
+
+"""Rule to remember
+self.age = age → initializes only one attribute.
+Animal.__init__(self, age) → runs all the initialization code inside the parent class."""
+
+# -- Testers --
+p1 = Person("Jack",23)
+p2 = Person("Jill", 22)
+
+print(p1)
+
+print(p1.get_name())
+print(p1.get_age())
+print(p2.get_name())
+print(p2.get_age())
+
+p1.speak() # if i add print statement i'll get the output as well as the None value 
+p2.speak() 
+
+p1.age_diff(p2)
+
+p1.add_friends('Bobby')
+p1.add_friends('Brianna')
+p2.add_friends('Brianna')
+p2.add_friends('Bobby')
+
+print(p1.get_friends())
+print(p2.get_friends()) # we can have mutual friends too in this 
