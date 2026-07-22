@@ -5,46 +5,46 @@ Why use OOP and classes of Objects?
 
 """
 
-# # here we create animal class - will tell age and name and as per that we have to classify which animal it is. 
-# class Animal(object):
-#     def __init__(self,age):
-#         self.age = age
-#         self.name = None # later we'll create methods that we use to give names 
-#  # 2nd Step: We are adding __str__ to the method to change how the way we print: 
-#  # if we dont initialize __str__ method it will bydefault print the memory location of the object that we have created. 
-#     def __str__(self):
-#         return "Animal:" + str(self.name) + ":" + str(self.age)
-#  # adding getters and setters
-#    # -- Getters --> simple functions that will return the values of the Data attributes that this object has 
-#     def get_age(self):
-#         return self.age
-#     def get_name(self):
-#         return self.name
-#    # -- Setters --> same idea but here we are allowing someone using our class to set the values of these data 
-#     def set_age(self,newage):
-#         self.age = newage
-#     def set_name(self,newname = ""):
-#         self.name = newname
+# here we create animal class - will tell age and name and as per that we have to classify which animal it is. 
+class Animal(object):
+    def __init__(self,age):
+        self.age = age
+        self.name = None # later we'll create methods that we use to give names 
+ # 2nd Step: We are adding __str__ to the method to change how the way we print: 
+ # if we dont initialize __str__ method it will bydefault print the memory location of the object that we have created. 
+    def __str__(self):
+        return "Animal:" + str(self.name) + ":" + str(self.age)
+ # adding getters and setters
+   # -- Getters --> simple functions that will return the values of the Data attributes that this object has 
+    def get_age(self):
+        return self.age
+    def get_name(self):
+        return self.name
+   # -- Setters --> same idea but here we are allowing someone using our class to set the values of these data 
+    def set_age(self,newage):
+        self.age = newage
+    def set_name(self,newname = ""):
+        self.name = newname
 
 # Testing the objects that we create: 
 
 
-# myanimal = Animal(3)
-# print(myanimal)
+myanimal = Animal(3)
+print(myanimal)
 
-# # -- If we do: print(myanimal.age) and print(myanimal.get_age()) both will give me same output 
-# print(myanimal.age)
-# print(myanimal.get_age())
+# -- If we do: print(myanimal.age) and print(myanimal.get_age()) both will give me same output 
+print(myanimal.age)
+print(myanimal.get_age())
 
-# # -- setname: we have set the name using setter function and get tha using getter functions 
-# myanimal.set_name("Paul")
-# print(myanimal.name)
-# print(myanimal.get_name())
-# print(myanimal) # -- this will print all the values like Age and Name 
+# -- setname: we have set the name using setter function and get tha using getter functions 
+myanimal.set_name("Paul")
+print(myanimal.name)
+print(myanimal.get_name())
+print(myanimal) # -- this will print all the values like Age and Name 
 
-# # -- if we set name as an empty ones like
-# myanimal.set_name()
-# print(myanimal) # -- Animal::3 --> is the output coz we havent gave any name here 
+# -- if we set name as an empty ones like
+myanimal.set_name()
+print(myanimal) # -- Animal::3 --> is the output coz we havent gave any name here 
 
 
 """
@@ -100,68 +100,68 @@ here the dictionary should have keys that is ints and values should be Animal ob
 2:Animal(2) --> in this way 
 
 """
-# class Animal(object):
-#     def __init__(self,age):
-#         self.age = age
-#         self.name = None # later we'll create methods that we use to give names 
-#  # 2nd Step: We are adding __str__ to the method to change how the way we print: 
-#  # if we dont initialize __str__ method it will bydefault print the memory location of the object that we have created. 
-#     def __str__(self):
-#         return "Animal:" + str(self.name) + ":" + str(self.age)
-#  # adding getters and setters
-#    # -- Getters --> simple functions that will return the values of the Data attributes that this object has 
-#     def get_age(self):
-#         return self.age
-#     def get_name(self):
-#         return self.name
-#    # -- Setters --> same idea but here we are allowing someone using our class to set the values of these data 
-#     def set_age(self,newage):
-#         self.age = newage
-#     def set_name(self,newname = ""):
-#         self.name = newname
+class Animal(object):
+    def __init__(self,age):
+        self.age = age
+        self.name = None # later we'll create methods that we use to give names 
+ # 2nd Step: We are adding __str__ to the method to change how the way we print: 
+ # if we dont initialize __str__ method it will bydefault print the memory location of the object that we have created. 
+    def __str__(self):
+        return "Animal:" + str(self.name) + ":" + str(self.age)
+ # adding getters and setters
+   # -- Getters --> simple functions that will return the values of the Data attributes that this object has 
+    def get_age(self):
+        return self.age
+    def get_name(self):
+        return self.name
+   # -- Setters --> same idea but here we are allowing someone using our class to set the values of these data 
+    def set_age(self,newage):
+        self.age = newage
+    def set_name(self,newname = ""):
+        self.name = newname
 
-# # here we are checking if the list has only int values (no negative or string values are allowed)
-# # -- Adding it to "d" dictionary
-# def animal_dict(L):
-#     d = {}
-#     for n in L:
-#         if type(n) == int and n >= 0:
-#             d[n] = Animal(n)
-#             # here means d[0] -- means the key of dict 
-#             # animal[0] -- means the value of dic
-#     return d
+# here we are checking if the list has only int values (no negative or string values are allowed)
+# -- Adding it to "d" dictionary
+def animal_dict(L):
+    d = {}
+    for n in L:
+        if type(n) == int and n >= 0:
+            d[n] = Animal(n)
+            # here means d[0] -- means the key of dict 
+            # animal[0] -- means the value of dic
+    return d
 
-# L = [2,3,-5,'a',0]
-# animals = animal_dict(L)
-# # print(animals) # -- this doesnt print recursively it just prints the top level thing (knows to print integers doesnt know to print the dictionaries)
-# for n,a in animals.items():
-#     print(f"Key {n} and the value {a}")
-#     # -- here we are running print on key and value seperately..  
+L = [2,3,-5,'a',0]
+animals = animal_dict(L)
+# print(animals) # -- this doesnt print recursively it just prints the top level thing (knows to print integers doesnt know to print the dictionaries)
+for n,a in animals.items():
+    print(f"Key {n} and the value {a}")
+    # -- here we are running print on key and value seperately..  
 
-# # -- Try it Yourself -- 
-# # L1 --> list of ints and L2 --> list of str.. L1 and L2 are of same length. Creates a list of Animals of same length as L1 and L2
-# # An animal object at index i has the age and name correspondingly to same index in L1 and L2, respectively
+# -- Try it Yourself -- 
+# L1 --> list of ints and L2 --> list of str.. L1 and L2 are of same length. Creates a list of Animals of same length as L1 and L2
+# An animal object at index i has the age and name correspondingly to same index in L1 and L2, respectively
 
-# def make_animals(l1,l2):
-#     l3 = []
-#     for i in range(len(l1)):
-#         # i is 0,1,2,3.. prolly the index (not values)
-#         age = l1[i]
-#         name = l2[i]
-#         a = Animal(age)
-#         a.set_name(name)
-#         l3.append(a)
+def make_animals(l1,l2):
+    l3 = []
+    for i in range(len(l1)):
+        # i is 0,1,2,3.. prolly the index (not values)
+        age = l1[i]
+        name = l2[i]
+        a = Animal(age)
+        a.set_name(name)
+        l3.append(a)
 
-#     return l3
+    return l3
 
-# l1 = [2,3,4]
-# l2 = ["blobfish","jellyfish","goldfish"]
-# fish = make_animals(l1,l2)
+l1 = [2,3,4]
+l2 = ["blobfish","jellyfish","goldfish"]
+fish = make_animals(l1,l2)
 
-# for i in fish:
-#     print(f"{i}")
+for i in fish:
+    print(f"{i}")
 
-# # --------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------
 """
 INHERITANCE: 
 This will have a base class Animal and 3 subclass - Rabbit, cat, person (with different behaviour and information)
@@ -207,15 +207,15 @@ class Cat(Animal): # -- inherits all the attributes(behaviors) of parent class A
     # parent class is a python object so the child class is also an python object 
     # the parent class has age and name attributes --> all these attributes are passed to cat class also
 
-# print("------cat animal test----------")
-# c = Cat(5)
-# c.set_name("Fluffy")
-# print(c) #--> Cat:Fluffy:5
-# c.speak() # --> "meow" as output
+print("------cat animal test----------")
+c = Cat(5)
+c.set_name("Fluffy")
+print(c) #--> Cat:Fluffy:5
+c.speak() # --> "meow" as output
 
-# print(c.get_age()) # --> will print 5
-# a = Animal(4)
-# a.speak() # --> This will throw an error coz we dont have speak() method in cat class not in animal class 
+print(c.get_age()) # --> will print 5
+a = Animal(4)
+a.speak() # --> This will throw an error coz we dont have speak() method in cat class not in animal class 
 
 class Person(Animal):
     def __init__(self,name,age):
@@ -243,29 +243,29 @@ class Person(Animal):
 self.age = age → initializes only one attribute.
 Animal.__init__(self, age) → runs all the initialization code inside the parent class."""
 
-# # -- Testers --
-# p1 = Person("Jack",23)
-# p2 = Person("Jill", 22)
+# -- Testers --
+p1 = Person("Jack",23)
+p2 = Person("Jill", 22)
 
-# print(p1)
+print(p1)
 
-# print(p1.get_name())
-# print(p1.get_age())
-# print(p2.get_name())
-# print(p2.get_age())
+print(p1.get_name())
+print(p1.get_age())
+print(p2.get_name())
+print(p2.get_age())
 
-# p1.speak() # if i add print statement i'll get the output as well as the None value 
-# p2.speak() 
+p1.speak() # if i add print statement i'll get the output as well as the None value 
+p2.speak() 
 
-# p1.age_diff(p2)
+p1.age_diff(p2)
 
-# p1.add_friends('Bobby')
-# p1.add_friends('Brianna')
-# p2.add_friends('Brianna')
-# p2.add_friends('Bobby')
+p1.add_friends('Bobby')
+p1.add_friends('Brianna')
+p2.add_friends('Brianna')
+p2.add_friends('Bobby')
 
-# print(p1.get_friends())
-# print(p2.get_friends()) # we can have mutual friends too in this 
+print(p1.get_friends())
+print(p2.get_friends()) # we can have mutual friends too in this 
 
 import random
 def make_pets(d):
@@ -291,17 +291,17 @@ class Student(Person):
             print("I'm just scrolling ")
     
 # -- Testers --
-# s1 = Student("Manisha",24,"Data Science")
-# s2 = Student("Roshini",24)
+s1 = Student("Manisha",24,"Data Science")
+s2 = Student("Roshini",24)
 
-# print(s1)
-# print(s2)
+print(s1)
+print(s2)
 
-# print(s1.get_name(),":Says:")
-# s1.speak()
+print(s1.get_name(),":Says:")
+s1.speak()
 
-# print(s2.get_name(),":says:")
-# s2.speak()
+print(s2.get_name(),":says:")
+s2.speak()
 
 # Another subclass Rabbit --
 class rabbit(Animal):
