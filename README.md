@@ -102,6 +102,9 @@ Just getting started here — `pandas.ipynb` currently has the import set up, re
 **NumPy**
 [CampusX — Complete NumPy Course: Part 1](https://www.youtube.com/live/XF6DCrNTzug?si=RrEhrbabo7EUfq64) · [Part 2](https://www.youtube.com/live/40xGMygHMDU?si=HkrOZ_V7T6qp0vKw) · [Part 3](https://www.youtube.com/live/jFBpnd0G09o?si=iHhTJjwc6L5xNssg)
 
+**Pandas**
+[CampusX — Complete Pandas Course: Part 1](https://www.youtube.com/live/zCDVUyq8lkw?si=uNQOjEXWBTdVmCQ0) 
+
 ## Tech Stack
 
 **Language:** Python · **Libraries:** NumPy, Pandas *(starting out)* · **Tools:** VS Code, Git, GitHub, Jupyter Notebook
