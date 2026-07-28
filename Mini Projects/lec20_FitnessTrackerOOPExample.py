@@ -40,7 +40,7 @@ class Workout(object):
     def set_start(self,start):
         self.start = start
     def set_end(self,end):
-        self.end = end
+        self.end = endd
 
 
 # -- Inspect internal state of class --
