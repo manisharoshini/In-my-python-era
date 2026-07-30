@@ -51,6 +51,25 @@ class Workout(object):
     def set_end(self,end):
         self.end = end
 
+    def __str__(self):
+        width = 16
+        retstr = f"|{'-'* width}| \n"
+        retstr += f"|{' '* width}| \n"
+        iconLen = 0
+        retstr += f"|{self.icon}{' '* (width-3)}|\n"
+        retstr += f"|{self.kind}{' '* (width-len(self.kind)-1)}|\n"
+        retstr += f"|{' '* width}|\n"
+        duration_str = str(self.get_duration())
+        retstr += f"|{duration_str}{' '* (width-len(duration_str)-1)}|\n"
+        cal_str = f"{self.get_calories():.0f}"
+        retstr += f"|{cal_str} Calories {' '* (width-len(cal_str)-11)}|\n"
+
+        retstr += f"|{' '* (width)}|\n"
+        retstr += f"|{' '* (width)}|\n"
+
+        return retstr
+
+    # we cant copy paste all of this __str__ code so we created in parent class and call it in subclass 
 
 # # -- Inspect internal state of class --
 
