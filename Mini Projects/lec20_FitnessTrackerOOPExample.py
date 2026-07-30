@@ -126,4 +126,31 @@ Note to myself: (if in future you didnt understood this just copy paste in chatg
 
 # # we cant do this access its not recommended but if we want we can change it throuh methods (like getter and setter) 
 
-# ==== You Try it ====
+# # ==== You Try it ====4
+# # -- testers -- 
+# w_one = Workout('Jan 1 2021 12:20 pm', 'Jan 1 2021 1:30 pm')
+# print(f"In this the Calories are calculated: {w_one.get_calories()}")
+
+# w_two = Workout('Jan 1 2021 12:20 pm', 'Jan 1 2021 1:30 pm',300)
+# print(f"In this the calories are given: {w_two.get_calories()}")
+
+# # --- Run Workout Class
+
+class RunWorkout(Workout):
+    def __init__(self,start,end,elev=0,calories = None):
+        super().__init__(self,start,end,calories) # here parent class is accessed via super() -- the return of the super is the thing in the parenthesis of Runworkout class ie 'Workout'
+        self.icon = 'running - icon' # override parent'd default
+        self.kind = 'RUNNING' # override parent'd default
+        self.elev = elev # This is a new Data Attribute that did not there in parent class 
+
+    def get_elev(self):
+        return self.elev
+    def set_elev(self,e):
+        self.elev = e
+
+
+
+
+
+
+ 
