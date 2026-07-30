@@ -17,6 +17,8 @@ What it does
 # and the icon and kind is not initialized in parameter it means "I don't care what the user gives me — every object created from this class gets 'workout'."
 
 from dateutil import parser # library is a collection of objects or methods, functions that deal with same type of data 
+from math import sin,cos,sqrt,atan2,radians
+
 
 class Workout(object):
     cal_per_hour = 200 # class varibale - all instances of Workout can read this .. 
@@ -68,6 +70,7 @@ class Workout(object):
         retstr += f"|{' '* (width)}|\n"
 
         return retstr
+
 
     # we cant copy paste all of this __str__ code so we created in parent class and call it in subclass 
 
@@ -153,23 +156,118 @@ Note to myself: (if in future you didnt understood this just copy paste in chatg
 # w_two = Workout('Jan 1 2021 12:20 pm', 'Jan 1 2021 1:30 pm',300)
 # print(f"In this the calories are given: {w_two.get_calories()}")
 
+def gpsDistance(p1,p2):
+    R = 6373.0
+
+    lat1 = radians(p1[0])
+    long1 = radians(p2[1])
+    lat2 = radians(p1[0])
+    long2 = radians(p[1])
+
+    # Compute haversine distance
+    dlon = long2 - long1
+    dlat = lat2 - lat1
+
+    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2) ** 2
+    c = 2* atan2(sqrt(a),sqrt(1 - a))
+
 # # --- Run Workout Class
 
 class RunWorkout(Workout):
-    def __init__(self,start,end,elev=0,calories = None):
-        super().__init__(self,start,end,calories) # here parent class is accessed via super() -- the return of the super is the thing in the parenthesis of Runworkout class ie 'Workout'
+    cals_per_km = 100
+    def __init__(self,start,end,elev=0,calories = None,routeGpsPoints = None):
+        super().__init__(start,end,calories) # here parent class is accessed via super() -- the return of the super is the thing in the parenthesis of Runworkout class ie 'Workout'
         self.icon = 'running - icon' # override parent'd default
         self.kind = 'RUNNING' # override parent'd default
         self.elev = elev # This is a new Data Attribute that did not there in parent class 
+        self.routeGpsPoints = routeGpsPoints
 
     def get_elev(self):
         return self.elev
     def set_elev(self,e):
         self.elev = e
 
+    # -- we have our own get_calories() method --
+    def get_calories(self):
+        if (self.route_gps_points != None):
+            dist = 0
+            lastP = self.routeGpsPoints[0]
+            for p in self.routeGpsPoints[1:]:
+                dist += gpsDistance(lastP,p) # gpsDistance -- This is just a their own library we can aslo cretae
+                lastP = p
+            return dist * RunWorkout.cals_per_km
+        else:
+            return super().get_calories()
+    def __eq__(self,other):
+        return super().__eq__(other) and self.elev == other.elev
 
 
 
+class SwimWorkout(Workout):
+    cal_per_hour = 400
+    def __init__(self,start,end,pace,calories = None):
+        super().__init__(start,end,calories)
+        self.icon = "Swimming - icon"
+        self.kind = "SWIMMING"
+        self.pace = pace
+
+    def get_pace(self):
+        return self.pace
+    def set_pace(self,p):
+        self.pace = p
+
+    def get_calories(self):
+        if (self.calories == None):
+            return SwimWorkout.cal_per_hour * (self.end-self.start).total_seconds()/3600
+        else:
+            return self.calories
 
 
+# -- Testers --
+# w = Workout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM')
+# r = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM')
+
+# print(r)
+# print(w)
  
+"""
+When can we use instance of a subclass ?
+- We can use an instance of RunWorkout anywhere Workout can be used. Beacuse RunWorkout is a Workout but Workout is not a RunWorkout. 
+- Opposite is not True (cannot use Workout anywhere RunWorkout is used). Because runworkout has other attributes other than Workout class. 
+- Consider two helping functions
+
+"""
+
+def total_calories(workout):
+    cals = 0
+    for w in workout:
+        cals += w.get_cals()
+    return cals
+
+def total_elevation(run_workouts):
+    elev = 0
+    for e in run_workouts:
+        elev += e.get_elev()
+    return elev
+
+# # -- Testers --
+# w1 = Workout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM')
+# print(w1.get_calories()) # this will print the value
+# # print(w1.get_elev()) # -- This will throw an error becasue the get_elev() belongs to RunWorkout class and the w1 belongs to Workout class. 
+# # Hence "We can use an instance of RunWorkout anywhere Workout can be used. Beacuse RunWorkout is a Workout but Workout is not a RunWorkout" is proved
+
+# w2 = Workout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',450)
+# print(w2.get_calories())
+
+# rw1 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',250)
+# print(rw1.get_calories())
+# print(rw1.get_elev())
+# print("______________________")
+# rw2 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',350,700) # elev comes before coz we have palces=d it first ib runworkout
+# print(rw2.get_calories())
+# print(rw2.get_elev())
+# print("______________________")
+# rw3 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',calories=240)
+# print(rw3.get_elev())
+# print(rw3.get_calories())
+
