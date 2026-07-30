@@ -71,6 +71,14 @@ class Workout(object):
 
         return retstr
 
+    def __eq__(self,other):
+        return type(self) == type(other) and \
+        self.start == other.start and \
+        self.end == other.end and \
+        self.kind == other.kind and \
+        self.get_calories() == other.get_calories()
+    # Here this says if all are same then the workouts are same too 
+
 
     # we cant copy paste all of this __str__ code so we created in parent class and call it in subclass 
 
@@ -202,6 +210,7 @@ class RunWorkout(Workout):
             return super().get_calories()
     def __eq__(self,other):
         return super().__eq__(other) and self.elev == other.elev
+    # so here this means all the things that are equal in parent class shoud work and also extra thing that is elev should also be equals
 
 
 
@@ -273,10 +282,27 @@ def total_elevation(run_workouts):
 # print(rw3.get_elev())
 # print(rw3.get_calories())
 
-points = [(42.3601,-71.0589),(42.3370,-71.2092)]
-run1 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',calories=240,routeGpsPoints=points)
-print(f"Calories with route points: {run1.get_calories()}")
 
-run2 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',calories=240)
-print(f"Calories with simple ones: {run2.get_calories()}")
+# # -- Testers for checking the latitude and longitude functions --
+# points = [(42.3601,-71.0589),(42.3370,-71.2092)]
+# run1 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',calories=240,routeGpsPoints=points)
+# print(f"Calories with route points: {run1.get_calories()}")
 
+# run2 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',calories=240)
+# print(f"Calories with simple ones: {run2.get_calories()}")
+
+# -- testers for __eq__ --
+w1 = Workout('9/30/2021 1:35 PM','9/30/2021 2:05 PM', 500)
+w2 = Workout('9/30/2021 1:35 PM','9/30/2021 2:05 PM') # cal are
+w3 = Workout('9/30/2021 1:35 PM','9/30/2021 2:05 PM', 100)
+
+rw1 = RunWorkout('9/30/2021 1:35 PM','9/30/2021 3:05 PM', 100)
+rw2 = RunWorkout('9/30/2021 1:35 PM','9/30/2021 3:05 PM', 200)
+rw3 = RunWorkout('9/30/2021 1:35 PM','9/30/2021 3:05 PM', 100)
+
+print(w1 == w2) # False -- since only length of workout is same
+print(w1 == w3) # False -- since only length of workout is same
+print(w2 == w3) # True -- length and clories both are equal
+print(w1 == rw1) # False -- types of w1 and rw1 are different
+print(rw1 == rw2) # False -- Elevation are different
+print(rw1 == rw3) # True -- Everything is same.
