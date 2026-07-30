@@ -160,9 +160,9 @@ def gpsDistance(p1,p2):
     R = 6373.0
 
     lat1 = radians(p1[0])
-    long1 = radians(p2[1])
-    lat2 = radians(p1[0])
-    long2 = radians(p[1])
+    long1 = radians(p1[1])
+    lat2 = radians(p2[0])
+    long2 = radians(p2[1])
 
     # Compute haversine distance
     dlon = long2 - long1
@@ -170,6 +170,8 @@ def gpsDistance(p1,p2):
 
     a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2) ** 2
     c = 2* atan2(sqrt(a),sqrt(1 - a))
+
+    return R * c
 
 # # --- Run Workout Class
 
@@ -189,11 +191,11 @@ class RunWorkout(Workout):
 
     # -- we have our own get_calories() method --
     def get_calories(self):
-        if (self.route_gps_points != None):
+        if (self.routeGpsPoints != None):
             dist = 0
             lastP = self.routeGpsPoints[0]
             for p in self.routeGpsPoints[1:]:
-                dist += gpsDistance(lastP,p) # gpsDistance -- This is just a their own library we can aslo cretae
+                dist += gpsDistance(lastP,p) # gpsDistance -- This is just a their own library we can aslo cretaed here 
                 lastP = p
             return dist * RunWorkout.cals_per_km
         else:
@@ -270,4 +272,11 @@ def total_elevation(run_workouts):
 # rw3 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',calories=240)
 # print(rw3.get_elev())
 # print(rw3.get_calories())
+
+points = [(42.3601,-71.0589),(42.3370,-71.2092)]
+run1 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',calories=240,routeGpsPoints=points)
+print(f"Calories with route points: {run1.get_calories()}")
+
+run2 = RunWorkout('9/30/2021 1:35 PM', '9/30/2021 1:57 PM',calories=240)
+print(f"Calories with simple ones: {run2.get_calories()}")
 
