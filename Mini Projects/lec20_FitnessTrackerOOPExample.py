@@ -305,4 +305,6 @@ print(w1 == w3) # False -- since only length of workout is same
 print(w2 == w3) # True -- length and clories both are equal
 print(w1 == rw1) # False -- types of w1 and rw1 are different
 print(rw1 == rw2) # False -- Elevation are different
-print(rw1 == rw3) # True -- Everything is same.
+print(rw1 == rw3) # True -- Everything is same 
+
+# -------------------End-------------------------------------------------------------
