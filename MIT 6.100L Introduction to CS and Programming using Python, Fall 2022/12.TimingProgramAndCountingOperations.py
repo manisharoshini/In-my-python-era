@@ -83,3 +83,25 @@ for i in range(8):
 time_wrapper(cel_to_far,L_N)
 time_wrapper(mysum,L_N)
 # time_wrapper(square,L_N) # this takes a lot of time to execute
+
+
+"""
+TIMING PROGRAMS IS INCONSISTENT
+  Goal: To evaluate differnet algorithms
+x Running time should be vary between algorithms.   
+x Running TIme should not vary between implementations
+x Running TIme should not vary between computers
+x Running TIme should not vary between languages
+x Running Time is should be predictable for small inputs 
+
+We cant do counting programs in this case coz of many obstracles, so we can try counting operations 
+
+"""
+# ======================================================================================================================
+
+"""
+************COUNTING OPERATIONS*****************
+
+
+
+"""
