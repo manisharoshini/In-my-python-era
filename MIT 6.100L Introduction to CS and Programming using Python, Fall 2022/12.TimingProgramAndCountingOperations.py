@@ -98,10 +98,3 @@ We cant do counting programs in this case coz of many obstracles, so we can try 
 
 """
 # ======================================================================================================================
-
-"""
-************COUNTING OPERATIONS*****************
-
-
-
-"""
