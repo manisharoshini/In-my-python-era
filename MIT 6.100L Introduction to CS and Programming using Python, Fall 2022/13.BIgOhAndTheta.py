@@ -3,7 +3,7 @@
 # # -- Timing a program: 
 # # -- last lecture we used time in this lecture we use performance counter ir perf_counter (this is used in real world)
 
-# import time 
+import time 
 # def convert_to_km(m):
 #     return m * 1.609
 
@@ -13,19 +13,58 @@
 
 # print(f"t = {dt}seconds")
 
-# ------------------------------------------------------------
-# -- Here we are going to looke at two functions:  
+# # ------------------------------------------------------------
+# # -- Here we are going to looke at two functions:  
 
-def convert_to_km(m):
-    return m * 1.609
+# def convert_to_km(m):
+#     return m * 1.609
 
-def compound(invest,interest,n_months):
-    total = 0
-    for i in range(n_months):
-        total = total * interest + invest
-    return total
+# def compound(invest,interest,n_months):
+#     total = 0
+#     for i in range(n_months):
+#         total = total * interest + invest
+#     return total
+
+# # Inputs 
+# L_N = [1]
+# for i in range(7):
+#     L_N.append(L_N[-1]*10)
+
+# for N in L_N:
+#     t = time.perf_counter()
+#     km = convert_to_km(N)
+#     dt = time.perf_counter() - t
+#     print(f"Convert_to_km({N}) took {dt:.2e} seconds ({1/dt:,.2f}/sec)")
+
+# print()
+# # -- Here we are checking which variable of compound functions effects the running time (Checking the effects of input parameters on time )
+# # here we chnage invest rate: 
+# for N in L_N:
+#     t = time.perf_counter()
+#     money = compound(N,1.05,12)
+#     dt = time.perf_counter()-t
+#     print(f"Compound({N}) took {dt:.2e}seconds ({1/dt:,.2f}/sec)")
+# # lets check what happens if we change the interest rate:
+# for N in L_N:
+#     t = time.perf_counter()
+#     money = compound(10.0,1+1/N,12)
+#     dt = time.perf_counter()-t
+#     print(f"Compound({N}) took {dt:.2e}seconds ({1/dt:,.2f}/sec)")
+# # here we are changing the months to check whether it has effect on Time or not:
+# for N in L_N:
+#     t = time.perf_counter()
+#     money = compound(10.0,1.05,N)
+#     dt = time.perf_counter()-t
+#     print(f"Compound({N}) took {dt:.2e}seconds ({1/dt:,.2f}/sec)")
 
 """
+Scientific notations: 1.44e-0.6 = 1.44 x 10^-6 --> read the seconds 
+
+Observations about above code: 
+1. Time grows with the input only when n_months chnages
+2. Average time seems to increase by 10 as size of argument increases by 10
+3. relationship between size and time only predictable for large sizes
+
 Questions: 
 
 1. How long does it take to compute this functions?
@@ -33,3 +72,6 @@ Questions:
 3. Are the times noticeably different for these two functions? 
 
 """
+
+# ----------------------------------------------------------------------------
+# INPUTS HERE ARE LISTS: lets check the change in time
