@@ -99,9 +99,8 @@ Observations:
 2. Average time increases by 10 as size of argument increases by 10
 3. relationship between size and time only predictable for larger sizes
 4. Time seems compareable to computation of compound
-
 Another observations Number took compount took 8 seconds to run 100 millions and list of 100 milions took about 7 seconds -- This is youtube's observations 
 
 """
 
-
+# -------------------------------------------------------------------------------------------
