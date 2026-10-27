@@ -103,33 +103,75 @@ Another observations Number took compount took 8 seconds to run 100 millions and
 
 """
 
-# -------------------------------------------------------------------------------------------
+# # -------------------------------------------------------------------------------------------
 
-# Brute Force Technique -- Measure time to find element in the list
-def is_in(L,x):
-    for ele in L:
-        if ele == x:
-            return True
-        return False
+# # Brute Force Technique -- Measure time to find element in the list
+# def is_in(L,x):
+#     for ele in L:
+#         if ele == x:
+#             return True
+#         return False
 
-# Bisection Search 
-def binary_search(L,x):
-    lo = 0
-    hi = len(L)
-    while lo-hi > 1:
-        mid = (lo+hi)//2
-        if L[mid] <= x:
-            lo = mid
-        else:
-            hi = mid
-    return L[lo] == x
+# # Bisection Search 
+# def binary_search(L,x):
+#     lo = 0
+#     hi = len(L)
+#     while lo-hi > 1:
+#         mid = (lo+hi)//2
+#         if L[mid] <= x:
+#             lo = mid
+#         else:
+#             hi = mid
+#     return L[lo] == x
 
-'''
-Here builtin functions took less time that normal ones which we have created
+# '''
+# Here builtin functions took less time that normal ones which we have created
 
-'''
+# '''
 
 
 #  -- NESTED LOOP COMLEXITY --
 
-# diameter Function 
+"""
+diameter Function: Means there are several points in a plane or a surface This code will tell us which one have the biggest distance and whats that distance.. 
+This is the aim of the function
+"""
+
+import math
+
+def diameter(L):
+    farthest_dist = 0
+    for i in range(len(L)): # selects one point and calculates distance between others
+        for j in range(i+1,len(L)): # go through each element except myself 
+            p1 = L[i]
+            p2 = L[j]
+            dist = math.sqrt((p1[0]-p2[0])**2 + (p1[1]-p2[1])**2)
+            if dist>farthest_dist:
+                farthest_dist = dist
+    return farthest_dist
+
+# L = [ (math.cos(0),math.sin(0)), (math.cos(1),math.sin(1)), (math.cos(2),math.sin(2)), (math.cos(3),math.sin(3)) ]
+# print(diameter(L))
+
+def create_list_of_2D_points(N):
+    L = []
+    for i in range(N):
+        x = math.cos(i) * i
+        y = math.sin(i) * i
+        L.append((x,y))
+    return L
+L_N = [100,200,400,800,1600,3200,6400]
+
+diameter_times = []
+last = 0
+
+for N in L_N:
+    L = create_list_of_2D_points(N)
+    t = time.perf_counter()
+    d = diameter(L)
+    dt = time.perf_counter() - t
+    diameter_times.append(dt)
+    print(f"diameter of {N} points took {dt} seconds")
+    if(last != 0):
+        print(f"delta = {dt/last:.1f}x for 2x many points")
+    last = dt
