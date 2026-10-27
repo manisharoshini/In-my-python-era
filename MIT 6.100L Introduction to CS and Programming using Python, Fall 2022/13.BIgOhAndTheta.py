@@ -104,3 +104,32 @@ Another observations Number took compount took 8 seconds to run 100 millions and
 """
 
 # -------------------------------------------------------------------------------------------
+
+# Brute Force Technique -- Measure time to find element in the list
+def is_in(L,x):
+    for ele in L:
+        if ele == x:
+            return True
+        return False
+
+# Bisection Search 
+def binary_search(L,x):
+    lo = 0
+    hi = len(L)
+    while lo-hi > 1:
+        mid = (lo+hi)//2
+        if L[mid] <= x:
+            lo = mid
+        else:
+            hi = mid
+    return L[lo] == x
+
+'''
+Here builtin functions took less time that normal ones which we have created
+
+'''
+
+
+#  -- NESTED LOOP COMLEXITY --
+
+# diameter Function 
